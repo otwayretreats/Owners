@@ -237,7 +237,7 @@ label.f input,label.f select,label.f textarea{font-size:1rem;font-weight:400;let
 <!-- 5 -->
 <section class="step" id="s5">
   <h2><span class="n">05</span>Cleaning, linen &amp; supplies</h2>
-  <div class="price"><b>$430</b><span>per clean · the standard package for every home</span></div>
+  <div class="price"><b>$300</b><span>per clean · the standard package for every home</span></div>
   <p class="note">Charged to you after each guest departs; guests pay a flat $100 cleaning fee towards it, which comes back to you as booking income.</p>
   <details class="incl"><summary>What a clean includes, and what it doesn't</summary><div class="body">
     <p><b>Every clean:</b> vacuum and mop throughout; bathrooms, showers and toilets; kitchen and all surfaces; a cosmetic sweep of courtyards, balconies and the barbecue area; bins; a photo of every room and a property check before the next arrival. Over time we also get to under-furniture, skirting boards, cupboard tidying and the front entrance.</p>
@@ -407,7 +407,7 @@ label.f input,label.f select,label.f textarea{font-size:1rem;font-weight:400;let
   <p class="note">Bed sizes in each room (king, queen, double, single, bunk, tri-bunk). Guests like heating in every room; portable heaters and spare blankets are wise.</p>
   <div id="bedrooms"></div>
   <div class="grid">
-    <label class="f"><span>Total guests the home sleeps</span><input id="sleeps_total" value="7"></label>
+    <label class="f"><span>Total guests the home sleeps</span><input id="sleeps_total" value="8"></label>
     <label class="f"><span>Main bathrooms (excluding ensuites)</span><input id="main_baths" inputmode="numeric"></label>
     <label class="f"><span>Bath</span><select id="bath"><option value="">—</option><option>No</option><option>Yes</option></select></label>
   </div>
@@ -495,7 +495,7 @@ label.f input,label.f select,label.f textarea{font-size:1rem;font-weight:400;let
 
   <details class="incl"><summary>Schedule of fees (all inclusive of GST)</summary><div class="body"><div class="tbl"><table>
     <tr><td>Management fee</td><td>22% of all booking income, including the guest cleaning fee</td></tr>
-    <tr><td>Cleaning</td><td>$430 per clean</td></tr>
+    <tr><td>Cleaning</td><td>$300 per clean</td></tr>
     <tr><td>Linen</td><td>$170 per booking</td></tr>
     <tr><td>Initial set-up fee</td><td>$600 once</td></tr>
     <tr><td>Photography</td><td>$350 once, if required</td></tr>
@@ -616,7 +616,7 @@ label.f input,label.f select,label.f textarea{font-size:1rem;font-weight:400;let
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 (function(){
-const CFG={"slug": "1a-mclennan-street", "address": "1A McLennan Street", "suburb": "Apollo Bay", "owner_display": "Nid Kelly", "bedrooms": 4, "clean": "$430", "linen": "$170", "extra_above": "six", "sch": {"base": "$300 \u2013 $450 a night", "hols": "$450 \u2013 $580 a night", "lw": "$580 \u2013 $760 a night", "peak": "$700 \u2013 $1,100 a night"}};
+const CFG={"slug": "1a-mclennan-street", "address": "1A McLennan Street", "suburb": "Apollo Bay", "owner_display": "Nid Kelly", "bedrooms": 4, "clean": "$300", "linen": "$170", "extra_above": "six", "sch": {"base": "$300 \u2013 $450 a night", "hols": "$450 \u2013 $580 a night", "lw": "$580 \u2013 $760 a night", "peak": "$700 \u2013 $1,100 a night"}};
 const $=id=>document.getElementById(id);
 const KEY='authority:'+CFG.slug;
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
