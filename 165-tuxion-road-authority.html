@@ -1,0 +1,754 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>165 Tuxion Road Authority</title></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --bg:#f7f5f0; --paper:#ffffff; --ink:#1b1e1c; --muted:#656b67; --line:#ded9cf; --soft:#e9efec;
+  --accent:#141615; --accent-ink:#ffffff; --warn:#9a5b1e; --warn-bg:#f8efe2; --ok:#2c6b5f; --ok-bg:#e3efea; --err:#8a2a2a; --err-bg:#f3dcdc;
+  --display:"Outfit",system-ui,sans-serif; --body:"Figtree",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141716; --paper:#1d2120; --ink:#ebe8e1; --muted:#9aa29d; --line:#323835; --soft:#213129;
+  --accent:#ebe8e1; --accent-ink:#141615; --warn:#e2a560; --warn-bg:#2d2419; --ok:#6fb8a6; --ok-bg:#1f2f2a; --err:#f0b4b4; --err-bg:#3a2323; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#141716; --paper:#1d2120; --ink:#ebe8e1; --muted:#9aa29d; --line:#323835; --soft:#213129;
+  --accent:#ebe8e1; --accent-ink:#141615; --warn:#e2a560; --warn-bg:#2d2419; --ok:#6fb8a6; --ok-bg:#1f2f2a; --err:#f0b4b4; --err-bg:#3a2323; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+[hidden]{display:none!important}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(1.5rem,4.5vw,2.1rem);font-weight:600;line-height:1.15}
+h2{font-size:1.05rem;font-weight:600;display:flex;gap:10px;align-items:baseline}
+h2 .n{font-size:.72rem;letter-spacing:.1em;color:var(--muted);font-weight:600}
+h3{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+p{margin:0 0 10px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0 14px;border-bottom:1px solid var(--line);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 8px calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.lockup{height:52px;width:auto;display:block}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lockup{filter:invert(1)}}
+:root[data-theme="dark"] .lockup{filter:invert(1)}
+.saved{font-size:.74rem;color:var(--muted);text-align:right}
+.wrap{max-width:860px;margin:0 auto}
+.hero{padding:22px 0 10px}
+.eyebrow{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:8px}
+.lead{color:var(--muted);font-size:1rem;max-width:62ch}
+.progress{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 8px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.bar{height:6px;background:var(--line);border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.progress small{display:flex;justify-content:space-between;color:var(--muted);font-size:.74rem;margin-top:4px}
+section.step{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 16px;margin:0 0 14px}
+.grid{display:grid;gap:10px 12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:10px 0}
+.grid.tight{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.wifi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 12px;margin:8px 0}
+@media(max-width:640px){.wifi{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bedroom{border-top:1px solid var(--line);padding-top:8px;margin-top:6px}.checks.small{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));margin:0 0 6px}
+.trade{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:10px 12px;margin:8px 0}
+label.f{display:grid;gap:4px;font-size:.78rem;color:var(--muted);font-weight:500;min-width:0}
+label.f.req>span::after{content:" *";color:var(--warn)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%;min-width:0}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+input.bad{border-color:var(--err)}
+textarea{min-height:64px;resize:vertical}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices label{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-size:.9rem;cursor:pointer}
+.choices input{width:auto;margin:0;accent-color:var(--accent)}
+.choices label:has(input:checked){border-color:var(--accent);background:var(--soft)}
+.checks{display:grid;gap:6px 14px;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));margin:6px 0 10px}
+.checks label{display:flex;align-items:flex-start;gap:8px;font-size:.92rem;cursor:pointer}
+.checks input{width:auto;margin:3px 0 0;accent-color:var(--accent);flex:none}
+.checks .w{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center}
+.checks .w input[type=text]{padding:6px 9px;font-size:.88rem}
+.inline{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;margin:6px 0}
+.inline .choices{grid-column:1}
+details.incl{border:1px solid var(--line);border-radius:8px;background:var(--bg);margin:8px 0}
+details.incl summary{cursor:pointer;padding:10px 12px;font-weight:600;font-size:.9rem;list-style:none;display:flex;justify-content:space-between}
+details.incl summary::after{content:"+";color:var(--muted)}details.incl[open] summary::after{content:"–"}
+details.incl .body{padding:0 12px 12px;font-size:.9rem;color:var(--ink)}
+details.incl .body p{margin:0 0 8px}
+.price{display:flex;align-items:baseline;gap:10px;margin:4px 0 8px}.price b{font-family:var(--display);font-size:1.5rem;font-weight:600}.price span{color:var(--muted);font-size:.85rem}
+.note{font-size:.82rem;color:var(--muted)}
+.chip{display:inline-block;font-size:.85rem;font-weight:600;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 14px;background:var(--bg)}
+.callout{background:var(--soft);border-radius:8px;padding:10px 12px;font-size:.9rem;margin:8px 0}
+.callout.warn{background:var(--warn-bg);color:var(--warn)}
+.callout.err{background:var(--err-bg);color:var(--err)}
+.callout.ok{background:var(--ok-bg);color:var(--ok)}
+table{border-collapse:collapse;width:100%;font-size:.86rem;font-variant-numeric:tabular-nums;margin:8px 0}
+th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td.r,th.r{text-align:right;white-space:nowrap}
+.tbl{overflow-x:auto}
+ul{margin:4px 0 10px;padding-left:20px}li{margin:3px 0}
+.legal{font-size:.86rem;color:var(--ink)}
+.legal ol{padding-left:20px}
+.sig{border:1px dashed var(--line);border-radius:8px;background:var(--bg);position:relative;touch-action:none}
+.sig canvas{display:block;width:100%;height:150px;border-radius:8px}
+.sig .clear{position:absolute;right:8px;top:8px;font-size:.74rem;padding:4px 9px}
+.sig .ph{position:absolute;left:12px;bottom:10px;color:var(--muted);font-size:.8rem;pointer-events:none}
+button{font:inherit;font-weight:600;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:9px;padding:10px 16px;cursor:pointer}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+button.quiet{background:transparent}
+button:disabled{opacity:.5;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--paper);border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.dock .in{max-width:860px;margin:0 auto;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.dock .in small{color:var(--muted);font-size:.78rem}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 14px;border-radius:999px;font-size:.85rem;opacity:0;transition:opacity .2s;pointer-events:none;z-index:20}
+.toast.on{opacity:1}
+#done .steps{display:grid;gap:8px;margin:10px 0}
+#done .steps div{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+#done .steps b{width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:.8rem}
+pre.summary{white-space:pre-wrap;word-break:break-word;font-size:.78rem;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;max-height:260px;overflow:auto}
+@media(prefers-reduced-motion:reduce){.bar i,.toast{transition:none}}
+</style>
+
+<header class="topbar"><img class="lockup" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAioAAADFCAYAAAB6vdnNAAATlklEQVR42u3d6Y7lKBJA4STl939l5s9Mq6Y6F9sQEMB3pFK3qjLvtdnisDj88YGvqP/9AwAAJvKpCL6UlK/+HwAAEBUAAACi8hX15t8BAACiMl1SyAoAAEQltaSQFQAAiAoAAABR+Zsa9LMAAICoDJMUsgIAAFFJLSlkBQAAojKNcvPvAAAAUQmjPhSScvMzAAAAUekuKRk+CwAAHC4q34nFne0dW0AAABCV4ZTGn7WqAgAAUWnm6bmU1s8GAABEZbhIFLICAABRiaZM+l0AAEBU/iFqy8d5FQAAiEp3SdnxOwEAICqbSErPbRvnVQAAICrhYpHtMwEAwMaiEvko8l1ZsaoCAABRuS0IdYI8kBUAAIjKY3mIEAhbQAAAEJVfJSTiZ1tkxaoKAABE5ZUQjNoOIisAALzg2vz+yk1ZqF/8PCEBACBRIF+ZJ0/51KAyqgeV96ptImPfyCy35eV1zy67kqDeZl1D2fA+d7pOHCoqbztr7VRG9cAy31VORtfZCitwJbDvrCoqp9x/TdBHdrhGNLL6GZWWgb58xG716BTj2kD0WaMR33Ga/J0gedqJNgCi0kUQ3grLHUnxFFC8PJzyvcgRwOoC96h9gqgk7qgtqxil8bu/+xyysmewUIfKaHdK4vq25U5Ujh0AW8+2lKSdeqfAV13PcgHsRAEqk++/TroP6R5AVCYPnm8lhc3vPTgZONUJiDWIyo8DUGZJ+elnDKb7BB11qR3ueg2ZVlVs+RAVA0WQpAhwZ5TPjltB2dr36ds+s8oqg6wYK4kKBkgKu58/MJW//gho766vHNp+3M8612u83YRrk0ZfJzTMno80V50qZJCbtSX3pD7LgPLRts7uR73qv3zkXNXW5jfnc6HOdvfnojtSRN6VHWd/MyWldbUkOhmg+hz3OTXZPazenmZsAZEUomJgHNABBK0xZdV7O6f189T7eZTN+tTs79eHsISo1JcBpPfqSm9J8RRQf0mJDD4k1cz1VNFYqd61SaKSroOOEpYRkkJWxkuEQfCMYK1P9S+DEVtAtnywhKjcbYyRwhIpKTpW20BWkrQ/gXLvMlB/42VFmWMJUXmT2G3GltBbSfnp73TS3LMngqksRpWFR6y1Q6KyaWOeKSy1U0c6SVZWXOJVn2sFN+Ufl5fIeIAjRaVXYxwtLG8lRUdbc1BSb1hNLLJLO0nBEqIS8S6fu29Fjjiw15L464RZoJUj97/DNa+yFVkTl6tVLywhKjW4M0ctU/bY7tFJ15w9mdHFlkFN+lnZxsITXweh7xGVbQfBnsLS6z1APZdCYUar/N37jDbYsgVkywdLiEod3Bgjs472Dly7Bjfvq0FmWVnlvTarjwHkHcuIyswBrudhsKKDCpTuv0sQHvlU3op1X4InSFnLwqSFqKSaQYwM5neFpZekPL2Ok6XGwIRT2kZVJ8YC5BOVu1sfNfm1lgGfYQUGEMR6lUFdrC7UL1FZZraRcd84QlJ275Q7Slc5+N4jJidRgavnubCSvK0BRCVgwBqR8yS7pPz096cFOQOyuiJwa9ZD0bawuqi8OacxQ1hmb/eYkUPAFtCi7rEucK0khaik7oCZhGWWpOikQP9+kU32a7LyAY4XladbPj2eyOk5AIxeSbEFhN0EIvNBzsznU1bMF1OS3S+IynRJiFxd6XWiXucD5k02ssn+yjlNIq/FOIlpotIjA+0MYekhKS3ZcK2qAGcHsFXeqaSOsbSo9E6TP0pYeknKCQMMcEKgK/ov+cCeohLZAaKEJYukEBLsFpBqgjZeN+9nXpgJotLYCWa8GTnqDMtMSTHAgASth5dyAslEZfRgNlJYoiTFiwsBUjOyHIw3OFZURqymvO2grTIQKSlP7mu1AWbHdPMG+fftvy5UbyV5WQJEZbHBOzJpXBZJESjN9Fcl0/bHzo9Ga3MgKi87ah3cUUeknh4lKQYeYP8APeP6TXhwlKjcfUvpasKSZSXllNwq1TVuTV3oGlZ+gs/kBktyJRysyuBOu/p2D5B5NWC3NwKfInHVuIMsfA7uYLNT4H+8vKbMkrLyqsouTyN4zHSfdrareABEJUAOsgmLlRSDPKC/AZuIyt3HkUc8PhzZYbNIyimrKqsP5sRz7TZSBrYVAIGi8jRnSuTjwytKytvDvg7WmnGSDJKojYOoBA8kq6ywZH1q6JRgttJTIoD2AiQSlR4ZaLMLS2ZJOWVVZfZ91Qnt5lRK0s8iWcCiotJ7gCrJOlH2lZSVB5SyyP2SlDPvn+QAk+iZRyXqfT538p2MyMGysqTsnBNh5L2ZWZKD6HZTEl8bMIWV3p4885FmKym5A1P0NmDL55uJk58dro3QYHlRGfl25NHCkllSntznCY8r9xaW1s8jKeRGgAeSiMqswSNb0rjRkrJrgOwhh3Xi76O9TklevnrRJzCFHmdURq6m/NTRZp9hySYpX71n5bT3d9SbZZ9xuxCxY0adOAZoL8BgUfmug47ueJmExUpKzmBSB7dFYLe+5mWFGE7r1k99+W+zg0Tk0n4mSVk9r8qKA6JBvL1sygb1aTUFSCAq9ebPzErKNkNYMq6k7HBepbhOEMo05eGsCpYRladBdndhWWm7Z8WBxmOlWAWrKUACUakvpWAFYdlRUnYZDItrMrNXtynu16oK0otKqxRkF5adJGW3gSbLFoutHiJChICkonL3ceQThGWGpLy99t0GxVmiQFCw80qDto0tRCViYF9NWOpESTGozhGHbIKy47ZfOeQ7CQEQ3Flqw2fU5J34zmpRdB6T0e8F2nHAzPL6hNn3utq7Y8om11I3b1fKB6lFpVeHziwsPwXy1SUlW4D4SFa/mFcXxbUAiBCVUQc6Z6a+v5PxdqXtHsEaALAMT86oRL0PZXYm2dZ7X01SRtUtAABDRSUyiEbnOSEpAABsLCojX+aW9QmhnSRl9XcAAQCIynQJyCwsVlIAAEgScDM8JVI73UuP79pJUk5/AggAkJxrMaGqN4JuGXAdq0uKbR4AwFIC8DagZUrQ1OvaIlcZZkhK7dwmAABYRlR2FJaoHCMrpcUnKwCAFPTa+hmx7fJdQK1Jr22kpNjKAQBsSQkKfhlS37+9tlHZd8vAe/7t+x2qBQCk5OmKyp1DrX/++8hgl/HaoiTFuRMAwBE8WVFpSRK20gpLrxWVCEmpner2bX0DAJBCVJ5uBawuLKVjwI5IuT+ifG3/AACWFZW7AWtkYrYoYWkRld6SMloAraoAANKLSo+Z9erC0lvSMpZf9kfPAQAIy0ybJZPs22vrGfR7S0r09hEAAGm4s6Iy6jHarCssLUnxysDriBITKyoAgDSiEn2gckVheXuIeIak1AFtBABWw/m78ZP8bvFktKisKCzlxT2MPoD7VlCiziiNbPirSVnWLbiy4DU/qbe6ebvKWk8ZhGD0mLZDfxl1b+XND422zozC0po/ZqSkjDoYfNpAWza/v1ZxJVra1iqyUgdf1w79ZcZ9/Xg9V4LCWuFdPb0b/khBscT5vo6VHbQtaK+T+8WVwAQzp+W/W2mjVlFmPVJcDx1YBRVEti3tam6QVQc5JOXXMfcz0Uy8PFhNqIkqLZOklE71pvPO77DQroBT2+b/ff+VsIB2fbngW0mJPsdjsDQDhnal/JE2JlyJC+uJsMw4wZ1BUsrqDdCgBmhXJwRbvOdzgUq9s50xejuoh6T8dl+1sUz+Lpuq4xsAO0ovtCtlv19fT1kW10KDVpa0/L0k5W1DKToeBrbp8rF3XohsAbMc1LZ2FI/s/aVM+MzmxHDXwg1/hrBEH1QdnVflt8+uG3e22vi7Jfn9ZbmelV5+GfUWclJH/FfoL1F5uUpr37g2aAyjhCX6PMiIx5YNVh07D9AwNs2S4N2pDb+n3ONjyJ2+8a/P/tykwKLPsPSSlIh0/PVhOemMfToduUGPsQlYTfDK6L5xbTYoRDzSPEtSeuVVQb/2A4xoW2b38cFWuS80Sby+qdya4eIaPjdbltvRkqKzkRUAWCV2/yoq2cy353mS0cLy5C2ds54IapmJnDDjKMoDJHg5asfP0aeTcS3U4N40npHCUoPvsaekGDABsgIQlWCBeXPOpD78jh4DU4+fjX5jM4B8452ZvbLHN6JSBjSCWeJSOl/DT/fUKzfJrNwqZr4AVpzE4gBRGREEIhpcfRDAewpL5LmUlm2wXrlVDAIATpuAWFVJVC5XwobUI1DelZaoFZaZktIzsyFJAZA9cGJzWbkWMMlWebkjLW+F5clqShZJKZ3rAgCyU/74L7n5unzSlss12FJLwOf0lJaoylr1sWUAeSZoGBOnsk7aM5b9kPK5BptUREAtLxtva0HXTtdPUs4bAAHMkz6rKovJ3JXwplsD7dPVltrwXSPuKfqxZcEZIMDKcmIgTiR0LWdCw8rpWrBBvg3ytWPjvysfmR9bNnC2l4nVKiB/8O0ZlDFBWK6BA/DM/Cl//lxNXMGtUuNJHjNeaFvKsv/3WVWZKCzX4AKIaHhPt27erLL89jutqykjJMVAuU751Mn9EXPrsyzctrQrstJdWK5EBdOjU72VlplvW579RFCryJ0qKQZkrCbAp60+3En8KQFcrKx0iZ9X8kopDZ0+IlNtyypJxieCekqiIAK0ty0CrM/uKCtNwnINahAl6HPeHH4dkam296HcN+W682PLNUEHhiCoXeUOsr2D8Yl5VSIOHT8WlivwYkYEzTfbFHcKqffB29ZVl6dCU4PL2gAI4DSRPHnMi0yE+uuYeiVugBnyp9wRlvpSbmpQ52x5IggkBdrWaWXpUeX7ZRolLGUFUektL2+lpYewjOhcEY8tm7UIJNC2VooHs66jaKtjt4OuAR2oBjXWiPwpPYTlThlGnGHx2LJAAm1Leb7/PWNhDmEpP4lKVEVFBcqnid+erLJECMuM2Uavx5bNINwT1MGs+8omEF5WGBsL/1W+V9KGHf2+gV75U3rJ3ciEcRk7vkBCJLQtbQuE5UtZ+UxqsuWvP09vsH7czyHSmnb+t8/4+1qi9vZIisEc+duVttU+vkX1W2f5krbxK7hCdsqf0rq68t1yYcujyxEvMqw6GqBdAR3ae+vrccpXohKVia53552ZP+Wnz/nt96MeSb5Tpm8P25bEncDsB7NlQrKwOGaco5MALp+w/Lr1M6IhfvXnaUE8WW668x13Pq9+jMtZEpEw7qufr5t3FlKDVQIvcPok4J8+cy3SoSPyp/RcYSkvf3fEoCcB3LuyVT7oPQPHfhJorBjQV66bHzZ7qT0yf8pdYWnZDqoDyq4E/GzRSQCB7SDxQMJx+ArqXCWwIb7NnzIid8qb1ZXaqazqze8rBgYBBSQYWKS/1GvyxfYIlk+f7LkjGy3C8vbdP9lmI0UHAUjwouOX+txoLP4Mlog3F/82f8r/rrFX/pTfPqt0upYZnaouPjAYMJFx4AUQwNMVlTq4w2bPn7Jy7pFTg7BVFZiFG5fU5yai8nZAj5SZ2flTSucOVZJ2ch3OAAQSDKQXlRnW/PbAbo83I98ZaDJk6X3zHQZPAQUkeIXyUJ+56iHF/fwmKqMH9Az5U3pt52RqsE+20AycAgpIMMhimrHvauiMI4z4jbjMejPySoHMe30EFJDgzAEy21h7clr9GlDuj+r7utko7lpWZP6Uv383Mn9KTdBholc9apIBQEABCQbyy2KvMTAs4VvPi56VP6V2LLwyuqJe/H4J/H4BBSDBs/qssWK8pPw0sQ+PfVeSSmqVl15P9kR0kpqo4ZWEA4CAAhJ8dtuqG95POaTOol/4Wp6IyncdL7JCWh5F/qkAnwpL2ajTeUHhGgGlTioHkILM7Wp2G7UC+3t7KhHt7ZrQ8Fu3i0YtUZUEnX9WhmCcOeCQlf0lOFu7qvoTEf4t/l3BHe/ujYzMn9IzId2MvCq9DywLTgIKAKTlzYpKxPLXyPwpIyVglgzcXX4TbAESvMLsuyxYnyvVZbZtrdIqKjMacM/8KaMEhQQIKACw0hj4NoZGTrSbEr49naVny59y9/NW30axmgKQ4FXGpRXGql1XVd6211BJaRGVNzfTS2Ce5E9pSZo2OulbxHkXkrJOBwWATGNha1zqEcOaRaWXQbY8zvTTkz3RkjI04c3Gs5OuDZoIHVmu6n7/gKk+55RJtLCUUTdcJ3x2S6G2Piq3el6V7AEpwwsTo1fTTmsTNUGbrEn6RT2oXc0Yb7OMVS3Xn/2lsTW4XYTd9IgGF/02454DmVkzAOAUQicCs96GOHrmUAYU8HDLHDT7BwBgmxn2jGDdIho9JCVTXhWHZwEARGWArDy9vt6PSq+Y/ZWkAACIygRZeSsdbySlp6BkOJxHUgAAROVlAO2RN2SkpGQ8C0JSAABEZVAgrcH3lOmR5Yj7JikAAKIycNbf85Bq1DVkzKlCUgAARKVzgO4hLD3TyK+aU4WkAACISpCwtBxkzSYpdfN6BABg2wD3VgRmS0qkoIzcfgIAgKgEyEqdIDV3y6kGlTtJAQAQlYncDcRPxCPjI8tPy5qgAADwsfabGGdKSlROldXfJgoAwHai8kZYsksKQQEAoANXMmmqAZ/ZS1IICgAAE+QgI09XVyIP2t65nhJ4bwAAEJUNhOXOvc14ZPnNfRAUAAAWCog9DtyOlJS6eX0AAEBUOkvAk/t/Kij1sDoAAICoDBQWZQ8AgGB5tLQQEwAABM9U4kJOAAAQSFPICykBAKAz/wEhKuAUnwAVfgAAAABJRU5ErkJggg==" alt="Otway Retreats" width="200" height="71"><div class="saved" id="saved"></div></header>
+
+<div class="wrap">
+<div class="hero">
+  <span class="eyebrow">Holiday management agreement · Anna Till &amp; Paul Cornelisson</span>
+  <h1>165 Tuxion Road, Apollo Bay</h1>
+  <p class="lead">Everything we need to take your home on. Fill it in on your phone or computer; it saves on this device as you go, so you can come back to it. Fields marked * we need before we can start. At the end you sign and tap send: your mail app opens with everything filled in, and you can download a PDF copy for your own records.</p>
+</div>
+
+<div class="progress"><div class="bar"><i id="bar"></i></div><small><span id="prog-text">0 of 0 required fields</span><span>Takes about 15 minutes</span></small></div>
+
+<!-- 1 -->
+<section class="step" id="s1">
+  <h2><span class="n">01</span>Property &amp; owner</h2>
+  <div class="grid">
+    <label class="f"><span>Holiday home address</span><input value="165 Tuxion Road, Apollo Bay" readonly></label>
+    <label class="f"><span>Owner/s (as on the title)</span><input id="owner_names" value="Anna Till &amp; Paul Cornelisson"></label>
+    <label class="f"><span>Property name for marketing</span><input id="property_name" placeholder="Optional – we can suggest one"></label>
+    <label class="f req"><span>Mailing address</span><input id="mailing_address" data-req placeholder="Street, suburb, postcode"></label>
+    <label class="f req"><span>Email</span><input id="owner_email" type="email" data-req value=""></label>
+    <label class="f req"><span>Mobile</span><input id="mobile" type="tel" data-req placeholder="04…"></label>
+    <label class="f"><span>Home phone</span><input id="phone_home" type="tel"></label>
+    <label class="f"><span>Available from</span><input id="available_from" value="Summer 2026/27 – date to be confirmed"></label>
+  </div>
+  <p class="note">We open bookings nine months ahead as a default (three months for homes that are for sale). Send us any owner stays over Christmas and Easter before the calendar opens to guests.</p>
+  <p class="note">Tariffs: the rate schedule at the end is the starting point. We run PriceLabs dynamic pricing, so rates move inside the bands with demand; our job is to balance the best return with healthy occupancy.</p>
+  <h3>Owner bookings</h3>
+  <p class="note">You'll be set up in Hostaway to see and be notified of every booking. It doesn't show pricing and you can't block dates there yourself: to stay at your own home, complete the owner booking form on our website (<a href="https://www.otwayretreats.com.au/ownerbookingform" target="_blank" rel="noopener">otwayretreats.com.au/ownerbookingform</a>). Booking terms for owner stays and the cleaning and linen options are kept current on that form.</p>
+</section>
+
+<!-- 2 -->
+<section class="step" id="s2">
+  <h2><span class="n">02</span>Where we pay you</h2>
+  <p class="note">Paid weekly, every Thursday: within seven days of each departure for Airbnb and direct stays, within fourteen for Booking.com (they hold funds a week). Any invoices accrued during a stay are deducted from rental monies.</p>
+  <div class="grid">
+    <label class="f req"><span>Account name</span><input id="acct_name" data-req></label>
+    <label class="f req"><span>Bank</span><input id="bank" data-req></label>
+    <label class="f"><span>Branch</span><input id="branch"></label>
+    <label class="f req"><span>BSB</span><input id="bsb" data-req inputmode="numeric" placeholder="000-000"></label>
+    <label class="f req"><span>Account number</span><input id="acct_no" data-req inputmode="numeric"></label>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="step" id="s3">
+  <h2><span class="n">03</span>Access, keys &amp; safety</h2>
+  <h3>Alarm</h3>
+  <div class="inline">
+    <div class="choices"><label><input type="radio" name="alarm" value="no" checked>No alarm</label><label><input type="radio" name="alarm" value="yes">Alarm fitted</label></div>
+    <input id="alarm_code" placeholder="Alarm code and any instructions">
+  </div>
+  <h3>Keysafes – two are required</h3>
+  <p class="note">Every home needs two keysafes before the first guest. We don't keep spare keys at the office, so if a guest locks themselves out or a cleaner needs the supplies cupboard, the keys have to be on site.</p>
+  <h4 style="font-size:.95rem;margin:10px 0 4px">1 · Guest keysafe <span class="note">– holding one set of guest-only keys</span></h4>
+  <div class="callout warn">It must be in a very obvious spot right by the front door, at eye level if possible. Guests arriving late will not go looking behind gates, around the side or in the garage, and a keysafe they can't find means calls to us and a bad start to their stay.</div>
+  <div class="choices"><label><input type="radio" name="ks_guest" value="own" data-req>We'll install our own and give you the location and code below</label><label><input type="radio" name="ks_guest" value="otway" data-req>Please supply and install it for us · <b>$110</b></label></div>
+  <div class="grid" id="ks_guest_fields">
+    <label class="f"><span>Guest keysafe location</span><input id="ks_guest_loc" placeholder="e.g. left of front door"></label>
+    <label class="f"><span>Guest keysafe code</span><input id="ks_guest_code"></label>
+  </div>
+  <h4 style="font-size:.95rem;margin:10px 0 4px">2 · Spare keysafe <span class="note">– holding a full spare set of keys plus the key to the locked supplies cupboard, for our cleaners and emergencies</span></h4>
+  <div class="choices"><label><input type="radio" name="ks_spare" value="own" data-req>We'll install our own and give you the location and code below</label><label><input type="radio" name="ks_spare" value="otway" data-req>Please supply and install it for us · <b>$80</b></label></div>
+  <div class="grid" id="ks_spare_fields">
+    <label class="f"><span>Spare keysafe location</span><input id="ks_spare_loc"></label>
+    <label class="f"><span>Spare keysafe code</span><input id="ks_spare_code"></label>
+  </div>
+  <p class="note">If we install, we'll put the location and code in your welcome email once it's in. Keysafe costs are added to your first owner statement.</p>
+  <p class="note"><b>Keys:</b> please provide two full sets of keys and remotes to every lock, door, window, garage and shed before the first guest arrives. If any are missing when we set up, we may need to have them cut and the cost is charged to you.</p>
+  <h3>Emergency contact</h3>
+  <p class="note">Someone we can call about the property if we can't reach you.</p>
+  <div class="grid">
+    <label class="f req"><span>Name</span><input id="ec_name" data-req></label>
+    <label class="f"><span>Relationship</span><input id="ec_rel"></label>
+    <label class="f req"><span>Mobile</span><input id="ec_phone" type="tel" data-req></label>
+    <label class="f"><span>Email</span><input id="ec_email" type="email"></label>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="step" id="s4">
+  <h2><span class="n">04</span>Pets</h2>
+  <div class="inline">
+    <div class="choices"><label><input type="radio" name="pets" value="no" checked>Not pet friendly</label><label><input type="radio" name="pets" value="yes">Pet friendly</label></div>
+  </div>
+  <div id="pets_more" hidden>
+    <p class="note" style="margin-top:8px">Pet-friendly homes need somewhere a dog can be left securely outside. Please confirm:</p>
+    <div class="choices"><label><input type="radio" name="fencing" value="yes">Yes – there is a secured area for dogs</label><label><input type="radio" name="fencing" value="no">No secured area</label></div>
+    <label class="f" style="margin-top:8px"><span>Where is the secured area?</span><input id="fencing_loc" placeholder="e.g. fully fenced rear yard, enclosed balcony, side courtyard with gate"></label>
+    <p class="note">We'll describe this in the listing so guests know what to expect. Without a secured area we usually advise against listing as pet friendly.</p>
+  </div>
+  <details class="incl"><summary>Our standard pet rules for guests</summary><div class="body"><ul>
+    <li>Maximum of two dogs, each up to 20 kg; larger dogs by request only.</li>
+    <li>Pets are kept off all furnishings and never left unsupervised inside.</li>
+    <li>Guests bring their own pet bedding, bowls and towels.</li>
+    <li>Pets left outside must be secure; they're the guest's responsibility, so secure fencing, or an area that can be secured, matters.</li>
+    <li>Before leaving, guests vacuum up pet hair inside and check the yard, bagging and binning any mess.</li>
+    <li>Guests check screens, doors and external points for pet damage and report or make good.</li>
+    <li>A $50 pet fee applies per booking with a pet (Airbnb).</li>
+  </ul><p class="note">These rules go in the guest guide and the listing for every pet-friendly home.</p></div></details>
+</section>
+
+<!-- 5 -->
+<section class="step" id="s5">
+  <h2><span class="n">05</span>Cleaning, linen &amp; supplies</h2>
+  <div class="price"><b>$350</b><span>per clean · the standard package for every home</span></div>
+  <p class="note">Charged to you after each guest departs; guests pay a flat $100 cleaning fee towards it, which comes back to you as booking income.</p>
+  <details class="incl"><summary>What a clean includes, and what it doesn't</summary><div class="body">
+    <p><b>Every clean:</b> vacuum and mop throughout; bathrooms, showers and toilets; kitchen and all surfaces; a cosmetic sweep of courtyards, balconies and the barbecue area; bins; a photo of every room and a property check before the next arrival. Over time we also get to under-furniture, skirting boards, cupboard tidying and the front entrance.</p>
+    <p><b>Not part of a regular clean</b> (deep-clean items, once or twice a year, by you on a visit or by us at an extra cost): windows inside and out, external cobwebs and external cleaning, pressure-washing decks, sugar-soaping walls, steam-cleaning grout, carpets and upholstery, heavy oven and barbecue cleaning, gutters, moving fridges, couches and beds to clean behind, exhaust fans and air-conditioner filters, and washing or dry-cleaning quilts.</p>
+    <p><b>Owner stays:</b> you may clean after your own stay and the fee is waived; we check anyway while re-making beds and charge only for any extra time needed. Weekend or public-holiday cleans we can't move attract loadings (see the fee schedule).</p>
+  </div></details>
+  <details class="incl"><summary>Supplies we stock, included in the clean</summary><div class="body">
+    <p>We manage and restock the basics every holiday home should have, included in the clean: kitchen bin liners (4), bathroom bin liners (1 per bathroom), Chux (2), dishwasher tablets (8), dish cloth and scourer (1), toilet paper (2 per toilet), dishwashing detergent (1), body wash (1 per bathroom), spray and wipe (1), hand wash (1 per bathroom, 1 in the kitchen), tea bags (8), coffee sachets (8), sugar sachets (20), laundry detergent (1), salt, pepper and olive oil (1 each), paper towel (1), fly spray (1), long-life milk (2), shampoo and conditioner (1 each), cling wrap and foil (1 each), matches (1) and firelighters where there's a fireplace, and the arrival gift: a bottle of wine and a welcome note. We use Who Gives a Crap toilet paper, Biology spa-range bathroom products and eco-friendly cleaning products wherever possible. The package may change over time.</p>
+    <p><b>You supply:</b> firewood and kindling, coffee pods or beans, boxed tissues, remote batteries, light globes and heat bulbs, gas bottles, fabric softener and stain remover, pegs, hairdryers, vacuum bags, mop heads and brooms, barbecue cleaning products, phone chargers, spices and sauces, dishwasher deep-clean tablets, oven and timber cleaners. We'll let you know when essentials like firewood run low.</p>
+    <p><b>Owner's stock cupboard:</b> a lockable cupboard or space we can reach between bookings makes a real difference. Keep in it spare mattress and pillow protectors, a spare pillow or two, a spare quilt and blankets, spare globes for the lights in the house, batteries for the remotes, a spare set of glasses and wine glasses, and spare plates and bowls, so we can replace chips and breakages like for like. It isn't essential; the alternative is we order as needed, usually with a week's delivery lag.</p>
+  </div></details>
+  <div class="price" style="margin-top:14px"><b>$150</b><span>per booking · beds made before every arrival</span></div>
+  <details class="incl"><summary>What linen includes, and what you provide</summary><div class="body">
+    <p><b>Included:</b> hotel-quality white sheets, pillowcases and quilt covers for every bed, including bunks (we supply the bunk linen folded on the bed for guests to make up themselves, as our staff don't make bunks for safety reasons), bath towels and face washers for every guest, hand towels and bath mats for every bathroom, tea towels. Commercially laundered between stays.</p>
+    <p><b>You provide once, at set-up:</b> all-season quilts, two pillows per sleeping space, mattress and pillow protectors for every bed plus spares (the charcoal Kmart range works well), and a spare warm blanket per bed.</p>
+    <p><b>Not included:</b> laundering your own linen, or professional cleaning of protectors, quilts and bulky items that can't be washed on site (about $10 per protector, up to $30 for quilts). On owner stays you arrive to made beds and the linen fee applies, unless you request your own linen and re-make the beds to guest standard; a bed-remake-only option is on the owner booking form.</p>
+  </div></details>
+  <div class="callout">By engaging Otway Retreats, I/we authorise cleaning and linen services at the property whenever Otway Retreats deems it necessary: between guest stays, after owner bookings, or when the home has been vacant for a period and needs refreshing before guests.</div>
+</section>
+
+<!-- 6 -->
+<section class="step" id="s6">
+  <h2><span class="n">06</span>Lawns, insurance, pool &amp; trades</h2>
+  <h3>Gardening and lawns</h3>
+  <p class="note">We can engage a local contractor to keep the grounds tidy between bookings, charged at $88 an hour as incurred. Choose one:</p>
+  <div class="choices">
+    <label><input type="radio" name="lawns" value="otway">Lawns only · basic grass mowing, usually 2–3 hrs every 4–6 weeks</label>
+    <label><input type="radio" name="lawns" value="full">Comprehensive · mowing plus weeding of garden beds, pruning, trimming and spraying – usually about double the time</label>
+    <label><input type="radio" name="lawns" value="own">We arrange our own gardener</label>
+  </div>
+  <div class="grid" id="gardener" hidden>
+    <label class="f"><span>Gardener name</span><input id="gardener_name"></label>
+    <label class="f"><span>Phone</span><input id="gardener_phone" type="tel"></label>
+    <label class="f"><span>Email</span><input id="gardener_email" type="email"></label>
+  </div>
+  <p class="note">"Lawns only" is exactly that: no weeding, pruning or spraying. By choosing either Otway Retreats option, I/we authorise Otway Retreats to arrange garden maintenance at the property when it deems it necessary. Anything beyond the chosen service is quoted as it comes up.</p>
+
+  <h3>Insurance</h3>
+  <p class="note">We can't manage a home without building insurance and public liability cover of at least $20 million. Building cover won't replace carpets and curtains after fire or water damage, so check your contents and landlord cover too. Terri Scheer offer short-stay cover for holiday homes.</p>
+  <div class="grid">
+    <label class="f req"><span>Building insurer</span><input id="ins_bld" data-req></label>
+    <label class="f"><span>Policy number</span><input id="ins_bld_no"></label>
+    <label class="f req"><span>Public liability insurer</span><input id="ins_pl" data-req></label>
+    <label class="f req"><span>Level of cover</span><input id="ins_pl_cover" data-req placeholder="$20 million"></label>
+    <label class="f"><span>Holiday-rental / contents insurer</span><input id="ins_str"></label>
+    <label class="f"><span>Policy number</span><input id="ins_str_no"></label>
+  </div>
+
+  <h3>Pool and spa safety</h3>
+  <div class="choices"><label><input type="radio" name="pool" value="no" checked>No pool or spa</label><label><input type="radio" name="pool" value="yes">Pool or spa on the property</label></div>
+  <div id="pool_more" hidden>
+    <p class="note">Compliance with pool and spa safety law is required before any guest stays. We can arrange the council inspection; any inspection cost and compliance works are yours.</p>
+    <div class="checks"><label><input type="checkbox" id="pool_inspect">Please arrange a council inspection and compliance certificate</label><label><input type="checkbox" id="pool_cert">I have a current compliance certificate and will send a copy</label></div>
+  </div>
+
+  <h3>Preferred trades</h3>
+  <p class="note">We use qualified local contractors and always try to reach you first. If you have your own trades, we'll call them first when you can't be reached.</p>
+  <div class="trade"><label class="f"><span>Plumber – name</span><input id="plumber"></label><label class="f"><span>Phone</span><input id="plumber_ph" type="tel"></label></div>
+  <div class="trade"><label class="f"><span>Electrician – name</span><input id="electrician"></label><label class="f"><span>Phone</span><input id="electrician_ph" type="tel"></label></div>
+  <div class="trade"><label class="f"><span>Handyman – name</span><input id="handyman"></label><label class="f"><span>Phone</span><input id="handyman_ph" type="tel"></label></div>
+
+  <p class="note">If no trades are listed, we'll appoint local, qualified tradespeople as work arises.</p>
+  <h3>Bins</h3>
+  <p class="note">Red and yellow bins are required. Our team takes bins in and out when we're there for a clean or check, and guests help; we don't make special trips. If guests leave on a day when collection is more than 48 hours away and the bins are full, we may need to charge for emptying them so the next guests have somewhere for their rubbish; the same can happen in summer when a bin simply can't keep up. </p>
+  <p class="note"><b>What a bin concierge does:</b> a local service that comes every week on collection day to wheel your bins out to the kerb the night before and bring them back in afterwards, whether or not anyone is staying, for about $10–15 a week. It suits homes on main roads where bins can't be left out, or in high-wind spots where they blow over, and homes with sensitive neighbours. For most homes our staff and guests manage bins well enough without it.</p>
+  <div class="choices"><label><input type="radio" name="bins" value="otway" checked>Happy for Otway Retreats and guests to manage bins</label><label><input type="radio" name="bins" value="concierge">We'll engage a bin concierge</label></div>
+</section>
+
+<!-- 7 -->
+<section class="step" id="s7">
+  <h2><span class="n">07</span>How we look after repairs and the home</h2>
+  <details class="incl"><summary>Urgent and non-urgent repairs</summary><div class="body">
+    <p><b>Urgent</b> (gas leak, burst pipe, major electrical fault, a safety risk): we try you and your emergency contact first; if we can't reach you we act to make the home safe, up to $3,300 (a burst hot-water service, for example).</p>
+    <p><b>Non-urgent:</b> globes, minor handyman items, replacing broken glasses, stained protectors or a dead kettle. We attend to these between bookings within reason and tell you what we did; under $200 we act without checking first when a guest is arriving and trades are hard to line up.</p>
+  </div></details>
+  <details class="incl"><summary>Bottled gas, wood fires, gas appliances and smoke alarms</summary><div class="body">
+    <p><b>Bottled gas:</b> we check levels at every clean and arrange refills through Apollo Bay Gas &amp; Electrical unless you tell us otherwise by email.</p>
+    <p><b>Wood fire:</b> a lockable wood store is ideal; we then supply enough for a 2–3 night stay and restock firewood and kindling at your cost (see fees). Wood is supplied to guests April to November as standard (about 3 m³ over a winter, depending on bookings); year round if the fire is the only heating. You provide an ash bucket, wheelbarrow, splitter and spare, and kindling stock.</p>
+    <p><b>Gas appliances</b> such as heaters and stoves should be maintained by a licensed gas fitter; unserviced appliances can pose a carbon-monoxide risk, and Energy Safe Victoria recommends a service at least every two years; <b>smoke alarms</b> tested and batteries replaced yearly and units replaced every ten years. Both are the owner's responsibility (your insurance may depend on it); we're happy to arrange checks if you ask.</p>
+  </div></details>
+  <h3>Indemnity</h3>
+  <div class="legal">
+    <p>Otway Retreats is authorised to collect booking and rental monies and issue receipts for rents, bonds, deposits and other monies collected on my/our behalf. Information provided with this form is subject to the Otway Retreats privacy policy (otwayretreats.com.au/privacy-policy).</p>
+    <p>I/we indemnify Otway Retreats as managing agent for claims for unpaid or maintenance accounts authorised in accordance with my/our instructions, and will reimburse advertising, cleaning, maintenance and general expenses incurred on those instructions, including urgent and non-urgent maintenance.</p>
+    <p>Otway Retreats cannot be held accountable for damage caused by guests; it will act within the law to recover costs from guests where appropriate. Where costs cannot be recovered, I/we indemnify Otway Retreats from claims and costs for damage to the property and inventory, and confirm we have been told of the need for adequate short-stay, public liability, contents and building insurance, which are often used to recover costs beyond a guest's bond.</p>
+    <p>Otway Retreats manages tariffs within normal company policy and uses strategies aimed at Airbnb's algorithms to optimise the listing. I/we entrust Otway Retreats to set tariffs on changing market conditions, and indemnify it for claims and costs if the initial strategy changes with the market. Ongoing discussion of rates is welcome.</p>
+    <p>I/we are responsible for annual checks of smoke alarms and gas appliances by licensed trades, for any other building requirements introduced during the management, and for accounting compliance including remitting the short-stay levy to the SRO after Otway Retreats collects it on our behalf.</p>
+  </div>
+  <div class="checks"><label><input type="checkbox" id="ack_indemnity" data-req>I/we have read and agree to the indemnity above *</label></div>
+</section>
+
+<!-- 8 -->
+<section class="step" id="s8">
+  <h2><span class="n">08</span>Property checklist</h2>
+  <p class="note">This builds the guest guide for the first arrival. Fill in what you can; we fill the gaps on the set-up visit.</p>
+  <h3>Bins</h3>
+  <div class="checks"><label><input type="checkbox" id="bin_red">Red waste bin</label><label><input type="checkbox" id="bin_yellow">Yellow recycling bin</label><label><input type="checkbox" id="bin_green">Green garden bin</label>
+    <div class="w"><span class="note">Where the bins live</span><input type="text" id="bins_loc"></div></div>
+  <h3>Services</h3>
+  <div class="grid">
+    <label class="f"><span>Bottled gas</span><select id="gas"><option value="">—</option><option>No</option><option>Yes</option></select></label>
+    <label class="f"><span>Gas bottle location</span><input id="gas_loc"></label>
+    <label class="f"><span>Main switchboard location</span><input id="switchboard"></label>
+    <label class="f"><span>Electricity meter location</span><input id="meter"></label>
+    <label class="f"><span>Smart meter</span><select id="smart_meter"><option value="">—</option><option>No</option><option>Yes</option></select></label>
+    <label class="f"><span>Hot water service</span><select id="hws"><option value="">—</option><option>Gas</option><option>Electric</option></select></label>
+    <label class="f"><span>HWS location</span><input id="hws_loc"></label>
+    <label class="f"><span>Smoke alarms – how many</span><input id="smoke_n" inputmode="numeric"></label>
+    <label class="f"><span>Smoke alarm locations</span><input id="smoke_loc"></label>
+    <label class="f"><span>Septic</span><select id="septic"><option value="">—</option><option>No</option><option>Yes</option></select></label>
+    <label class="f"><span>Appliance manuals on site</span><input id="manuals" placeholder="Where? We suggest a kitchen drawer"></label>
+    <label class="f"><span>Water</span><select id="water"><option value="">—</option><option>Town water</option><option>Tank water</option></select></label>
+    <label class="f"><span>Filter systems</span><input id="filters"></label>
+    <label class="f"><span>Cooktop</span><select id="cooktop"><option value="">—</option><option>Gas</option><option>Electric</option><option>Induction</option></select></label>
+    <label class="f"><span>Oven</span><select id="oven"><option value="">—</option><option>Gas</option><option>Electric</option></select></label>
+    <label class="f"><span>Barbecue</span><input id="bbq" placeholder="Location, if there is one"></label>
+  </div>
+  <div class="checks"><label><input type="checkbox" id="bbq_spare">Spare gas bottle for the barbecue</label><label><input type="checkbox" id="bbq_tools">Barbecue cleaning tools</label><label><input type="checkbox" id="bbq_cover">Barbecue cover</label></div>
+  <div class="grid">
+    <label class="f"><span>Air conditioning</span><input id="aircon" placeholder="Type, how many, which rooms"></label>
+  </div>
+  <h3>Fireplace</h3>
+  <div class="choices" style="margin-bottom:8px"><label><input type="radio" name="fireplace" value="no" checked>No fireplace</label><label><input type="radio" name="fireplace" value="yes">Wood fireplace</label><label><input type="radio" name="fireplace" value="gas">Gas or electric fireplace</label></div>
+  <div id="fire_more" hidden>
+    <p class="note">Firewood must be available to guests from April to November (year round if the fire is the only heating). A typical home uses about 3 m³ over winter depending on bookings. We supply enough for a 2–3 night stay from a lockable store so usage is controlled; if the store can't be locked, wood goes much faster. We can arrange local deliveries and stacking at your cost (see fees).</p>
+    <div class="grid">
+      <label class="f"><span>Fireplace type / brand</span><input id="fire_type" placeholder="e.g. Nectre slow-combustion"></label>
+      <label class="f"><span>Where firewood is stored</span><input id="fire_loc" placeholder="e.g. lockable shed by the carport"></label>
+      <label class="f"><span>Where kindling and firelighters are kept</span><input id="kindling_loc"></label>
+    </div>
+    <div class="checks">
+      <label><input type="checkbox" id="fire_lockable">Wood store can be locked off from guests</label>
+      <label><input type="checkbox" id="fire_tools">Fireplace tools (poker, brush, tongs)</label>
+      <label><input type="checkbox" id="fire_bucket">Metal bucket for ash</label>
+      <label><input type="checkbox" id="fire_barrow">Wheelbarrow for moving wood</label>
+      <label><input type="checkbox" id="fire_splitter">Splitter plus a spare</label>
+      <label><input type="checkbox" id="fire_stock">Wood is stocked now</label>
+      <label><input type="checkbox" id="fire_delivery">Please arrange firewood deliveries for us</label>
+    </div>
+  </div>
+  <h3>Wi-Fi</h3>
+  <div class="wifi">
+    <label class="f"><span>Provider</span><input id="wifi_provider" placeholder="e.g. Telstra, Starlink"></label>
+    <label class="f"><span>Network name</span><input id="wifi_name"></label>
+    <label class="f"><span>Password</span><input id="wifi_pw"></label>
+    <label class="f"><span>Modem location</span><input id="wifi_loc"></label>
+  </div>
+  <h3>Bedrooms</h3>
+  <p class="note">Bed sizes in each room (king, queen, double, single, bunk, tri-bunk). Guests like heating in every room; portable heaters and spare blankets are wise.</p>
+  <div id="bedrooms"></div>
+  <div class="grid">
+    <label class="f"><span>Total guests the home sleeps</span><input id="sleeps_total" value="6"></label>
+    <label class="f"><span>Main bathrooms (excluding ensuites)</span><input id="main_baths" inputmode="numeric"></label>
+    <label class="f"><span>Bath</span><select id="bath"><option value="">—</option><option>No</option><option>Yes</option></select></label>
+  </div>
+  <h3>Other rooms and areas</h3>
+  <div class="checks" data-group="rooms">
+    <label><input type="checkbox" value="Powder room">Powder room</label><label><input type="checkbox" value="Living room">Living room</label><label><input type="checkbox" value="Dining room">Dining room</label><label><input type="checkbox" value="Family room">Family room</label><label><input type="checkbox" value="Rumpus room">Rumpus room</label><label><input type="checkbox" value="Office/study">Office/study</label><label><input type="checkbox" value="Games room">Games room</label><label><input type="checkbox" value="Single lock-up garage">Single lock-up garage</label><label><input type="checkbox" value="Double lock-up garage">Double lock-up garage</label>
+    <div class="w"><span class="note">Other</span><input type="text" id="rooms_other"></div>
+  </div>
+  <h3>Kitchen</h3>
+  <div class="checks" data-group="kitchen">
+    <label><input type="checkbox" value="Fridge">Fridge</label><label><input type="checkbox" value="Freezer">Freezer</label><label><input type="checkbox" value="Dishwasher">Dishwasher</label><label><input type="checkbox" value="Oven">Oven</label><label><input type="checkbox" value="Microwave">Microwave</label><label><input type="checkbox" value="Electric kettle">Electric kettle</label><label><input type="checkbox" value="Toaster">Toaster</label><label><input type="checkbox" value="Sandwich press">Sandwich press</label><label><input type="checkbox" value="Kitchen utensils">Kitchen utensils</label><label><input type="checkbox" value="BBQ utensils">BBQ utensils</label><label><input type="checkbox" value="Wine glasses">Wine glasses</label><label><input type="checkbox" value="Rice cooker">Rice cooker</label><label><input type="checkbox" value="Blender">Blender</label><label><input type="checkbox" value="Outdoor kitchen">Outdoor kitchen</label>
+    <div class="w"><span class="note">Dining table seats</span><input type="text" id="dining_seats" inputmode="numeric"></div>
+    <div class="w"><span class="note">Other</span><input type="text" id="kitchen_other"></div>
+  </div>
+  <h3>Coffee</h3>
+  <p class="note">A coffee maker is essential; guests ask about it more than almost anything else in the kitchen. We recommend one that takes ground coffee: a stovetop moka pot (Bialetti style), a French press / plunger, or a proper home espresso machine. Pod machines are fine, but guests expect a generous supply of pods and we don't stock them, so you would need to keep the pod drawer topped up.</p>
+  <div class="choices" style="margin-bottom:8px">
+    <label><input type="radio" name="coffee_type" value="moka">Stovetop moka pot</label>
+    <label><input type="radio" name="coffee_type" value="press">French press / plunger</label>
+    <label><input type="radio" name="coffee_type" value="espresso">Espresso machine (ground coffee)</label>
+    <label><input type="radio" name="coffee_type" value="pod">Pod machine</label>
+    <label><input type="radio" name="coffee_type" value="none">None yet – we'll buy one</label>
+  </div>
+  <div class="grid">
+    <label class="f"><span>Brand / model and pod type if applicable</span><input id="coffee" placeholder="e.g. Nespresso Vertuo, Breville Barista Express"></label>
+    <label class="f"><span>Grinder on site?</span><select id="coffee_grinder"><option value="">—</option><option>No</option><option>Yes</option></select></label>
+  </div>
+  <h3>General</h3>
+  <div class="checks" data-group="general">
+    <label><input type="checkbox" value="Balcony">Balcony</label><label><input type="checkbox" value="Clothing storage">Clothing storage</label><label><input type="checkbox" value="Garden/yard">Garden/yard</label><label><input type="checkbox" value="Fully fenced yard">Fully fenced yard</label><label><input type="checkbox" value="Laptop-friendly workspace">Laptop-friendly workspace</label><label><input type="checkbox" value="External spa/hot tub">External spa/hot tub</label><label><input type="checkbox" value="Swimming pool">Swimming pool</label>
+    <div class="w"><span class="note">Main heating in living areas – type</span><input type="text" id="heating_main" placeholder="e.g. split system, ducted, wood fire only"></div>
+    <div class="w"><span class="note">Cooling in living areas – ceiling fans, portable fans, air con</span><input type="text" id="ceiling_fans" placeholder="e.g. ceiling fan in lounge, split system in dining"></div>
+    <div class="w"><span class="note">Spare portable heaters or fans – how many, where kept</span><input type="text" id="heaters"></div>
+    <div class="w"><span class="note">Other</span><input type="text" id="general_other"></div>
+  </div>
+  <h3>Bathrooms and wardrobes</h3>
+  <p class="note">Heating, blankets and fans for each bedroom are captured above, room by room.</p>
+  <div class="checks" data-group="bedbath">
+    <label><input type="checkbox" value="Hairdryer in main bathroom">Hairdryer in main bathroom</label><label><input type="checkbox" value="Hangers in every bedroom">Hangers in every bedroom</label><label><input type="checkbox" value="Bath">Bath</label><label><input type="checkbox" value="Spa bath">Spa bath</label><label><input type="checkbox" value="Block-out blinds or curtains to all bedrooms">Block-out blinds or curtains to all bedrooms</label><label><input type="checkbox" value="Spare pillows">Spare pillows</label>
+    <div class="w"><span class="note">Other</span><input type="text" id="bedbath_other"></div>
+  </div>
+  <h3>Entertainment</h3>
+  <div class="checks" data-group="ent">
+    <label><input type="checkbox" value="Smart TV with streaming (guests BYO accounts)">Smart TV with streaming</label><label><input type="checkbox" value="Beach toys">Beach toys</label><label><input type="checkbox" value="Board games">Board games</label><label><input type="checkbox" value="Sauna">Sauna</label><label><input type="checkbox" value="Ping pong table">Ping pong table</label><label><input type="checkbox" value="Pool table">Pool table</label><label><input type="checkbox" value="Record player">Record player</label><label><input type="checkbox" value="Piano">Piano</label><label><input type="checkbox" value="Exercise equipment">Exercise equipment</label><label><input type="checkbox" value="Yoga mats">Yoga mats</label><label><input type="checkbox" value="DVD player">DVD player</label>
+    <div class="w"><span class="note">Gaming console / music player – type</span><input type="text" id="ent_type"></div>
+    <div class="w"><span class="note">Other</span><input type="text" id="ent_other"></div>
+  </div>
+  <h3>Laundry</h3>
+  <div class="checks" data-group="laundry">
+    <label><input type="checkbox" value="Washing machine">Washing machine</label><label><input type="checkbox" value="Dryer">Dryer</label><label><input type="checkbox" value="Iron">Iron</label><label><input type="checkbox" value="Ironing board">Ironing board</label><label><input type="checkbox" value="Vacuum">Vacuum</label><label><input type="checkbox" value="Mop">Mop</label><label><input type="checkbox" value="Broom">Broom</label><label><input type="checkbox" value="Dustpan and brush">Dustpan and brush</label><label><input type="checkbox" value="Drying rack">Drying rack</label>
+  </div>
+  <h3>Accessibility</h3>
+  <div class="checks" data-group="access">
+    <label><input type="checkbox" value="Step-free entry">Step-free entry</label><label><input type="checkbox" value="Step-free inside">Step-free inside</label><label><input type="checkbox" value="Single-level home">Single-level home</label><label><input type="checkbox" value="Wheelchair access possible">Wheelchair access possible</label><label><input type="checkbox" value="Accessible-height bed">Accessible-height bed</label><label><input type="checkbox" value="Roll-in shower">Roll-in shower</label><label><input type="checkbox" value="Grab rails to shower">Grab rails to shower</label><label><input type="checkbox" value="Grab rails to toilet">Grab rails to toilet</label><label><input type="checkbox" value="Shower chair">Shower chair</label><label><input type="checkbox" value="Ceiling hoist">Ceiling hoist</label>
+  </div>
+  <h3>Children</h3>
+  <p class="note">Children's amenities matter in a family home and show up in searches. A portable cot and a high chair are the bare minimum, plus some games and books; a few toys and children's dinnerware go a long way. Target or Kmart cover all of this inexpensively. Tick what's there now; if you'd like us to buy the basics at set-up, tick the last box.</p>
+  <div class="checks" data-group="kids">
+    <label><input type="checkbox" value="Portable cot">Portable cot</label><label><input type="checkbox" value="High chair">High chair</label><label><input type="checkbox" value="Baby bath">Baby bath</label><label><input type="checkbox" value="Changing table">Changing table</label><label><input type="checkbox" value="Children's dinnerware">Children's dinnerware</label><label><input type="checkbox" value="Books for kids">Books for kids</label><label><input type="checkbox" value="Toys">Toys</label><label><input type="checkbox" value="Games for children">Games for children</label><label><input type="checkbox" value="Child play area">Child play area</label><label><input type="checkbox" value="Cubby house">Cubby house</label>
+    <label><input type="checkbox" value="Please buy the basics (cot, high chair, games, books) at set-up and charge us">Please buy the basics (cot, high chair, games, books) at set-up and charge us</label>
+    <div class="w"><span class="note">Other</span><input type="text" id="kids_other"></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="step" id="s9">
+  <h2><span class="n">09</span>Photography, set-up and fees</h2>
+  <h3>Professional photography · $350</h3>
+  <p class="note">Every home needs professional photos (minimum 1920 × 1440 if you supply your own). We arrange Great Ocean Photography or similar for 15 high-resolution images and style the home for the shoot: real-estate shots plus magazine-style interiors. Drone, video, dusk and floor plans are quoted separately. Waived if you can supply photos of that quality.</p>
+  <div class="choices"><label><input type="radio" name="photos" value="otway" checked>Please arrange photography ($350)</label><label><input type="radio" name="photos" value="own">We'll supply professional photos</label></div>
+  <h3>Marketing and set-up package · $600, once</h3>
+  <p class="note">The initial inspection, laminated signage and guest guides, loading the listing on every channel, setting the home up for the shoot, and the first clean and linen (three hours included; a full vacate clean beyond that is $70 an hour) plus initial stocking of any missing supplies.</p>
+  <h3>Annual marketing fee · $500, each year</h3>
+  <p class="note">Charged at commencement and on each anniversary: our website, Airbnb and Booking.com presence, channel manager, inventory and digital guest-guide software, AI guest support and cleaning-management software with photos after every clean.</p>
+  <h3>Paying the set-up</h3>
+  <p class="note">Marketing begins once the set-up fee, annual fee and photography (if we arrange it) are received. All fees include GST.</p>
+  <table><tbody>
+    <tr><td>Initial set-up fee</td><td class="r">$600</td></tr>
+    <tr><td>Annual marketing subscription</td><td class="r">$500</td></tr>
+    <tr id="photo_row"><td>Professional photography</td><td class="r">$350</td></tr>
+    <tr><td><b>Total to commence</b></td><td class="r"><b id="setup_total">$1,450</b></td></tr>
+  </tbody></table>
+  <div class="callout"><b>Direct deposit:</b> Otway Retreats Rental Trust · BSB 013 642 · Account 418918556 · Reference: your surname. Email the receipt to hello@otwayretreats.com.au. Prefer card? Reply to our email and we'll send a secure payment link (Visa/Mastercard 2.2%, Amex 3.85% surcharge).</div>
+  <div class="choices"><label><input type="radio" name="pay" value="deposit" checked>We'll pay by direct deposit</label><label><input type="radio" name="pay" value="card">Please send a card payment link</label></div>
+
+  <details class="incl"><summary>Schedule of fees (all inclusive of GST)</summary><div class="body"><div class="tbl"><table>
+    <tr><td>Management fee</td><td>22% of all booking income, including the guest cleaning fee</td></tr>
+    <tr><td>Cleaning</td><td>$350 per clean</td></tr>
+    <tr><td>Linen</td><td>$150 per booking</td></tr>
+    <tr><td>Initial set-up fee</td><td>$600 once</td></tr>
+    <tr><td>Photography</td><td>$350 once, if required</td></tr>
+    <tr><td>Annual marketing subscription</td><td>$500 a year</td></tr>
+    <tr><td>Keysafes</td><td>$110 first, $80 second, if we install</td></tr>
+    <tr><td>Lawns and gardens</td><td>$88 an hour, if we're appointed: lawns only (2–3 hrs every 4–6 weeks) or comprehensive incl. weeding, pruning and spraying (about double)</td></tr>
+    <tr><td>General maintenance</td><td>$60 for the first half hour plus materials, then $30 per half hour</td></tr>
+    <tr><td>Laundering protectors or owner linen off site</td><td>$10–20 per item</td></tr>
+    <tr><td>Excess rubbish removal</td><td>$80–110 as incurred, when bins overflow before collection</td></tr>
+    <tr><td>Additional supplies</td><td>At cost, for items outside the standard supply package</td></tr>
+    <tr><td>Firewood</td><td>$250–300 per m³ plus stacking at $88 an hour; kindling $25 a bag, firelighters $5 a packet</td></tr>
+    <tr><td>Weekend and public-holiday cleans</td><td>Saturday or Sunday +50%; public holidays double, only when a changeover can't be moved</td></tr>
+    <tr><td>Owner bookings</td><td>Linen and cleaning as above unless you opt to re-make beds or clean yourself on the owner booking form</td></tr>
+  </table></div><p class="note">External costs may change without notice.</p></div></details>
+
+  <details class="incl"><summary>Our current standard policies</summary><div class="body">
+    <p><b>Cancellation:</b> Airbnb's Moderate policy, a full refund up to five days before arrival; it has proven effective for forward bookings and may be adjusted with the market.</p>
+    <p><b>Length-of-stay discounts</b> on every channel: 10% for 3 nights, 15% for 4–6, 20% for a week, 25% for a month. Nightly rates ease up to 5% inside the last two weeks if a date is still open; we don't stack early-bird or last-minute offers on top.</p>
+    <p><b>Launch:</b> 20% off the first three Airbnb bookings to seed reviews. <b>Winter:</b> we may run offers in low demand to hold search ranking; tell us if you'd rather not. <b>Cleaning fee:</b> guests pay a flat $100 per stay, part of your booking income.</p>
+    <p><b>Airbnb's algorithms</b> reward continuous bookings, value and guest experience more than any single price, so you may see pricing vary while the listing establishes or in quiet periods.</p>
+  </div></details>
+  <details class="incl" id="expect"><summary>What to expect in the first year</summary><div class="body">
+    <p>Launching between April and November takes time. Homes with views, rural settings, spas, saunas, pools or play areas book consistently on weekends; homes without them lean on long weekends and school holidays, which is why presentation and photography matter so much.</p>
+    <p>Early on we price for value to win bookings and reviews, then lift rates as performance builds. Winter running costs can exceed income; the bulk of the year's profit sits in summer. Owners who stay in dialogue with us, keep presentation at guest standard and act on feedback see the best results.</p>
+  </div></details>
+  <div class="checks"><label><input type="checkbox" id="ack_fees" data-req>I/we have read the schedule of fees, the standard policies and what to expect *</label></div>
+</section>
+
+<!-- 10 -->
+<section class="step" id="s10">
+  <h2><span class="n">10</span>Rate schedule</h2>
+  <p class="note">Starting bands for 165 Tuxion Road. Rates move inside them with demand; guests pay a flat $100 cleaning fee per stay plus $40 per person per night above six guests.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Season</th><th>Minimum stay</th><th class="r">Low</th><th class="r">High</th></tr></thead>
+    <tbody>
+      <tr><td>High peak · 21 Dec – 28 Jan, Easter, Marathon weekend</td><td>4 nights over Christmas–New Year, 2–3 either side and at Easter; relaxed closer to the date</td><td class="r">$750</td><td class="r">$1,250</td></tr>
+      <tr><td>Long weekends</td><td>2–3 nights</td><td class="r">$600</td><td class="r">$850</td></tr>
+      <tr><td>School holidays</td><td>2 nights</td><td class="r">$600</td><td class="r">$780</td></tr>
+      <tr><td>Base rate · everything else</td><td>2 nights</td><td class="r">$380</td><td class="r">$600</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Pricing rules</h3>
+  <div class="tbl"><table id="rules">
+    <thead><tr><th>Rule</th><th>Amount</th><th>Applies</th></tr></thead>
+    <tbody>
+      <tr><td>Extra guest fee</td><td>$40</td><td>Per person per night above six guests</td></tr>
+      <tr><td>Guest cleaning fee</td><td>$100</td><td>Flat, per stay, paid by the guest and passed to you as booking income</td></tr>
+      <tr><td>Length-of-stay discounts</td><td>10% / 15% / 20% / 25%</td><td>3 nights / 4–6 nights / 7+ nights / 28+ nights, on every channel</td></tr>
+      <tr><td>Last-minute</td><td>Up to 5%</td><td>Rates ease gradually inside the last 14 days if a date is still open (PriceLabs)</td></tr>
+      <tr><td>Early bird</td><td>Off</td><td>Not currently used; we don't stack offers</td></tr>
+      <tr><td>Non-refundable discount</td><td>10%</td><td>For guests who book without the option to cancel</td></tr>
+      <tr><td>Launch offer (Airbnb only)</td><td>20%</td><td>The first three bookings, to seed reviews</td></tr>
+      <tr><td>Pet fee</td><td>$50</td><td>Per booking with a pet, Airbnb, pet-friendly homes only</td></tr>
+      <tr><td>Winter offers</td><td>Varies</td><td>Occasional offers in low demand to hold search ranking; tell us if you'd rather not</td></tr>
+      <tr><td>Cancellation policy</td><td>Moderate</td><td>Full refund up to 5 days before arrival</td></tr>
+    </tbody>
+  </table></div>
+  <details class="incl"><summary>Notes to the schedule</summary><div class="body"><ol class="legal">
+    <li>Based on the current bedding configuration; a different guest count may affect pricing and occupancy.</li>
+    <li>Cleaning rates reflect average clean times; linen is set on average use and stays the same per booking.</li>
+    <li>Base rates are set on actual sleeping spaces; pull-outs, trundles and top bunks attract the $40 extra-guest fee.</li>
+    <li>Projections are estimates from our experience with similar homes, not a guarantee of performance; please do your own due diligence.</li>
+    <li>Tariffs are reviewed continually with your approval as supply and demand move.</li>
+    <li>Channel fees are added on top of your rate: $200 a night with us lists at about $234 on Airbnb (+17.1%).</li>
+    <li>Cleaning fees paid by guests form part of booking income; commission is calculated on the whole booking income, then cleaning, linen and other expenses are deducted.</li>
+  </ol></div></details>
+</section>
+
+<!-- 11 -->
+<section class="step" id="s11">
+  <h2><span class="n">11</span>Declaration and signature</h2>
+  <div class="legal"><ol>
+    <li>I/we appoint Otway Retreats as managing agent with authority to accept and manage bookings; collect all monies and remit them; pay expenses; market the property; manage pricing; engage contractors for maintenance I/we approve; and liaise with guests.</li>
+    <li>No inspections for sale or permanent rental may take place while guests are booked.</li>
+    <li>I/we will advise Otway Retreats immediately of dates not available; otherwise all available dates may be booked. If I/we cancel a booking in place, commission on the total booking and any third-party cancellation fees (up to 50% of the booking) remain payable.</li>
+    <li>Either party may end this agreement with seven days' written notice, without prejudice to rights and obligations accrued before the termination date.</li>
+    <li>On termination, existing bookings cannot be transferred to another agency; if they must be cancelled, Otway Retreats may pass on cancellation fees for bookings within 120 days of notice and retain commission for lost income unless otherwise agreed.</li>
+    <li>While under management the property will not be advertised for holiday rental by anyone else; Otway Retreats has exclusive rights to advertise and book it until notice under clause 4.</li>
+  </ol></div>
+  <div class="checks"><label><input type="checkbox" id="ack_decl" data-req>I/we have read and agree to the declaration, the indemnity and the schedule of fees *</label></div>
+  <div class="grid">
+    <label class="f req"><span>Signed by (full name)</span><input id="sign1_name" data-req value="Anna Till"></label>
+    <label class="f req"><span>Date</span><input id="sign1_date" type="date" data-req></label>
+  </div>
+  <div class="sig" id="sigbox1"><canvas id="sig1"></canvas><button class="clear quiet" type="button" data-clear="sig1">Clear</button><span class="ph" id="ph1">Draw your signature here (optional – your typed name below is the signature of record)</span></div>
+  <div class="checks" style="margin-top:10px"><label><input type="checkbox" id="two_signers">A second owner is signing too</label></div>
+  <div id="signer2" hidden>
+    <div class="grid">
+      <label class="f"><span>Second owner (full name)</span><input id="sign2_name" value="Paul Cornelisson"></label>
+      <label class="f"><span>Date</span><input id="sign2_date" type="date"></label>
+    </div>
+    <div class="sig" id="sigbox2"><canvas id="sig2"></canvas><button class="clear quiet" type="button" data-clear="sig2">Clear</button><span class="ph" id="ph2">Second signature</span></div>
+  </div>
+  <p class="note" style="margin-top:10px">By typing your name, ticking the declaration and sending this form you are signing it electronically, with the same effect as a handwritten signature. We countersign and send you a copy with your set-up date.</p>
+  <div id="problems" class="callout err" hidden></div>
+</section>
+
+<section class="step" id="done" hidden>
+  <h2>Thank you</h2>
+  <div class="callout ok" id="done-msg">Opening your email…</div>
+  <div class="steps">
+    <div><b>1</b><span>On a phone, the share sheet opens – choose <b>Mail</b> (or any email app) and send to <b>hello@otwayretreats.com.au</b>. On a computer your mail app opens. If neither happens, tap <b>Copy the details</b>, open your email, paste, and use the subject shown below.</span></div>
+    <div><b>2</b><span>Want a copy for your records? Tap <b>Download PDF copy</b>.</span></div>
+    <div><b>3</b><span>Pay the set-up by direct deposit (details in section 09). We'll confirm receipt, countersign, and book the set-up visit and photos.</span></div>
+  </div>
+  <div class="row" style="margin-top:10px"><button class="primary" id="btn-mail">Open email</button><button id="btn-copy">Copy the details</button><button class="quiet" id="btn-pdf-again">Download PDF copy</button><a id="mail-anchor" class="chip" target="_blank" rel="noopener" hidden href="#">Mail link</a><a id="pdf-anchor" class="chip" target="_blank" rel="noopener" hidden href="#">PDF</a></div>
+  <p class="note" id="mail-subject"></p>
+  <details class="incl"><summary>Everything you entered, as text</summary><div class="body"><pre class="summary" id="summary"></pre></div></details>
+</section>
+</div>
+
+<div class="dock"><div class="in"><small id="dock-note">Saves on this device as you type</small><button class="primary" id="btn-submit">Sign &amp; send to Otway Retreats</button></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+(function(){
+const CFG={"slug": "165-tuxion-road", "address": "165 Tuxion Road", "suburb": "Apollo Bay", "owner_display": "Anna Till & Paul Cornelisson", "bedrooms": 3, "clean": "$350", "linen": "$150", "extra_above": "six", "sch": {"peak": "$750 \u2013 $1,250 a night", "lw": "$600 \u2013 $850 a night", "hols": "$600 \u2013 $780 a night", "base": "$380 \u2013 $600 a night"}};
+const $=id=>document.getElementById(id);
+const KEY='authority:'+CFG.slug;
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
+const toast=m=>{const t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),2200);};
+
+/* bedrooms */
+const BEDOPTS='<option value="">—</option>'+['King','Queen','Double','King single','Single','Bunk (two singles)','Tri-bunk','Double-single bunk','Trundle','Sofa bed','Cot'].map(b=>`<option>${b}</option>`).join('');
+const bedWrap=$('bedrooms');
+for(let i=1;i<=Math.max(CFG.bedrooms,1);i++){
+  bedWrap.insertAdjacentHTML('beforeend',`<div class="bedroom"><div class="grid tight"><label class="f"><span>Bedroom ${i} – bed</span><select id="bed${i}_types">${BEDOPTS}</select></label><label class="f"><span>Second bed in room</span><select id="bed${i}_bed2"><option value="">None</option>${BEDOPTS}</select></label><label class="f"><span>Ensuite</span><select id="bed${i}_ens"><option value="">—</option><option>No</option><option>Yes</option></select></label><label class="f"><span>Heating</span><input id="bed${i}_heat" placeholder="None, panel, split system…"></label></div><div class="checks small"><label><input type="checkbox" id="bed${i}_blankets">Spare blankets</label><label><input type="checkbox" id="bed${i}_eblanket">Electric blanket</label><label><input type="checkbox" id="bed${i}_fan">Fan</label><label class="ens-only" id="bed${i}_hd_wrap" hidden><input type="checkbox" id="bed${i}_hairdryer">Hairdryer in ensuite</label></div></div>`);
+}
+
+/* fields */
+const fields=()=>Array.from(document.querySelectorAll('input,select,textarea')).filter(e=>e.id&&!e.readOnly);
+const radios=()=>Array.from(new Set(Array.from(document.querySelectorAll('input[type=radio]')).map(r=>r.name)));
+function state(){
+  const s={};fields().forEach(e=>{if(e.type==='checkbox')s[e.id]=e.checked;else if(e.type!=='radio')s[e.id]=e.value;});
+  radios().forEach(n=>{const r=document.querySelector(`input[name="${n}"]:checked`);s['r_'+n]=r?r.value:'';});
+  document.querySelectorAll('[data-group]').forEach(g=>{s['g_'+g.dataset.group]=Array.from(g.querySelectorAll('input[type=checkbox]:checked')).map(c=>c.value);});
+  s._sig1=sigData('sig1');s._sig2=sigData('sig2');
+  return s;
+}
+function restore(s){
+  fields().forEach(e=>{if(!(e.id in s))return;if(e.type==='checkbox')e.checked=!!s[e.id];else if(e.type!=='radio')e.value=s[e.id]??'';});
+  radios().forEach(n=>{const v=s['r_'+n];if(v){const r=document.querySelector(`input[name="${n}"][value="${v}"]`);if(r)r.checked=true;}});
+  document.querySelectorAll('[data-group]').forEach(g=>{const v=s['g_'+g.dataset.group]||[];g.querySelectorAll('input[type=checkbox]').forEach(c=>c.checked=v.includes(c.value));});
+  if(s._sig1)sigLoad('sig1',s._sig1);if(s._sig2)sigLoad('sig2',s._sig2);
+}
+let saveT;
+function save(){clearTimeout(saveT);saveT=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify({...state(),_saved:new Date().toISOString()}));$('saved').textContent='Saved on this device · '+new Date().toLocaleTimeString('en-AU',{hour:'numeric',minute:'2-digit'});}catch(e){$('saved').textContent='';}progress();},300);}
+function progress(){
+  const all=Array.from(document.querySelectorAll('[data-req]'));const names=new Set();const req=all.filter(e=>{if(e.type!=='radio')return true;if(names.has(e.name))return false;names.add(e.name);return true;});
+  let done=0;req.forEach(e=>{if(e.type==='radio'?document.querySelector(`input[name="${e.name}"]:checked`):(e.type==='checkbox'?e.checked:e.value.trim()))done++;});
+  const total=req.length;
+  $('bar').style.width=Math.round(done/total*100)+'%';$('prog-text').textContent=`${done} of ${total} required fields`;
+}
+
+/* conditional bits */
+function cond(){
+  $('pets_more').hidden=!document.querySelector('input[name=pets][value=yes]').checked;
+  $('gardener').hidden=!document.querySelector('input[name=lawns][value=own]').checked;
+  $('pool_more').hidden=!document.querySelector('input[name=pool][value=yes]').checked;
+  for(let i=1;i<=CFG.bedrooms;i++){const w=$(`bed${i}_hd_wrap`);if(w)w.hidden=$(`bed${i}_ens`).value!=='Yes';}
+  $('fire_more').hidden=!document.querySelector('input[name=fireplace][value=yes]:checked')&&!document.querySelector('input[name=fireplace][value=gas]:checked');
+  $('signer2').hidden=!$('two_signers').checked;
+  $('ks_guest_fields').hidden=!!document.querySelector('input[name=ks_guest][value=otway]:checked');$('ks_spare_fields').hidden=!!document.querySelector('input[name=ks_spare][value=otway]:checked');if($('two_signers').checked&&!$('sign2_date').value)$('sign2_date').value=today();
+  const photos=document.querySelector('input[name=photos][value=otway]').checked;
+  $('photo_row').style.opacity=photos?'1':'.4';$('setup_total').textContent=photos?'$1,450':'$1,100';
+}
+document.addEventListener('input',()=>{cond();save();});document.addEventListener('change',()=>{cond();save();});
+
+/* signatures */
+const sigs={};
+function sigInit(id){
+  const c=$(id),ctx=c.getContext('2d');sigs[id]={c,ctx,has:false,drawing:false};
+  function size(){const r=c.getBoundingClientRect();const img=sigs[id].has?c.toDataURL():null;c.width=r.width*devicePixelRatio;c.height=150*devicePixelRatio;ctx.scale(devicePixelRatio,devicePixelRatio);ctx.lineWidth=2;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--ink').trim()||'#000';if(img)sigLoad(id,img);}
+  size();addEventListener('resize',size);
+  const pos=e=>{const r=c.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top];};
+  c.addEventListener('pointerdown',e=>{e.preventDefault();c.setPointerCapture(e.pointerId);sigs[id].drawing=true;const [x,y]=pos(e);ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+0.1,y);ctx.stroke();});
+  c.addEventListener('pointermove',e=>{if(!sigs[id].drawing)return;e.preventDefault();const [x,y]=pos(e);ctx.lineTo(x,y);ctx.stroke();sigs[id].has=true;$(id==='sig1'?'ph1':'ph2').hidden=true;});
+  const up=()=>{if(sigs[id].drawing){sigs[id].drawing=false;save();}};
+  c.addEventListener('pointerup',up);c.addEventListener('pointercancel',up);c.addEventListener('pointerleave',up);
+}
+function sigClear(id){const s=sigs[id];s.ctx.save();s.ctx.setTransform(1,0,0,1,0,0);s.ctx.clearRect(0,0,s.c.width,s.c.height);s.ctx.restore();s.has=false;$(id==='sig1'?'ph1':'ph2').hidden=false;save();}
+function sigHas(id){return sigs[id]&&sigs[id].has;}
+function sigData(id){return sigHas(id)?sigs[id].c.toDataURL('image/png'):'';}
+function sigLoad(id,data){const s=sigs[id];if(!s||!data)return;const img=new Image();img.onload=()=>{s.ctx.save();s.ctx.setTransform(1,0,0,1,0,0);s.ctx.clearRect(0,0,s.c.width,s.c.height);s.ctx.drawImage(img,0,0,s.c.width,s.c.height);s.ctx.restore();s.has=true;$(id==='sig1'?'ph1':'ph2').hidden=true;progress();};img.src=data;}
+document.querySelectorAll('[data-clear]').forEach(b=>b.onclick=()=>sigClear(b.dataset.clear));
+sigInit('sig1');sigInit('sig2');
+
+/* restore */
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s){restore(s);if(s._saved)$('saved').textContent='Saved on this device · '+new Date(s._saved).toLocaleDateString('en-AU');}}catch(e){}
+if(!$('sign1_date').value)$('sign1_date').value=today();
+cond();progress();
+
+/* summary text */
+const fmtD=s=>{if(!s)return '';const [y,m,d]=s.split('-');return `${d}/${m}/${y}`;};
+const val=id=>{const e=$(id);if(!e)return '';return e.type==='checkbox'?(e.checked?'Yes':'No'):e.value.trim();};
+const rad=n=>{const r=document.querySelector(`input[name="${n}"]:checked`);return r?r.parentElement.textContent.trim():'';};
+const grp=n=>Array.from(document.querySelectorAll(`[data-group="${n}"] input[type=checkbox]:checked`)).map(c=>c.value);
+function sections(){
+  const beds=[];for(let i=1;i<=CFG.bedrooms;i++){const extras=[val(`bed${i}_blankets`)==='Yes'&&'spare blankets',val(`bed${i}_eblanket`)==='Yes'&&'electric blanket',val(`bed${i}_fan`)==='Yes'&&'fan',val(`bed${i}_ens`)==='Yes'&&(val(`bed${i}_hairdryer`)==='Yes'?'hairdryer in ensuite':'no hairdryer in ensuite')].filter(Boolean);const bedsIn=[val(`bed${i}_types`),val(`bed${i}_bed2`)].filter(Boolean).join(' + ');if(bedsIn||val(`bed${i}_ens`)||val(`bed${i}_heat`)||extras.length)beds.push([`Bedroom ${i}`,`${bedsIn}${val(`bed${i}_ens`)?' · ensuite: '+val(`bed${i}_ens`):''}${val(`bed${i}_heat`)?' · heating: '+val(`bed${i}_heat`):''}${extras.length?' · '+extras.join(', '):''}`]);}
+  const list=(n,other)=>{const a=grp(n);if(val(other))a.push('Other: '+val(other));return a.join(', ')||'—';};
+  return [
+   ['Property & owner',[['Holiday home',CFG.address+', '+CFG.suburb],['Owner/s',val('owner_names')],['Property name',val('property_name')],['Mailing address',val('mailing_address')],['Email',val('owner_email')],['Mobile',val('mobile')],['Home phone',val('phone_home')],['Available from',val('available_from')]]],
+   ['Bank details for owner payments',[['Account name',val('acct_name')],['Bank',val('bank')],['Branch',val('branch')],['BSB',val('bsb')],['Account number',val('acct_no')]]],
+   ['Access, keys & safety',[['Alarm',rad('alarm')+(val('alarm_code')?' · '+val('alarm_code'):'')],['Guest keysafe',rad('ks_guest')+([val('ks_guest_loc'),val('ks_guest_code')&&'code '+val('ks_guest_code')].filter(Boolean).length?' · '+[val('ks_guest_loc'),val('ks_guest_code')&&'code '+val('ks_guest_code')].filter(Boolean).join(' · '):'')],['Spare keysafe',rad('ks_spare')+([val('ks_spare_loc'),val('ks_spare_code')&&'code '+val('ks_spare_code')].filter(Boolean).length?' · '+[val('ks_spare_loc'),val('ks_spare_code')&&'code '+val('ks_spare_code')].filter(Boolean).join(' · '):'')],['Emergency contact',[val('ec_name'),val('ec_rel'),val('ec_phone'),val('ec_email')].filter(Boolean).join(' · ')]]],
+   ['Pets',[['Pet friendly',rad('pets')],['Secured area for dogs',rad('pets').startsWith('Pet')?(rad('fencing')+(val('fencing_loc')?' · '+val('fencing_loc'):'')):'']]],
+   ['Cleaning & linen',[['Cleaning package',CFG.clean+' per clean'],['Linen package',CFG.linen+' per booking'],['Authorisation','Cleaning and linen services authorised as deemed necessary by Otway Retreats']]],
+   ['Lawns, insurance, pool & trades',[['Lawns',rad('lawns')],['Gardener',[val('gardener_name'),val('gardener_phone'),val('gardener_email')].filter(Boolean).join(' · ')],['Building insurer',val('ins_bld')+(val('ins_bld_no')?' · policy '+val('ins_bld_no'):'')],['Public liability',val('ins_pl')+(val('ins_pl_cover')?' · cover '+val('ins_pl_cover'):'')],['Holiday-rental/contents insurer',val('ins_str')+(val('ins_str_no')?' · policy '+val('ins_str_no'):'')],['Pool or spa',rad('pool')+(val('pool_inspect')==='Yes'?' · arrange council inspection':'')+(val('pool_cert')==='Yes'?' · certificate to be supplied':'')],['Plumber',[val('plumber'),val('plumber_ph')].filter(Boolean).join(' · ')],['Electrician',[val('electrician'),val('electrician_ph')].filter(Boolean).join(' · ')],['Handyman',[val('handyman'),val('handyman_ph')].filter(Boolean).join(' · ')],['Bins',rad('bins')]]],
+   ['Indemnity',[['Agreed',val('ack_indemnity')]]],
+   ['Property checklist',[['Bins',[val('bin_red')==='Yes'&&'red',val('bin_yellow')==='Yes'&&'yellow',val('bin_green')==='Yes'&&'green'].filter(Boolean).join(', ')+(val('bins_loc')?' · '+val('bins_loc'):'')],['Bottled gas',val('gas')+(val('gas_loc')?' · '+val('gas_loc'):'')],['Switchboard',val('switchboard')],['Electricity meter',val('meter')+(val('smart_meter')?' · smart meter: '+val('smart_meter'):'')],['Hot water',val('hws')+(val('hws_loc')?' · '+val('hws_loc'):'')],['Smoke alarms',[val('smoke_n'),val('smoke_loc')].filter(Boolean).join(' · ')],['Septic',val('septic')],['Appliance manuals',val('manuals')],['Water',val('water')+(val('filters')?' · filters: '+val('filters'):'')],['Cooktop / oven',[val('cooktop'),val('oven')].filter(Boolean).join(' / ')],['Barbecue',val('bbq')+[val('bbq_spare')==='Yes'&&'spare bottle',val('bbq_tools')==='Yes'&&'cleaning tools',val('bbq_cover')==='Yes'&&'cover'].filter(Boolean).map(x=>' · '+x).join('')],['Air conditioning',val('aircon')],['Fireplace',rad('fireplace')+(rad('fireplace')!=='No fireplace'?[val('fire_type'),val('fire_loc')&&'wood: '+val('fire_loc'),val('kindling_loc')&&'kindling: '+val('kindling_loc'),val('fire_lockable')==='Yes'&&'lockable store',val('fire_tools')==='Yes'&&'tools',val('fire_bucket')==='Yes'&&'ash bucket',val('fire_barrow')==='Yes'&&'wheelbarrow',val('fire_splitter')==='Yes'&&'splitter',val('fire_stock')==='Yes'&&'wood stocked',val('fire_delivery')==='Yes'&&'arrange deliveries'].filter(Boolean).map(x=>' · '+x).join(''):'')],['Wi-Fi',[val('wifi_provider'),val('wifi_name')&&'network '+val('wifi_name'),val('wifi_pw')&&'password '+val('wifi_pw'),val('wifi_loc')&&'modem '+val('wifi_loc')].filter(Boolean).join(' · ')],...beds,['Sleeps',val('sleeps_total')],['Main bathrooms',val('main_baths')+(val('bath')?' · bath: '+val('bath'):'')],['Other rooms',list('rooms','rooms_other')],['Kitchen',list('kitchen','kitchen_other')+(val('dining_seats')?' · dining seats '+val('dining_seats'):'')],['Coffee',[rad('coffee_type'),val('coffee'),val('coffee_grinder')&&'grinder: '+val('coffee_grinder')].filter(Boolean).join(' · ')],['General',list('general','general_other')+[['heating_main','living-area heating'],['ceiling_fans','living-area cooling'],['heaters','spare heaters/fans']].filter(([k])=>val(k)).map(([k,l])=>' · '+l+': '+val(k)).join('')],['Bathrooms & wardrobes',list('bedbath','bedbath_other')],['Entertainment',list('ent','ent_other')+(val('ent_type')?' · '+val('ent_type'):'')],['Laundry',list('laundry','')],['Accessibility',list('access','')],['Children',list('kids','kids_other')]]],
+   ['Photography, set-up & fees',[['Photography',rad('photos')],['Set-up payment',rad('pay')],['Total to commence',$('setup_total').textContent],['Read fees, policies and what to expect',val('ack_fees')],['Fees acknowledged','Management 22% of booking income; set-up $600; annual $500; schedule of fees as published']]],
+   ['Rate schedule',[['High peak',CFG.sch.peak],['Long weekends',CFG.sch.lw],['School holidays',CFG.sch.hols],['Base',CFG.sch.base],['Guest cleaning fee','$100 per stay'],['Extra guest fee','$40 per person per night above '+CFG.extra_above+' guests']]],
+   ['Declaration',[['Agreed to declaration, indemnity and fees',val('ack_decl')],['Signed by',val('sign1_name')+' on '+fmtD(val('sign1_date'))],...( $('two_signers').checked?[['Also signed by',val('sign2_name')+' on '+fmtD(val('sign2_date'))]]:[])]],
+  ];
+}
+let signedAt='';
+function summaryText(){return `OTWAY RETREATS – HOLIDAY MANAGEMENT AGREEMENT\n${CFG.address}, ${CFG.suburb}\nSigned electronically by ${val('sign1_name')}${$('two_signers').checked&&val('sign2_name')?' and '+val('sign2_name'):''} on ${signedAt||new Date().toLocaleString('en-AU')}${sigHas('sig1')?' (drawn signature on the PDF copy)':''}\n\n`+sections().map(([h,rows])=>h.toUpperCase()+'\n'+rows.filter(([k,v])=>v&&v!=='—').map(([k,v])=>`${k}: ${v}`).join('\n')).join('\n\n')+`\n\n— Sent from the Otway Retreats authority page for ${CFG.address}.`;}
+
+/* validation */
+function validate(){
+  const probs=[];const seen=new Set();document.querySelectorAll('[data-req]').forEach(e=>{if(e.type==='radio'){if(seen.has(e.name))return;seen.add(e.name);if(!document.querySelector(`input[name="${e.name}"]:checked`))probs.push({ks_guest:'Guest keysafe – who installs it',ks_spare:'Spare keysafe – who installs it'}[e.name]||e.name);return;}const ok=e.type==='checkbox'?e.checked:e.value.trim();e.classList.toggle('bad',!ok);if(!ok){const l=e.closest('label');probs.push(l?l.textContent.replace(/\*|\s+/g,' ').trim():e.id);}});
+  const em=$('owner_email').value.trim();if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))probs.push('Email address looks incomplete');
+  return probs;
+}
+
+/* PDF */
+let pdfBlob=null,pdfName='';
+function money(s){return s;}
+function makePdf(){
+  if(!window.jspdf){throw new Error('the PDF tool did not load. Check your connection and reload the page, or use "Copy the details as text" and email them to us.');}
+  const {jsPDF}=window.jspdf;const doc=new jsPDF({unit:'mm',format:'a4'});
+  const W=210,M=16,CW=W-2*M;let y=M;
+  const line=(txt,size=10,style='normal',gap=4.8,color=[27,30,28])=>{doc.setFont('helvetica',style);doc.setFontSize(size);doc.setTextColor(...color);const lines=doc.splitTextToSize(txt,CW);lines.forEach(l=>{if(y>282){doc.addPage();y=M;}doc.text(l,M,y);y+=gap;});};
+  const head=()=>{doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(100);doc.text('OTWAY RETREATS',M,10);doc.text('Holiday Management Agreement · '+CFG.address,W-M,10,{align:'right'});doc.setDrawColor(200);doc.line(M,12.5,W-M,12.5);};
+  head();y=22;
+  line('Holiday Management Agreement',20,'bold',9);
+  line(CFG.address+', '+CFG.suburb,13,'normal',7);
+  line('Prepared for '+CFG.owner_display+' · completed '+new Date().toLocaleString('en-AU')+' · Otway Retreats, Apollo Bay · hello@otwayretreats.com.au · 0437 375 774',8.5,'normal',7,[100,100,100]);
+  sections().forEach(([h,rows])=>{
+    const rr=rows.filter(([k,v])=>v&&v!=='—');if(!rr.length)return;
+    y+=3;if(y>270){doc.addPage();y=M;}
+    doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(100);doc.text(h.toUpperCase(),M,y);y+=1.5;doc.setDrawColor(27,30,28);doc.line(M,y,W-M,y);y+=4.5;
+    rr.forEach(([k,v])=>{doc.setFont('helvetica','bold');doc.setFontSize(9.5);doc.setTextColor(27,30,28);const kl=doc.splitTextToSize(k,52);doc.setFont('helvetica','normal');const vl=doc.splitTextToSize(String(v),CW-58);const n=Math.max(kl.length,vl.length);if(y+n*4.6>285){doc.addPage();y=M;}doc.setFont('helvetica','bold');kl.forEach((l,i)=>doc.text(l,M,y+i*4.6));doc.setFont('helvetica','normal');vl.forEach((l,i)=>doc.text(l,M+58,y+i*4.6));y+=n*4.6+1.2;});
+  });
+  // legal text
+  const legal=[['Indemnity',Array.from(document.querySelectorAll('#s7 .legal p')).map(p=>p.textContent).join('\n')],['Declaration',Array.from(document.querySelectorAll('#s11 .legal li')).map((l,i)=>(i+1)+'. '+l.textContent).join('\n')],['Schedule of fees (inc. GST)',Array.from(document.querySelectorAll('#s9 details:nth-of-type(1) table tr')).map(tr=>Array.from(tr.children).map(td=>td.textContent).join(': ')).join('\n')],['Standard policies',Array.from(document.querySelectorAll('#s9 details:nth-of-type(2) .body p')).map(p=>p.textContent).join('\n')],['Pricing rules',Array.from(document.querySelectorAll('#rules tbody tr')).map(tr=>Array.from(tr.children).map(td=>td.textContent).join(' · ')).join('\n')],['Notes to the rate schedule',Array.from(document.querySelectorAll('#s10 .legal li')).map((l,i)=>(i+1)+'. '+l.textContent).join('\n')],['What to expect',Array.from(document.querySelectorAll('#expect .body p')).map(p=>p.textContent).join('\n')]];
+  doc.addPage();y=M;
+  legal.forEach(([h,t])=>{line(h.toUpperCase(),9,'bold',5,[100,100,100]);t.split('\n').forEach(p=>line(p,8.5,'normal',4,[27,30,28]));y+=3;});
+  // signatures
+  if(y>215){doc.addPage();y=M;}
+  y+=4;line('SIGNED',9,'bold',6,[100,100,100]);
+  const sigBlock=(name,date,data,x)=>{if(data){doc.addImage(data,'PNG',x,y,70,25);}doc.setDrawColor(27,30,28);doc.line(x,y+26,x+80,y+26);doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(27,30,28);doc.text(name,x,y+31);doc.setTextColor(100);doc.text('Date: '+date,x,y+36);};
+  sigBlock(val('sign1_name'),fmtD(val('sign1_date')),sigData('sig1'),M);
+  if($('two_signers').checked)sigBlock(val('sign2_name'),fmtD(val('sign2_date')),sigData('sig2'),M+90);
+  y+=42;line('Signed electronically on the Otway Retreats authority page. Otway Retreats to countersign.',8,'italic',4,[100,100,100]);
+  const pages=doc.getNumberOfPages();for(let i=1;i<=pages;i++){doc.setPage(i);head();doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(120);doc.text(`Page ${i} of ${pages}`,W-M,292,{align:'right'});}
+  pdfName=`Otway Retreats Authority – ${CFG.address}.pdf`;
+  pdfBlob=doc.output('blob');return pdfBlob;
+}
+async function deliver(){
+  if(!pdfBlob)makePdf();
+  // 1. Claude's own save prompt (when offered) → 2. share sheet with the file (phones: "Save to Files") → 3. open the PDF in a new tab → 4. plain download link
+  let dl=null;try{dl=await (window.claude&&window.claude.use?window.claude.use('downloads'):Promise.resolve(null));}catch(e){dl=null;}
+  if(dl){try{await dl.save({filename:pdfName,data:pdfBlob});toast('PDF saved');return;}catch(e){}}
+  if(navigator.share&&navigator.canShare){try{const f=new File([pdfBlob],pdfName,{type:'application/pdf'});if(navigator.canShare({files:[f]})){await navigator.share({files:[f],title:pdfName});toast('Choose "Save to Files" or an app to keep it');return;}}catch(e){if(e&&e.name==='AbortError')return;}}
+  const url=URL.createObjectURL(pdfBlob);
+  let w=null;try{w=window.open(url,'_blank');}catch(e){w=null;}
+  if(w){toast('PDF opened in a new tab – save or print it from there');return;}
+  const a=document.createElement('a');a.href=url;a.download=pdfName;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),2000);
+  const link=$('pdf-anchor');link.href=url;link.download=pdfName;link.hidden=false;
+  toast('If nothing opened, tap the "PDF" link');
+}
+const subject=()=>`Authority – ${CFG.address}, ${CFG.suburb} – ${val('sign1_name')}`;
+const mailBody=()=>`Hi Mikhala,\n\nHere is our completed management authority for ${CFG.address}.\n\n`+summaryText();
+const mailHref=()=>'mailto:hello@otwayretreats.com.au?subject='+encodeURIComponent(subject())+'&body='+encodeURIComponent(mailBody());
+function setDone(msg,ok){const d=$('done-msg');d.textContent=msg;d.className='callout '+(ok?'ok':'warn');}
+async function send(){
+  // 1. share sheet with the PDF attached (phones) → 2. share sheet with text → 3. mail app via mailto → 4. copy fallback
+  try{if(!pdfBlob)makePdf();}catch(e){pdfBlob=null;}
+  if(navigator.share){
+    try{
+      if(pdfBlob&&navigator.canShare){const f=new File([pdfBlob],pdfName,{type:'application/pdf'});if(navigator.canShare({files:[f]})){await navigator.share({files:[f],title:subject(),text:'Completed management authority for '+CFG.address+' – please send to hello@otwayretreats.com.au'});setDone('Shared. If you chose Mail, send it to hello@otwayretreats.com.au with the PDF attached.',true);return true;}}
+      await navigator.share({title:subject(),text:mailBody()});setDone('Shared. If you chose Mail, send it to hello@otwayretreats.com.au.',true);return true;
+    }catch(e){if(e&&e.name==='AbortError'){setDone('Sharing was cancelled. Tap "Open email" to try again, or use the copy option below.',false);return false;}}
+  }
+  if(window.top===window){location.href=mailHref();setDone('Your mail app should be opening with the completed authority addressed to hello@otwayretreats.com.au – just tap Send. If it didn\'t open, use Copy the details below.',true);return true;}
+  let w=null;try{w=window.open(mailHref(),'_blank');}catch(e){w=null;}
+  if(w){setDone('Your mail app should be opening with the completed authority addressed to hello@otwayretreats.com.au – just tap Send.',true);return true;}
+  const a=$('mail-anchor');a.href=mailHref();a.hidden=false;
+  setDone('Couldn\'t open your mail app from here. Tap "Copy the details", open your email and paste them into a message to hello@otwayretreats.com.au (subject below) – or try the mail link.',false);
+  return false;
+}
+function mailto(){send();}
+$('btn-submit').onclick=async()=>{
+  const probs=validate();const pb=$('problems');
+  if(probs.length){pb.hidden=false;pb.innerHTML='<b>A few things before we can take this:</b><br>'+probs.map(p=>'· '+p).join('<br>');pb.scrollIntoView({behavior:'smooth',block:'center'});return;}
+  pb.hidden=true;$('btn-submit').disabled=true;
+  signedAt=new Date().toLocaleString('en-AU');pdfBlob=null;
+  $('summary').textContent=summaryText();$('mail-subject').textContent='Send to: hello@otwayretreats.com.au · Subject: '+subject();$('done').hidden=false;
+  $('done').scrollIntoView({behavior:'smooth'});
+  await send();$('dock-note').textContent='Now send it from your email';
+  $('btn-submit').disabled=false;$('btn-submit').textContent='Sign & send again';
+};
+$('btn-pdf-again').onclick=async()=>{try{await deliver();}catch(e){toast('Could not create the PDF: '+(e.message||e));}};$('btn-mail').onclick=mailto;
+$('btn-copy').onclick=()=>{const t=summaryText();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(()=>toast('Copied')).catch(()=>toast('Select the text and copy'));else toast('Select the text and copy');};
+})();
+</script>
+</body></html>
