@@ -205,7 +205,7 @@ a.more{color:var(--accent);letter-spacing:.04em}
   <div class="tbl"><table>
     <thead><tr><th>Season</th><th>Minimum stay</th><th>Low</th><th>High</th></tr></thead>
     <tbody>
-      <tr><td>High peak · 21 Dec – 28 Jan, Easter, Marathon weekend</td><td>4 nights over Christmas–New Year, 2–3 either side and at Easter; relaxed closer to the date to fill gaps</td><td>$780</td><td>$800</td></tr>
+      <tr><td>High peak · 21 Dec – 28 Jan, Easter, Marathon weekend</td><td>4 nights over Christmas–New Year, 2–3 either side and at Easter; relaxed closer to the date to fill gaps</td><td>$600</td><td>$1,000</td></tr>
       <tr><td>Long weekends</td><td>2–3 nights</td><td>$510</td><td>$660</td></tr>
       <tr><td>School holidays</td><td>2 nights</td><td>$390</td><td>$510</td></tr>
       <tr><td>Base rate · everything else</td><td>2 nights</td><td>$300</td><td>$390</td></tr>
@@ -343,9 +343,9 @@ a.more{color:var(--accent);letter-spacing:.04em}
 const $=id=>document.getElementById(id);
 const P={clean:300,linen:170,guest:100,mgmt:0.22};
 /* name, days, standard-model nights, average nightly rate, avg stay (cleans), avg stay (linen) */
-const PERIODS=[['High peak · 21 Dec – 28 Jan',38,22,800,6,4],['Mid season',87,20,510,2,2.5],['Base · low season',180,17,390,3,2],
- ['Easter',4,3,800,3,3],['Melbourne Cup weekend',3,2,660,2,2],['Labour Day weekend',3,2,660,2,2],['Anzac Day weekend',3,2,660,2,2],
- ["King's Birthday weekend",3,2,660,2,2],['Marathon weekend',3,2,800,2,2],['April holidays',10,4,510,3,4],['July holidays',14,4,510,3,2],['September holidays',14,4,510,3,2],['AFL Grand Final weekend',3,2,660,2,2]];
+const PERIODS=[['High peak · 21 Dec – 28 Jan',38,22,750,6,4],['Mid season',87,20,510,2,2.5],['Base · low season',180,17,390,3,2],
+ ['Easter',4,3,750,3,3],['Melbourne Cup weekend',3,2,660,2,2],['Labour Day weekend',3,2,660,2,2],['Anzac Day weekend',3,2,660,2,2],
+ ["King's Birthday weekend",3,2,660,2,2],['Marathon weekend',3,2,1000,2,2],['April holidays',10,4,510,3,4],['July holidays',14,4,510,3,2],['September holidays',14,4,510,3,2],['AFL Grand Final weekend',3,2,660,2,2]];
 const BASE_N=86, SCEN={low:0.18,standard:0.25,strong:0.35,vstrong:0.50};
 const money=(x,d=0)=>'$'+Math.round(x).toLocaleString('en-AU',{minimumFractionDigits:d,maximumFractionDigits:d});
 let scen='low', nights=Math.round(365*0.18);
@@ -380,9 +380,9 @@ const M=["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const m25=[393, 457, 321, 352, 348, 319, 321, 298, 255, 321, 285, 285];
 const m50=[502, 584, 410, 462, 454, 404, 400, 385, 351, 412, 355, 355];
 const m75=[679, 781, 526, 609, 614, 538, 500, 489, 481, 579, 518, 518];
-const ours=[800, 800, 390, 390, 510, 390, 390, 510, 390, 510, 390, 390];
+const ours=[750, 750, 390, 390, 510, 390, 390, 510, 390, 510, 390, 390];
 const svg=$('chart'), W=760,H=300,L=46,R=14,T=16,B=34, cw=W-L-R, ch=H-T-B;
-const ymax=900, x=i=>L+cw*(i+0.5)/12, y=v=>T+ch*(1-v/ymax);
+const ymax=1200, x=i=>L+cw*(i+0.5)/12, y=v=>T+ch*(1-v/ymax);
 const css=getComputedStyle(document.documentElement);
 let s='';
 for(let v=0;v<=ymax;v+=250){s+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="Figtree,system-ui">$${v.toLocaleString()}</text>`;}
