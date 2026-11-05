@@ -1,0 +1,500 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow,noarchive"><style>:root{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>Bunjil Retreat Owner Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --bg:#fbf9f7; --paper:#ffffff; --ink:#231f20; --muted:#5e5856; --line:#e6e0dc;
+  --accent:#2f6b58; --tint:#e1eee8; --band:#ece6e0; --median:#6f6561; --watch:#9a5b1f;
+  --font:"Brandon Grotesque","Jost","Century Gothic","Avenir Next",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1819; --paper:#2a2526; --ink:#f4efec; --muted:#b8afab; --line:#3a3435;
+    --accent:#8fc9b4; --tint:#2c4a40; --band:#3b3435; --median:#c9bfba; --watch:#e0a870; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1819; --paper:#2a2526; --ink:#f4efec; --muted:#b8afab; --line:#3a3435;
+  --accent:#8fc9b4; --tint:#2c4a40; --band:#3b3435; --median:#c9bfba; --watch:#e0a870; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink); font:400 16px/1.6 var(--font);
+  padding-block:28px 64px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); -webkit-text-size-adjust:100%}
+.wrap{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:48px; min-width:0}
+section{min-width:0}
+.brand{font-size:.72rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--accent); margin:0 0 18px}
+.kicker{font-size:.74rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+h1{font-weight:300; font-size:clamp(2rem,7vw,2.9rem); line-height:1.08; letter-spacing:.05em; text-transform:uppercase; margin:0 0 6px; text-wrap:balance}
+.addr{margin:0; color:var(--muted); font-size:1.02rem}
+.meta{margin:10px 0 0; color:var(--muted); font-size:.86rem}
+.lead{font-size:1.15rem; line-height:1.6; margin:24px 0 0; max-width:62ch; text-wrap:pretty}
+.lead b{font-weight:500; color:var(--accent)}
+h2{font-weight:400; font-size:1.45rem; line-height:1.2; margin:0 0 6px; text-wrap:balance}
+h3{font-weight:500; font-size:1.05rem; margin:0 0 4px}
+.sub{margin:0 0 20px; color:var(--muted); max-width:64ch}
+.note{margin:16px 0 0; color:var(--muted); font-size:.92rem; max-width:66ch}
+.muted{color:var(--muted)}
+.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:28px}
+.tile{border:1px solid var(--line); background:var(--paper); padding:16px 18px; border-radius:3px; min-width:0}
+.tile .k{font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+.tile .v{font-size:1.9rem; font-weight:300; line-height:1.1; margin:0; font-variant-numeric:tabular-nums}
+.tile .d{margin:6px 0 0; font-size:.86rem; color:var(--muted)}
+.explain{border-left:3px solid var(--accent); background:var(--paper); padding:14px 16px; margin:0 0 22px; font-size:.95rem; max-width:66ch}
+.explain p{margin:0}
+.scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse; width:100%; font-size:.93rem; font-variant-numeric:tabular-nums}
+th{font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); text-align:right; padding:8px 10px; border-bottom:1px solid var(--ink); white-space:nowrap}
+td{padding:11px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap}
+th:first-child, td:first-child{text-align:left; padding-left:2px}
+td:first-child{font-weight:500}
+td.strong{font-weight:600; color:var(--accent)}
+tr.me td{background:var(--tint)}
+tr.me td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+@media (max-width:640px){
+  .stack thead{display:none}
+  .stack, .stack tbody, .stack tr, .stack td{display:block; width:100%}
+  .stack tr{border-top:1px solid var(--line); padding:12px 0 10px}
+  .stack td{display:flex; justify-content:space-between; gap:16px; padding:3px 2px; border:0; white-space:normal}
+  .stack td::before{content:attr(data-label); color:var(--muted); font-weight:400}
+  .stack td:first-child{font-size:1.02rem; padding-bottom:6px}
+  .stack td:first-child::before{content:""}
+}
+.pill{display:inline-block; font-size:.7rem; font-weight:500; letter-spacing:.04em; padding:2px 8px; border-radius:99px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; vertical-align:middle}
+.pill.good{border-color:var(--accent); color:var(--accent)}
+.pill.watch{border-color:var(--watch); color:var(--watch)}
+.pill.off{text-decoration:none; opacity:.85}
+.dgroup{margin-top:6px}
+.dgroup + .dgroup{margin-top:26px}
+.dhead{font-size:.72rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 4px; padding-bottom:6px; border-bottom:1px solid var(--ink)}
+.drow{display:grid; grid-template-columns:1fr auto; gap:6px 16px; padding:12px 2px; border-bottom:1px solid var(--line); align-items:start}
+.dname{font-weight:500; min-width:0}
+.ddet{display:block; font-weight:400; color:var(--muted); font-size:.9rem; line-height:1.45; margin-top:2px}
+.legend{display:flex; flex-wrap:wrap; gap:8px 18px; font-size:.84rem; color:var(--muted); margin:0 0 10px}
+.legend span{display:inline-flex; align-items:center; gap:7px}
+.legend i{display:inline-block; width:22px; height:0; border-top:2px solid var(--accent)}
+.legend i.med{border-top:2px dashed var(--median)}
+.legend i.bandsw{height:10px; border:0; background:var(--band)}
+.legend i.bk{height:10px; border:0; background:var(--tint); box-shadow:inset 0 0 0 1px var(--accent)}
+#chartbox{position:relative; background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:10px 6px 4px; min-width:0}
+#chart{width:100%; touch-action:pan-y}
+#chart svg{display:block; overflow:visible}
+.ax{fill:var(--muted); font:400 11px var(--font)}
+.gl{stroke:var(--line); stroke-width:1}
+.tip{position:absolute; top:8px; z-index:2; pointer-events:none; background:var(--ink); color:var(--bg); font-size:.8rem; line-height:1.45; padding:8px 10px; border-radius:3px; width:max-content; max-width:210px}
+.hintline{margin:8px 2px 0; font-size:.8rem; color:var(--muted)}
+.points{margin:24px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px}
+.points li{padding-left:18px; position:relative; max-width:66ch}
+.points li::before{content:""; position:absolute; left:0; top:.72em; width:8px; height:2px; background:var(--accent)}
+.points b{font-weight:500}
+.pace{display:flex; flex-direction:column; gap:14px}
+.pace .r{display:grid; grid-template-columns:104px 1fr; gap:12px; align-items:center}
+.pace .lab{font-size:.9rem; color:var(--muted)}
+.pace .bars{display:flex; flex-direction:column; gap:5px; min-width:0}
+.pace .b{display:flex; align-items:center; gap:8px; font-variant-numeric:tabular-nums; font-size:.86rem}
+.pace .b i{display:block; height:14px; border-radius:1px; width:calc(var(--v) / 50 * 100% - 44px); min-width:4px}
+.pace .b.us i{background:var(--accent)}
+.pace .b.mk i{background:var(--band); box-shadow:inset 0 0 0 1px var(--line)}
+.pace .b em{font-style:normal; color:var(--muted)}
+.pace .b.us em{color:var(--ink); font-weight:500}
+.key{display:flex; gap:18px; flex-wrap:wrap; font-size:.84rem; color:var(--muted); margin:0 0 14px}
+.key span{display:inline-flex; align-items:center; gap:7px}
+.key i{display:inline-block; width:16px; height:10px}
+.key i.us{background:var(--accent)} .key i.mk{background:var(--band); box-shadow:inset 0 0 0 1px var(--line)}
+.acts{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px}
+.act{display:grid; grid-template-columns:40px 1fr; gap:14px; background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:18px 18px 16px 14px; min-width:0}
+.anum{width:32px; height:32px; border-radius:50%; background:var(--accent); color:var(--bg); display:grid; place-items:center; font-weight:600}
+.abody{min-width:0}
+.abody p{margin:0 0 8px; max-width:62ch}
+.abody .sugg b{font-weight:600}
+.abody .reply{margin:0; font-size:.88rem; color:var(--accent)}
+.atype{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px !important}
+.abody .evid{font-style:italic;color:var(--muted)}
+.abody .cost{font-size:.86rem;color:var(--watch)}
+.revtop{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:stretch}
+.sbars{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:6px 4px;min-width:0}
+.sb{display:grid;grid-template-columns:28px 1fr 24px;gap:8px;align-items:center;font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.sb i{display:block;height:8px;border-radius:1px;background:var(--accent);width:calc(var(--v) / var(--t) * 100%);min-width:2px}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:22px}
+.tl{margin:8px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px} .tl b{font-weight:500}
+.rl{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.rl li{border-bottom:1px solid var(--line);padding-bottom:10px} .rl p{margin:4px 0 0;max-width:66ch}
+.rh{font-size:.86rem;color:var(--muted)}
+.cats{margin:18px 0 0;font-size:.9rem;color:var(--muted)} .cats b{color:var(--ink);font-weight:600} .st{color:var(--accent);letter-spacing:1px}
+.context{background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:18px 20px}
+.context p{margin:0 0 10px; max-width:64ch} .context p:last-child{margin:0}
+footer{border-top:1px solid var(--line); padding-top:20px; color:var(--muted); font-size:.86rem; display:flex; flex-direction:column; gap:10px}
+footer p{margin:0; max-width:68ch}
+.askbox .q{font-size:1.1rem; font-style:italic; margin:0 0 12px; max-width:62ch}
+.askbox .ans{background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:3px; padding:16px 20px}
+.askbox .ans p{margin:0 0 10px; max-width:64ch} .askbox .ans p:last-child{margin:0}
+.chg{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+.chg li{background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:12px 16px}
+.chg li span{display:block; color:var(--muted); font-size:.9rem}
+.chg li p{margin:6px 0 0; max-width:64ch}
+.glink{color:var(--accent); font-weight:500; text-underline-offset:3px}
+footer .who{color:var(--ink)}
+</style>
+
+<div class="wrap">
+  <header>
+    <style>
+.pdfbar{float:right;margin:-4px 0 8px 12px}
+.pdfbtn{font:500 .74rem var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:7px 14px;cursor:pointer}
+.pdfbtn:hover{border-color:var(--accent)}
+.pdfbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@page{size:A4;margin:14mm 12mm 16mm}
+@media print{
+  :root{--bg:#fff;--paper:#fff;--ink:#231f20;--muted:#5e5856;--line:#ddd6d1;--accent:#2f6b58;--tint:#e1eee8;--band:#ece6e0;--median:#6f6561;--watch:#9a5b1f;color-scheme:light}
+  html,body{background:#fff!important;color:#231f20!important}
+  body{padding:0!important;font-size:11pt}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pdfbar,.hintline,#tip{display:none!important}
+  .wrap{max-width:none;gap:26px}
+  h2,h3,.dhead{break-after:avoid}
+  .tile,.act,tr,.drow,.askbox .ans,.context,#chartbox,.pace .r,.rl li,.tl li,.cat,footer,.explain,.chg li{break-inside:avoid}
+  #chart svg{width:100%!important;height:auto!important}
+  .scroll{overflow:visible}
+  a{color:inherit}
+  a.glink::after{content:" (" attr(href) ")";font-weight:400;font-size:.85em;word-break:break-all}
+}
+</style>
+<div class="pdfbar"><button type="button" class="pdfbtn" onclick="window.print()">Save as PDF</button></div>
+    <p class="brand">Otway Retreats</p>
+    <p class="kicker">Owner report · November 2026</p>
+    <h1>Bunjil Retreat</h1>
+    <p class="addr">90 Biddles Rd, Apollo Bay · 1 bedrooms, sleeps 2</p>
+    <p class="meta">Prepared for Kim Straub · as at 5 November 2026</p>
+    <p class="lead">Bunjil Retreat has a strong November: <b>4 stays</b> on the books paying out <b>$5,648.70</b>, including an 8-night stay from 10 November worth <b>$2,420.61</b>. December and January are still open and priced in the top quarter of the market, so that is where our suggestions focus.</p>
+    <div class="tiles">
+      <div class="tile"><p class="k">Payouts on the books</p><p class="v">$4,253</p><p class="d">Stays from today onward</p></div>
+      <div class="tile"><p class="k">Booked, next 90 days</p><p class="v">14%</p><p class="d">Comparable homes: 32%</p></div>
+      <div class="tile"><p class="k">Discounts on these stays</p><p class="v">$570</p><p class="d">Payout given up to discounts</p></div>
+    </div>
+  </header>
+
+  
+
+  
+
+  <section aria-labelledby="h-how">
+    <h2 id="h-how">How a stay is priced</h2>
+    <p class="sub">Every booking is made up of more than the nightly rate. The rates in the charts and tables below are <b>per night only</b>; a stay also has a minimum number of nights and a guest cleaning fee on top.</p>
+    <div class="tiles">
+      <div class="tile"><p class="k">1 · Nightly rate</p><p class="v">$280–$800</p><p class="d">Set for each night by PriceLabs, within your strategy below</p></div>
+      <div class="tile"><p class="k">2 · Minimum stay</p><p class="v">2 to 4 nights</p><p class="d">The fewest nights a guest can book; longer over peak periods. Shown for each period below.</p></div>
+      <div class="tile"><p class="k">3 · Guest cleaning fee</p><p class="v">$100</p><p class="d">Added once to every booking, on top of the nightly rates</p></div>
+    </div>
+    <div style="margin-top:22px"><div class="explain"><p><b>For example:</b> a 2-night stay, 18–20 Nov, at today's rates is 2 nights at about $328 = $655, plus the $100 cleaning fee, so roughly <b>$755</b> paid out for the stay, before our management, cleaning and linen fees.</p></div></div>
+    <h3>Your pricing strategy in PriceLabs</h3>
+    <p class="sub">PriceLabs sets a new rate for every night, every day, using three settings we agree with you.</p>
+    <div class="dgroup">
+      <div class="drow"><div class="dname">Minimum price<span class="ddet">The floor. PriceLabs never sets a nightly rate below this, even for a quiet night that hasn't booked close to the date. It protects the value of your home; set too high, quiet nights are more likely to stay empty. Booking site promotions are applied after this, so a discounted booking can pay out a little less per night.</span></div><div class="dstat"><span class="pill">$280</span></div></div>
+      <div class="drow"><div class="dname">Base price<span class="ddet">The anchor. It is the rate for a typical night across the year. PriceLabs moves each night up or down from it for the season, weekends and weekdays, local events and demand, and how quickly your calendar is filling. Guests rarely see the base price itself; raising or lowering it shifts every night.</span></div><div class="dstat"><span class="pill">$400</span></div></div>
+      <div class="drow"><div class="dname">Maximum price<span class="ddet">The ceiling. PriceLabs never sets a rate above this, even on the busiest nights such as New Year's Eve. If peak nights keep reaching the maximum and still book, there may be room to lift it.</span></div><div class="dstat"><span class="pill">$800</span></div></div>
+    </div>
+    <p class="note">From 23 December to 8 January and over the Australia Day weekend your nights sit at your <b>$800 maximum</b>; PriceLabs would price some higher, but with none of them booked yet we aren't suggesting a change.</p>
+  </section>
+
+  <style>
+.calc{border:1px solid var(--line);background:var(--paper);border-radius:3px;padding:18px;display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+.calc>*,.calc .two>*,.calc .ctls>*{min-width:0}
+.calc td:first-child{padding-right:10px}
+.calc .ctl{display:grid;gap:6px}
+.calc .ctl label{display:grid;gap:2px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.calc .ctl label b{font-size:.95rem;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:500}
+.calc input[type=range]{width:100%;accent-color:var(--accent);min-height:28px}
+.calc .ctls{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.calc .warn{font-size:.86rem;color:var(--watch);margin:0}
+.calc table{width:100%;border-collapse:collapse;font-size:.95rem}
+#c-out{display:table-row-group}.calc .two>table{table-layout:fixed}.calc .two>table td:last-child{width:96px}
+.calc td{padding:7px 0;border-bottom:1px solid var(--line)}
+.calc td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc tr.tot td{font-weight:600;border-bottom:2px solid var(--ink)}
+.calc tr.net td{font-weight:600;color:var(--accent);font-size:1.05rem;border-bottom:0}
+.calc tr.minus td{color:var(--muted)}
+.calc .two{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.calc .ctls{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))!important}
+.calc .los td,.calc .los th{padding:6px 4px;font-size:.88rem;text-align:right}
+.calc .los th{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--line)}
+.calc .los td:first-child,.calc .los th:first-child{text-align:left}
+.calc .los tr.on td{background:var(--tint)}
+.calc .los tr.short td{color:var(--muted)}
+.calc .pos{font-size:.9rem;margin:0}
+.cal{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cal h3{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 8px}
+.cal .g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal .dw{font-size:.62rem;text-align:center;color:var(--muted)}
+.cal .c{aspect-ratio:1;border-radius:3px;font-size:.7rem;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;border:1px solid var(--line);background:var(--paper);font-variant-numeric:tabular-nums}
+.cal .c small{font-size:.56rem;color:var(--muted)}
+.cal .c.b{background:var(--tint);border-color:transparent}
+.cal .c.gap{background:repeating-linear-gradient(135deg,var(--paper) 0 4px,var(--band) 4px 8px);border-color:var(--watch)}
+.cal .c.x{visibility:hidden}
+.calkey{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--muted);margin:0 0 14px}
+.calkey i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:6px;border:1px solid var(--line)}
+.calkey i.b{background:var(--tint);border-color:transparent}.calkey i.gap{background:repeating-linear-gradient(135deg,var(--paper) 0 3px,var(--band) 3px 6px);border-color:var(--watch)}
+.ly{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:22px}
+.hbar{display:grid;grid-template-columns:110px 1fr 46px;gap:10px;align-items:center;font-size:.86rem;margin:5px 0}
+.hbar i{display:block;height:12px;background:var(--accent);border-radius:2px;width:calc(var(--v)*1%);min-width:2px}
+.hbar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.pat{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+@media print{.calc input[type=range]{display:none}.calc .ctl label{text-transform:none}.cal .c{font-size:.6rem}}
+</style><section aria-labelledby="h-calc">
+    <h2 id="h-calc">Try a stay</h2>
+    <p class="sub">Pick a check-in date and a stay length to see what a booking would pay at today's rates, and roughly what it leaves you after our fees. Move the base price to see how the rates would shift. Nights keep within your minimum and maximum, and booked nights stay as booked.</p>
+    <div class="calc" id="calc">
+      <div class="ctls">
+        <div class="ctl"><label for="c-in">Check-in <b id="c-in-l"></b></label><input type="range" id="c-in" min="0" value="0" step="1"></div>
+        <div class="ctl"><label for="c-n">Stay length <b id="c-n-l"></b></label><input type="range" id="c-n" min="1" max="10" value="2" step="1"></div>
+        <div class="ctl"><label for="c-base">What if your base price was… <b id="c-base-l"></b></label><input type="range" id="c-base" min="-20" max="20" step="5" value="0"></div>
+      </div>
+      <p class="warn" id="c-warn" hidden></p>
+      <div class="two">
+        <table aria-label="This stay"><tbody id="c-out"></tbody></table>
+        <div style="min-width:0"><div class="scroll"><table class="los" aria-label="Stay lengths from this check-in" id="c-los"></table></div><p class="note" style="margin-top:8px">The same check-in at each stay length. Longer stays spread the per-stay cleaning and linen costs over more nights.</p></div>
+      </div>
+      <p class="pos" id="c-pos"></p>
+    </div>
+    <p class="note">Our fees here are the ones on your owner account: 22% management on the payout, and cleaning $195 and linen $115 per stay. Estimates only, using direct-booking payouts; booking site promotions, extra-guest and pet fees change the real figure. Your owner statement is the official record.</p>
+  </section>
+
+  <section aria-labelledby="h-book">
+    <h2 id="h-book">Your bookings</h2>
+    <p class="sub">Every booking from this month onward, with what it pays out and what it would have paid with no discounts.</p>
+    <div class="explain"><p>All figures in this report are <b>payouts</b>, the amount paid out for your home after the booking site's commission. Airbnb and Booking.com take a commission, so we add a markup on those sites to cover it. That's why the price a guest sees is higher than the figures here.</p></div>
+    <table class="stack">
+      <thead><tr><th>Stay</th><th>Nights</th><th>Channel</th><th>Booked</th><th>Payout</th><th>Without discounts</th><th>Discounts cost</th></tr></thead>
+      <tbody><tr><td data-label="Stay">31 Oct – 3 Nov <span class="pill">Completed</span></td>
+<td data-label="Nights">3</td><td data-label="Channel">Booking.com</td>
+<td data-label="Booked">31 Oct</td>
+<td data-label="Payout" class="strong">$1,396.00</td>
+<td data-label="Without discounts">–</td>
+<td data-label="Discounts cost">–</td></tr><tr><td data-label="Stay">6–8 Nov</td>
+<td data-label="Nights">2</td><td data-label="Channel">Airbnb</td>
+<td data-label="Booked">28 Oct</td>
+<td data-label="Payout" class="strong">$1,010.34</td>
+<td data-label="Without discounts">$1,048.68</td>
+<td data-label="Discounts cost">$38 <span class="muted">(4%)</span></td></tr><tr><td data-label="Stay">8–10 Nov</td>
+<td data-label="Nights">2</td><td data-label="Channel">Airbnb</td>
+<td data-label="Booked">29 Oct</td>
+<td data-label="Payout" class="strong">$821.75</td>
+<td data-label="Without discounts">–</td>
+<td data-label="Discounts cost">–</td></tr><tr><td data-label="Stay">10–18 Nov</td>
+<td data-label="Nights">8</td><td data-label="Channel">Airbnb</td>
+<td data-label="Booked">30 Oct</td>
+<td data-label="Payout" class="strong">$2,420.61</td>
+<td data-label="Without discounts">$2,951.91</td>
+<td data-label="Discounts cost">$531 <span class="muted">(18%)</span></td></tr></tbody>
+    </table>
+    <p class="note">Discounts cost $570 across two Airbnb stays, most of it on the 8-night stay (18% of that booking). Booking.com stays and stays starting before the rate data show no discount figure.</p>
+    <p class="note">Payouts include the guest cleaning fee and are before our management, cleaning and linen fees. Your owner statement is the official record of what is paid to you.</p>
+  </section>
+
+  <section aria-labelledby="h-disc">
+    <h2 id="h-disc">Discounts set up on your home</h2>
+    <p class="sub">Everything that can lower a booking's payout, and whether it's on today. Your nightly rate never goes below $280 (your minimum) or above $800 (your maximum).</p>
+    <div class="dgroup"><p class="dhead">Booking site promotions</p><div class="drow"><div class="dname">Early bird<span class="ddet">5% off when booked two or more months ahead.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Weekly and monthly stays<span class="ddet">10% off stays of 7 nights or more, and 20% off 30 nights or more.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Non-refundable rate<span class="ddet">10% off for guests who choose a non-refundable booking.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Airbnb mobile and top-rated discounts<span class="ddet">Not used, so discounts don&#x27;t stack.</span></div><div class="dstat"><span class="pill off">Off</span></div></div></div>
+    <div class="dgroup"><p class="dhead">Automatic pricing rules</p><div class="drow"><div class="dname">Last-minute easing<span class="ddet">If a night is still free inside 14 days, its rate eases gradually, by up to 5%.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Midweek pricing<span class="ddet">Sunday to Thursday nights sit 10% below Friday, and Saturday is 5% above.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Booking-pace adjustment<span class="ddet">Rates ease while the calendar fills slowly and rise when it fills fast. 0–15 days out: 8% lower to 20% higher; 16–30 days out: 12% lower to 25% higher; 31–60 days out: 12% lower to 30% higher.</span></div><div class="dstat"><span class="pill good">On</span></div></div></div>
+  </section>
+
+  <section aria-labelledby="h-mkt">
+    <h2 id="h-mkt">Your rates against the market</h2>
+    <p class="sub">Your nightly rate for every night from 6 Nov to 3 February 2027: the rate for one night only, before the guest cleaning fee and with each period's minimum stay applying. Because markups cover commission, this is roughly the payout per night before any discount. The shaded band is the middle half of comparable homes nearby, and the dashed line is their median.</p>
+    <div class="legend"><span><i></i>Your nightly rate</span><span><i class="med"></i>Market median</span><span><i class="bandsw"></i>Middle half of the market</span><span><i class="bk"></i>Booked nights</span></div>
+    <div id="chartbox">
+      <div id="chart" role="img" aria-label="Daily nightly rate for Bunjil Retreat against the market median and middle half of comparable homes, 6 Nov to 3 February 2027."></div>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <p class="hintline">Hover or tap a night for detail. AUD per night, before the cleaning fee.</p>
+    <ul class="points"><li><b>November is fully booked to the 17th</b> at an average of $341 a night, in the top quarter of comparable homes (median $269).</li><li><b>December is open and in the top quarter.</b> It averages $505 a night against a market median of $367, with a minimum stay of 2 to 4 nights.</li><li><b>January is open and in the top quarter.</b> It averages $664 a night against a median of $420; the top quarter starts at about $559.</li></ul>
+    <div class="scroll" style="margin-top:24px">
+      <table aria-label="Rate by period against the market">
+        <thead><tr><th>Period</th><th>Status</th><th>Your nightly rate</th><th>Minimum stay</th><th>Market median</th><th>Top quarter from</th><th>Where you sit</th></tr></thead>
+        <tbody><tr><td>6–17 Nov</td><td><span class="pill good">Booked</span></td><td>$341</td><td>2 nights</td><td>$269</td><td>$332</td><td><span class="pill">Top quarter</span></td></tr><tr><td>18–30 Nov</td><td><span class="pill watch">Open</span></td><td>$324</td><td>2 nights</td><td>$275</td><td>$341</td><td><span class="pill">Above median</span></td></tr><tr><td>1–31 Dec</td><td><span class="pill watch">Open</span></td><td>$505</td><td>2–4 nights</td><td>$367</td><td>$496</td><td><span class="pill">Top quarter</span></td></tr><tr><td>1–31 Jan</td><td><span class="pill watch">Open</span></td><td>$664</td><td>2–4 nights</td><td>$420</td><td>$559</td><td><span class="pill">Top quarter</span></td></tr><tr><td>1–3 Feb</td><td><span class="pill watch">Open</span></td><td>$436</td><td>2 nights</td><td>$301</td><td>$407</td><td><span class="pill">Top quarter</span></td></tr></tbody>
+      </table>
+    </div>
+    <p class="note">Average nightly rate across each period, per night, before the guest cleaning fee. Market figures are nightly rates too.</p>
+  </section>
+
+  <section aria-labelledby="h-cal">
+    <h2 id="h-cal">Your calendar</h2>
+    <p class="sub">Every night from 6 Nov, with the nightly rate on open nights. Minimum stays for each period are in the table above; on a computer, hover over a night to see its own.</p>
+    <p class="calkey"><span><i class="b"></i>Booked</span><span><i></i>Open</span><span><i class="gap"></i>Gap night</span></p>
+    <div class="cal" id="calbox"></div>
+    <p class="note" id="calsum"></p>
+    
+  </section>
+
+  <section aria-labelledby="h-pace">
+    <h2 id="h-pace">How bookings are tracking</h2>
+    <p class="sub">Share of nights already booked, looking ahead from today, against comparable homes nearby.</p>
+    <div class="key"><span><i class="us"></i>Bunjil Retreat</span><span><i class="mk"></i>Comparable homes</span></div>
+    <div class="pace" id="pace"></div>
+    <div class="ly">
+      <div class="tile"><p class="k">Booked, next 90 nights</p><p class="v">12</p><p class="d">Same dates last year: 31 nights</p></div>
+      <div class="tile"><p class="k">Average booked rate</p><p class="v">$344</p><p class="d">Same dates last year: $496 a night</p></div>
+    </div>
+    <p class="note">Same time last year compares the nights booked so far for the coming 90 nights with what was booked by this date last year for the same dates, from PriceLabs. Average booked rate is per night, as PriceLabs records it.</p>
+  </section>
+
+  <section aria-labelledby="h-pat">
+    <h2 id="h-pat">How guests book your home</h2>
+    <p class="sub">From 62 stays between 5 Nov 2025 and 13 Feb 2027. Typical stay <b>2 nights</b>; typically booked <b>15 days</b> ahead.</p>
+    <div class="pat">
+      <div><p class="dhead">How far ahead guests book</p><div class="hbar"><span>Within a week</span><i style="--v:32"></i><em>32%</em></div><div class="hbar"><span>1–4 weeks</span><i style="--v:47"></i><em>47%</em></div><div class="hbar"><span>1–3 months</span><i style="--v:15"></i><em>15%</em></div><div class="hbar"><span>3+ months</span><i style="--v:6"></i><em>6%</em></div></div>
+      <div><p class="dhead">How long guests stay</p><div class="hbar"><span>1 night</span><i style="--v:0"></i><em>0%</em></div><div class="hbar"><span>2 nights</span><i style="--v:55"></i><em>55%</em></div><div class="hbar"><span>3 nights</span><i style="--v:29"></i><em>29%</em></div><div class="hbar"><span>4–6 nights</span><i style="--v:15"></i><em>15%</em></div><div class="hbar"><span>7+ nights</span><i style="--v:2"></i><em>2%</em></div></div>
+      <div><p class="dhead">Where bookings come from (nights)</p><div class="hbar"><span>Airbnb</span><i style="--v:73"></i><em>73%</em></div><div class="hbar"><span>Booking.com</span><i style="--v:25"></i><em>25%</em></div><div class="hbar"><span>Direct and other</span><i style="--v:2"></i><em>2%</em></div></div>
+    </div>
+    <p class="note">Most guests stay <b>2 nights</b> and typically book about <b>15 days</b> ahead, so open December nights are normal at this point; the summer holidays are where we want to act early.</p>
+  </section>
+
+  
+
+  <section aria-labelledby="h-act">
+    <h2 id="h-act">What we recommend</h2>
+    <p class="sub">Changes to pricing, your listing and the house, based on the market and on what guests are telling us. Nothing changes until you tell us. Reply to the email this came with.</p>
+    <ol class="acts"><li class="act"><div class="anum">1</div><div class="abody"><p class="atype">Pricing</p><h3>Christmas to 8 January: price between $485 and $800, easing as the dates approach</h3>
+<p>23 December to 8 January is open at $800 a night, against a market median of $484 and a top quarter of $687. Only 14% of the next 90 days is booked, against 32% for comparable homes.</p><p class="sugg"><b>Our suggestion:</b> Hold $800 a night until mid-December. If still open then, ease towards about $485 a night, closer to the date.</p>
+<p class="reply">To go ahead, reply <b>“yes to 1”</b>.</p></div></li><li class="act"><div class="anum">2</div><div class="abody"><p class="atype">Pricing</p><h3>Australia Day weekend: hold $800 until 1 January, then ease</h3>
+<p>22–25 January is priced at $800 a night, well above the market median of $425 for those dates.</p><p class="sugg"><b>Our suggestion:</b> Hold $800 a night until 1 January. If still open then, ease towards about $570 a night, where the top quarter of the market sits.</p>
+<p class="reply">To go ahead, reply <b>“yes to 2”</b>.</p></div></li><li class="act"><div class="anum">3</div><div class="abody"><p class="atype">Pricing</p><h3>Switch off stacked promotions on longer stays</h3>
+<p>The 8-night stay from 10 November paid out $2,420.61, $531 less than it would have without discounts (18% of the booking).</p><p class="sugg"><b>Our suggestion:</b> Switch off promotions that stack on top of the weekly discount, so longer stays get one discount rather than several.</p>
+<p class="reply">To go ahead, reply <b>“yes to 3”</b>.</p></div></li></ol>
+  </section>
+
+  <section aria-labelledby="h-ctx">
+    <h2 id="h-ctx">The season so far</h2>
+    <div class="context"><p>Bunjil is having a busy start to November, ahead of comparable homes for the next 30 days (43% booked against 32%). Further out the calendar thins: guests here book about two weeks ahead, so December filling late is normal, but the summer peak is priced at the top of the market and nothing is booked yet. We'd like to keep the strong rates while there is time, then ease them as the dates come closer.</p></div>
+  </section>
+
+  <section aria-labelledby="h-nb">
+    <h2 id="h-nb">Neighbourhood rates by size</h2>
+    <p class="sub">Typical nightly rates for homes near you over the next 12 months, by number of bedrooms. Per night, before cleaning fees.</p>
+    <div class="scroll"><table aria-label="Neighbourhood nightly rate percentiles by bedrooms">
+      <thead><tr><th>Bedrooms</th><th>Homes</th><th>25th percentile</th><th>Median</th><th>75th percentile</th><th>90th percentile</th></tr></thead>
+      <tbody><tr class=""><td>None</td><td>8</td><td>$244</td><td>$271</td><td>$369</td><td>$406</td></tr><tr class="me"><td>1 · Bunjil Retreat</td><td>72</td><td>$218</td><td>$263</td><td>$359</td><td>$479</td></tr><tr class=""><td>2</td><td>149</td><td>$278</td><td>$331</td><td>$430</td><td>$526</td></tr></tbody></table></div>
+  </section>
+
+  <section aria-labelledby="h-g">
+    <h2 id="h-g">How we market and price your home</h2>
+    <p class="sub">The general picture behind this report: our channels, how dynamic pricing works, seasons and minimum stays, the offers we use and what guests pay.</p>
+    <p><a class="glink" href="https://otwayretreats.github.io/Owners/guide/marketing-pricing-guide.html" target="_blank" rel="noopener">Read our marketing and pricing guide ↗</a></p>
+  </section>
+
+  <footer>
+    <p>Sources: Hostaway bookings and PriceLabs market data for homes near you, as at 5 November 2026. Your next report will be ready in early December.</p>
+    <p class="who">Mikhala McCann, Director, Otway Retreats · Mobile 0437 375 774 · Office (03) 5292 3631 · mikhala@otwayretreats.com.au</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var C = {"start":"2026-11-06","ours":[361,413,333,332,331,321,328,390,442,283,280,280,375,280,349,409,280,280,280,280,290,350,457,297,286,280,280,292,359,424,294,304,298,299,305,404,477,325,319,338,343,354,450,583,528,593,599,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,766,570,634,607,614,590,700,781,571,550,551,552,534,800,800,800,800,504,437,451,527,598,441,450,435,424],"booked":[[0,11]],"median":[275,281,263,261,261,261,271,281,281,267,264,265,261,271,282,288,269,270,269,268,277,287,287,272,275,284,284,293,301,298,280,283,283,289,294,305,307,294,295,297,294,312,340,375,383,427,436,455,461,485,483,492,513,510,507,510,519,501,486,473,476,468,454,440,440,414,405,410,412,416,418,421,394,401,403,431,440,442,442,423,394,368,352,347,364,346,320,301,301,300],"p25":[229,238,218,212,216,217,220,232,235,217,219,219,217,220,238,240,222,221,220,221,221,241,244,226,225,231,234,243,252,254,236,233,235,239,239,259,258,245,246,242,248,259,293,307,310,326,329,342,365,367,366,367,374,382,382,387,388,388,379,371,371,368,374,367,353,342,331,331,333,333,334,327,326,329,331,336,342,341,344,338,322,297,287,283,289,288,260,248,246,246],"p75":[333,343,321,325,317,320,336,346,358,333,324,324,325,336,357,364,330,326,326,327,341,361,363,332,344,352,352,372,392,396,369,358,359,360,370,389,398,365,366,382,384,412,452,500,529,583,613,647,700,708,707,707,716,720,710,717,707,704,690,666,664,660,637,620,588,533,508,510,520,532,531,521,508,504,505,535,560,606,574,558,550,489,469,476,491,485,436,415,403,403],"ms":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2]};
+  var PACE = [["Next 30 days", 43, 32], ["Next 60 days", 22, 33], ["Next 90 days", 14, 32], ["Next 120 days", 11, 28], ["Next 180 days", 7, 22]];
+  var N = C.ours.length, D0 = Date.parse(C.start + 'T00:00:00Z');
+  var isB = new Array(N).fill(false);
+  C.booked.forEach(function(r){ for (var i=r[0]; i<=r[1]; i++) if (i>=0 && i<N) isB[i]=true; });
+  function money(v){ return '$' + Math.round(v).toLocaleString('en-AU'); }
+  function lab(i, o){ return new Date(D0+i*864e5).toLocaleDateString('en-AU', Object.assign({timeZone:'UTC'}, o)); }
+  var box=document.getElementById('chart'), tip=document.getElementById('tip'), cb=document.getElementById('chartbox');
+  function draw(){
+    var all = C.ours.concat(C.p75), hi = Math.max.apply(null, all), lo = Math.min.apply(null, C.ours.concat(C.p25));
+    var y0 = Math.max(0, Math.floor(lo/200)*200), y1 = Math.ceil(hi/200)*200;
+    var W=Math.max(300, box.clientWidth), H = W<480 ? 270 : 330, ml=44, mr=8, mt=10, mb=26, pw=W-ml-mr, ph=H-mt-mb, st=pw/N;
+    function X(i){ return ml+(i+0.5)*st; } function Y(v){ return mt+ph*(1-(v-y0)/(y1-y0)); }
+    var s='<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" aria-hidden="true">';
+    var stepV = (y1-y0) > 1000 ? 200 : 100;
+    for (var v=y0; v<=y1; v+=stepV){ s+='<line class="gl" x1="'+ml+'" x2="'+(W-mr)+'" y1="'+Y(v)+'" y2="'+Y(v)+'"/><text class="ax" x="'+(ml-8)+'" y="'+(Y(v)+4)+'" text-anchor="end">$'+v.toLocaleString('en-AU')+'</text>'; }
+    C.booked.forEach(function(r){ s+='<rect x="'+(ml+r[0]*st)+'" y="'+mt+'" width="'+((r[1]-r[0]+1)*st)+'" height="'+ph+'" style="fill:var(--tint)"/>'; });
+    var t=[], b=[]; for (var i=0;i<N;i++) t.push(X(i).toFixed(1)+','+Y(C.p75[i]).toFixed(1)); for (var j=N-1;j>=0;j--) b.push(X(j).toFixed(1)+','+Y(C.p25[j]).toFixed(1));
+    s+='<polygon points="'+t.concat(b).join(' ')+'" style="fill:var(--band);opacity:.9"/>';
+    function path(a){ return a.map(function(v,k){ return (k?'L':'M')+X(k).toFixed(1)+' '+Y(v).toFixed(1); }).join(''); }
+    s+='<path d="'+path(C.median)+'" style="fill:none;stroke:var(--median);stroke-width:1.5;stroke-dasharray:5 4"/>';
+    s+='<path d="'+path(C.ours)+'" style="fill:none;stroke:var(--accent);stroke-width:2.25;stroke-linejoin:round"/>';
+    var nt = W<440 ? 4 : 6;
+    for (var q=0;q<nt;q++){ var k=Math.round(q*(N-1)/(nt-1)); var an=q===0?'start':(q===nt-1?'end':'middle'); var xx=q===0?ml:(q===nt-1?W-mr:X(k));
+      s+='<text class="ax" x="'+xx+'" y="'+(H-8)+'" text-anchor="'+an+'">'+lab(k,{day:'numeric',month:'short'})+'</text>'; }
+    s+='<line id="guide" x1="0" x2="0" y1="'+mt+'" y2="'+(mt+ph)+'" style="stroke:var(--ink);stroke-width:1;opacity:0"/><circle id="dot" r="4" style="fill:var(--accent);stroke:var(--paper);stroke-width:2;opacity:0"/><rect id="hit" x="'+ml+'" y="'+mt+'" width="'+pw+'" height="'+ph+'" fill="transparent"/></svg>';
+    box.innerHTML=s;
+    var hit=document.getElementById('hit');
+    function show(ev){ var r=hit.getBoundingClientRect(); var i=Math.max(0,Math.min(N-1,Math.floor((ev.clientX-r.left)/st)));
+      var g=document.getElementById('guide'), dd=document.getElementById('dot'), xx=X(i);
+      g.setAttribute('x1',xx); g.setAttribute('x2',xx); g.style.opacity=.35; dd.setAttribute('cx',xx); dd.setAttribute('cy',Y(C.ours[i])); dd.style.opacity=1;
+      tip.innerHTML='<b>'+lab(i,{weekday:'short',day:'numeric',month:'short'})+'</b><br>Your nightly rate '+money(C.ours[i])+' ('+(isB[i]?'booked':'open')+')'+(C.ms&&C.ms[i]?'<br>Minimum stay '+C.ms[i]+' nights':'')+'<br>Market median '+money(C.median[i])+'<br>Middle half '+money(C.p25[i])+' to '+money(C.p75[i]);
+      tip.hidden=false; var tw=tip.offsetWidth, bw=cb.clientWidth, left=xx+20; if (left+tw>bw-6) left=xx-8-tw; if (left<6) left=6; tip.style.left=left+'px'; }
+    function hide(){ tip.hidden=true; var g=document.getElementById('guide'), dd=document.getElementById('dot'); if(g) g.style.opacity=0; if(dd) dd.style.opacity=0; }
+    hit.addEventListener('pointermove',show); hit.addEventListener('pointerdown',show); hit.addEventListener('pointerleave',hide);
+  }
+  draw(); var lw=box.clientWidth;
+  function rd(){ if (Math.abs(box.clientWidth-lw)>2){ lw=box.clientWidth; draw(); } }
+  if (window.ResizeObserver) new ResizeObserver(rd).observe(box); else window.addEventListener('resize', rd);
+  document.getElementById('pace').innerHTML = PACE.map(function(r){
+    return '<div class="r"><div class="lab">'+r[0]+'</div><div class="bars"><div class="b us"><i style="--v:'+r[1]+'"></i><em>'+r[1]+'%</em></div><div class="b mk"><i style="--v:'+r[2]+'"></i><em>'+r[2]+'%</em></div></div></div>';
+  }).join('');
+})();
+</script>
+<script type="application/json" id="xdata">{"start":"2026-11-06","ours":[361,413,333,332,331,321,328,390,442,283,280,280,375,280,349,409,280,280,280,280,290,350,457,297,286,280,280,292,359,424,294,304,298,299,305,404,477,325,319,338,343,354,450,583,528,593,599,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,766,570,634,607,614,590,700,781,571,550,551,552,534,800,800,800,800,504,437,451,527,598,441,450,435,424],"med":[275,281,263,261,261,261,271,281,281,267,264,265,261,271,282,288,269,270,269,268,277,287,287,272,275,284,284,293,301,298,280,283,283,289,294,305,307,294,295,297,294,312,340,375,383,427,436,455,461,485,483,492,513,510,507,510,519,501,486,473,476,468,454,440,440,414,405,410,412,416,418,421,394,401,403,431,440,442,442,423,394,368,352,347,364,346,320,301,301,300],"bk":[true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],"ms":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2],"min":280,"max":800,"base":400,"clean":100,"fees":{"pct":22.0,"clean":195.0,"linen":115.0,"other":0,"other_label":""}}</script><script>
+(function(){
+var X=JSON.parse(document.getElementById('xdata').textContent);
+var N=X.ours.length, D0=Date.parse(X.start+'T00:00:00Z');
+function money(v){return (v<0?'−$':'$')+Math.abs(Math.round(v)).toLocaleString('en-AU');}
+function lab(i,o){return new Date(D0+i*864e5).toLocaleDateString('en-AU',Object.assign({timeZone:'UTC'},o));}
+var $=function(id){return document.getElementById(id);};
+/* ---- Try a stay ---- */
+if($('calc')){
+  var ci=$('c-in'), cn=$('c-n'), cb=$('c-base');
+  var first=0; for(var i=0;i<N;i++){ if(!X.bk[i]){first=i;break;} }
+  ci.max=N-2; ci.value=first;
+  function rate(i,adj){ if(X.bk[i]) return X.ours[i]; var r=X.ours[i]*(1+adj/100); return Math.max(X.min,Math.min(X.max,r)); }
+  function stay(s,n,adj){ var sum=0,med=0,bk=0; for(var k=s;k<s+n&&k<N;k++){ sum+=rate(k,adj); med+=X.med[k]; if(X.bk[k])bk++; }
+    var nn=Math.min(n,N-s), pay=sum+X.clean, f=X.fees, mg=f?pay*f.pct/100:0, net=f?pay-mg-f.clean-f.linen-f.other:null;
+    return {n:nn,sum:sum,avg:sum/nn,med:med/nn,bk:bk,pay:pay,mg:mg,net:net}; }
+  function draw(){
+    var s=+ci.value, adj=+cb.value, ms=X.ms[s]||1;
+    cn.min=Math.max(1,ms); if(+cn.value<ms) cn.value=ms;
+    var n=+cn.value, r=stay(s,n,adj);
+    $('c-in-l').textContent=lab(s,{weekday:'short',day:'numeric',month:'short'})+' → '+lab(s+r.n,{weekday:'short',day:'numeric',month:'short'});
+    $('c-n-l').textContent=r.n+' night'+(r.n>1?'s':'')+' (minimum '+ms+')';
+    $('c-base-l').textContent=adj===0?'As set today ('+money(X.base)+')':(adj>0?'+':'')+adj+'% ('+money(X.base*(1+adj/100))+')';
+    var w=[]; if(r.bk) w.push(r.bk+' of these nights '+(r.bk>1?'are':'is')+' already booked, so this is for illustration.'); if(s+n>N) w.push('Rates are only loaded to '+lab(N-1,{day:'numeric',month:'short'})+'.');
+    $('c-warn').textContent=w.join(' '); $('c-warn').hidden=!w.length;
+    var f=X.fees, rows='<tr><td>'+r.n+' night'+(r.n>1?'s':'')+' at about '+money(r.avg)+' a night</td><td>'+money(r.sum)+'</td></tr>'+
+      '<tr><td>Guest cleaning fee (once per stay)</td><td>'+money(X.clean)+'</td></tr>'+
+      '<tr class="tot"><td>Payout for the stay</td><td>'+money(r.pay)+'</td></tr>';
+    if(f){ rows+='<tr class="minus"><td>Management fee ('+f.pct+'%)</td><td>'+money(-r.mg)+'</td></tr>'+
+      '<tr class="minus"><td>Cleaning (per stay)</td><td>'+money(-f.clean)+'</td></tr>'+
+      '<tr class="minus"><td>Linen (per stay)</td><td>'+money(-f.linen)+'</td></tr>'+
+      (f.other?'<tr class="minus"><td>'+f.other_label+'</td><td>'+money(-f.other)+'</td></tr>':'')+
+      '<tr class="net"><td>Estimated to you</td><td>'+money(r.net)+'</td></tr><tr><td colspan="2" class="note" style="border:0">About '+money(r.net/r.n)+' a night to you for this stay.</td></tr>'; }
+    $('c-out').innerHTML=rows;
+    var d=r.avg-r.med, pct=Math.round(100*d/r.med);
+    $('c-pos').innerHTML='For these nights the market median is <b>'+money(r.med)+' a night</b>, so this rate sits <b>'+(Math.abs(pct)<3?'right at the median':(Math.abs(pct)+'% '+(pct>0?'above':'below')+' the median'))+'</b>.'+(adj?' This shows the rate only. A higher or lower base also changes how quickly nights book, which nobody can promise.':'');
+    var t='<tr><th>Nights</th><th>Payout</th>'+(f?'<th>To you</th><th>To you a night</th>':'<th>A night</th>')+'</tr>';
+    for(var k=1;k<=10;k++){ if(s+k>N) break; var q=stay(s,k,adj); var sh=k<ms;
+      t+='<tr class="'+(k===r.n?'on':'')+(sh?' short':'')+'"><td>'+k+(sh?' <small>below min.</small>':'')+'</td><td>'+money(q.pay)+'</td>'+(f?'<td>'+money(q.net)+'</td><td>'+money(q.net/k)+'</td>':'<td>'+money(q.pay/k)+'</td>')+'</tr>'; }
+    $('c-los').innerHTML=t;
+  }
+  [ci,cn,cb].forEach(function(e){e.addEventListener('input',draw);}); draw();
+}
+/* ---- calendar ---- */
+if($('calbox')){
+  var gap=new Array(N).fill(false), i0=0;
+  while(i0<N){ if(X.bk[i0]){i0++;continue;} var j=i0; while(j+1<N&&!X.bk[j+1]) j++;
+    var len=j-i0+1, bounded=(i0>0&&X.bk[i0-1])&&(j<N-1&&X.bk[j+1]);
+    if(bounded&&len<(X.ms[i0]||1)) for(var k=i0;k<=j;k++) gap[k]=true; i0=j+1; }
+  var html='', cur=-1, g='';
+  for(var i=0;i<N;i++){ var dt=new Date(D0+i*864e5), m=dt.getUTCMonth();
+    if(m!==cur){ if(cur>=0) html+=g+'</div></div>'; cur=m; g='';
+      html+='<div><h3>'+dt.toLocaleDateString('en-AU',{month:'long',year:'numeric',timeZone:'UTC'})+'</h3><div class="g">'+['M','T','W','T','F','S','S'].map(function(x){return '<div class="dw">'+x+'</div>';}).join('');
+      var pad=(dt.getUTCDay()+6)%7; for(var p=0;p<pad;p++) g+='<div class="c x"></div>'; }
+    g+='<div class="c'+(X.bk[i]?' b':gap[i]?' gap':'')+'" title="'+lab(i,{weekday:'short',day:'numeric',month:'short'})+': '+(X.bk[i]?'booked':gap[i]?'gap night (shorter than the minimum stay)':'open')+', '+money(X.ours[i])+' a night, minimum '+(X.ms[i]||1)+'">'+dt.getUTCDate()+'<small>'+(X.bk[i]?'':money(X.ours[i]))+'</small></div>'; }
+  html+=g+'</div></div>'; $('calbox').innerHTML=html;
+  var gn=gap.filter(Boolean).length, open=X.bk.filter(function(b){return !b;}).length;
+  $('calsum').innerHTML='<b>'+(N-open)+'</b> of the next '+N+' nights are booked and <b>'+open+'</b> are open'+(gn?', including <b>'+gn+' gap night'+(gn>1?'s':'')+'</b>: short runs between bookings that are shorter than the minimum stay, so they can\'t be booked as things stand':'')+'.';
+}
+})();
+</script>
+
+</body></html>
