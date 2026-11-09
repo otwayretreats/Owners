@@ -1,0 +1,176 @@
+<title>Seal Haven Property Care</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --bg:#fbf9f7; --paper:#ffffff; --ink:#231f20; --muted:#5e5856; --line:#e6e0dc;
+  --accent:#2f6b58; --tint:#e1eee8; --band:#ece6e0; --median:#6f6561; --watch:#9a5b1f;
+  --font:"Brandon Grotesque","Jost","Century Gothic","Avenir Next",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1819; --paper:#2a2526; --ink:#f4efec; --muted:#b8afab; --line:#3a3435;
+    --accent:#8fc9b4; --tint:#2c4a40; --band:#3b3435; --median:#c9bfba; --watch:#e0a870; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1819; --paper:#2a2526; --ink:#f4efec; --muted:#b8afab; --line:#3a3435;
+  --accent:#8fc9b4; --tint:#2c4a40; --band:#3b3435; --median:#c9bfba; --watch:#e0a870; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink); font:400 16px/1.6 var(--font);
+  padding-block:28px 64px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); -webkit-text-size-adjust:100%}
+.wrap{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:48px; min-width:0}
+section{min-width:0}
+.brand{font-size:.72rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--accent); margin:0 0 18px}
+.kicker{font-size:.74rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+h1{font-weight:300; font-size:clamp(2rem,7vw,2.9rem); line-height:1.08; letter-spacing:.05em; text-transform:uppercase; margin:0 0 6px; text-wrap:balance}
+.addr{margin:0; color:var(--muted); font-size:1.02rem}
+.meta{margin:10px 0 0; color:var(--muted); font-size:.86rem}
+.lead{font-size:1.15rem; line-height:1.6; margin:24px 0 0; max-width:62ch; text-wrap:pretty}
+.lead b{font-weight:500; color:var(--accent)}
+h2{font-weight:400; font-size:1.45rem; line-height:1.2; margin:0 0 6px; text-wrap:balance}
+h3{font-weight:500; font-size:1.05rem; margin:0 0 4px}
+.sub{margin:0 0 20px; color:var(--muted); max-width:64ch}
+.note{margin:16px 0 0; color:var(--muted); font-size:.92rem; max-width:66ch}
+.muted{color:var(--muted)}
+.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:28px}
+.tile{border:1px solid var(--line); background:var(--paper); padding:16px 18px; border-radius:3px; min-width:0}
+.tile .k{font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+.tile .v{font-size:1.9rem; font-weight:300; line-height:1.1; margin:0; font-variant-numeric:tabular-nums}
+.tile .d{margin:6px 0 0; font-size:.86rem; color:var(--muted)}
+.explain{border-left:3px solid var(--accent); background:var(--paper); padding:14px 16px; margin:0 0 22px; font-size:.95rem; max-width:66ch}
+.explain p{margin:0}
+.scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse; width:100%; font-size:.93rem; font-variant-numeric:tabular-nums}
+th{font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); text-align:right; padding:8px 10px; border-bottom:1px solid var(--ink); white-space:nowrap}
+td{padding:11px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap}
+th:first-child, td:first-child{text-align:left; padding-left:2px}
+td:first-child{font-weight:500}
+td.strong{font-weight:600; color:var(--accent)}
+tr.me td{background:var(--tint)}
+tr.me td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+@media (max-width:640px){
+  .stack thead{display:none}
+  .stack, .stack tbody, .stack tr, .stack td{display:block; width:100%}
+  .stack tr{border-top:1px solid var(--line); padding:12px 0 10px}
+  .stack td{display:flex; justify-content:space-between; gap:16px; padding:3px 2px; border:0; white-space:normal}
+  .stack td::before{content:attr(data-label); color:var(--muted); font-weight:400}
+  .stack td:first-child{font-size:1.02rem; padding-bottom:6px}
+  .stack td:first-child::before{content:""}
+}
+.pill{display:inline-block; font-size:.7rem; font-weight:500; letter-spacing:.04em; padding:2px 8px; border-radius:99px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; vertical-align:middle}
+.pill.good{border-color:var(--accent); color:var(--accent)}
+.pill.watch{border-color:var(--watch); color:var(--watch)}
+.pill.off{text-decoration:none; opacity:.85}
+.dgroup{margin-top:6px}
+.dgroup + .dgroup{margin-top:26px}
+.dhead{font-size:.72rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 4px; padding-bottom:6px; border-bottom:1px solid var(--ink)}
+.drow{display:grid; grid-template-columns:1fr auto; gap:6px 16px; padding:12px 2px; border-bottom:1px solid var(--line); align-items:start}
+.dname{font-weight:500; min-width:0}
+.ddet{display:block; font-weight:400; color:var(--muted); font-size:.9rem; line-height:1.45; margin-top:2px}
+.legend{display:flex; flex-wrap:wrap; gap:8px 18px; font-size:.84rem; color:var(--muted); margin:0 0 10px}
+.legend span{display:inline-flex; align-items:center; gap:7px}
+.legend i{display:inline-block; width:22px; height:0; border-top:2px solid var(--accent)}
+.legend i.med{border-top:2px dashed var(--median)}
+.legend i.bandsw{height:10px; border:0; background:var(--band)}
+.legend i.bk{height:10px; border:0; background:var(--tint); box-shadow:inset 0 0 0 1px var(--accent)}
+#chartbox{position:relative; background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:10px 6px 4px; min-width:0}
+#chart{width:100%; touch-action:pan-y}
+#chart svg{display:block; overflow:visible}
+.ax{fill:var(--muted); font:400 11px var(--font)}
+.gl{stroke:var(--line); stroke-width:1}
+.tip{position:absolute; top:8px; z-index:2; pointer-events:none; background:var(--ink); color:var(--bg); font-size:.8rem; line-height:1.45; padding:8px 10px; border-radius:3px; width:max-content; max-width:210px}
+.hintline{margin:8px 2px 0; font-size:.8rem; color:var(--muted)}
+.points{margin:24px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px}
+.points li{padding-left:18px; position:relative; max-width:66ch}
+.points li::before{content:""; position:absolute; left:0; top:.72em; width:8px; height:2px; background:var(--accent)}
+.points b{font-weight:500}
+.pace{display:flex; flex-direction:column; gap:14px}
+.pace .r{display:grid; grid-template-columns:104px 1fr; gap:12px; align-items:center}
+.pace .lab{font-size:.9rem; color:var(--muted)}
+.pace .bars{display:flex; flex-direction:column; gap:5px; min-width:0}
+.pace .b{display:flex; align-items:center; gap:8px; font-variant-numeric:tabular-nums; font-size:.86rem}
+.pace .b i{display:block; height:14px; border-radius:1px; width:calc(var(--v) / 50 * 100% - 44px); min-width:4px}
+.pace .b.us i{background:var(--accent)}
+.pace .b.mk i{background:var(--band); box-shadow:inset 0 0 0 1px var(--line)}
+.pace .b em{font-style:normal; color:var(--muted)}
+.pace .b.us em{color:var(--ink); font-weight:500}
+.key{display:flex; gap:18px; flex-wrap:wrap; font-size:.84rem; color:var(--muted); margin:0 0 14px}
+.key span{display:inline-flex; align-items:center; gap:7px}
+.key i{display:inline-block; width:16px; height:10px}
+.key i.us{background:var(--accent)} .key i.mk{background:var(--band); box-shadow:inset 0 0 0 1px var(--line)}
+.acts{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px}
+.act{display:grid; grid-template-columns:40px 1fr; gap:14px; background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:18px 18px 16px 14px; min-width:0}
+.anum{width:32px; height:32px; border-radius:50%; background:var(--accent); color:var(--bg); display:grid; place-items:center; font-weight:600}
+.abody{min-width:0}
+.abody p{margin:0 0 8px; max-width:62ch}
+.abody .sugg b{font-weight:600}
+.abody .reply{margin:0; font-size:.88rem; color:var(--accent)}
+.atype{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 2px !important}
+.abody .evid{font-style:italic;color:var(--muted)}
+.abody .cost{font-size:.86rem;color:var(--watch)}
+.revtop{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:stretch}
+.sbars{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:6px 4px;min-width:0}
+.sb{display:grid;grid-template-columns:28px 1fr 24px;gap:8px;align-items:center;font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.sb i{display:block;height:8px;border-radius:1px;background:var(--accent);width:calc(var(--v) / var(--t) * 100%);min-width:2px}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:22px}
+.tl{margin:8px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px} .tl b{font-weight:500}
+.rl{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.rl li{border-bottom:1px solid var(--line);padding-bottom:10px} .rl p{margin:4px 0 0;max-width:66ch}
+.rh{font-size:.86rem;color:var(--muted)}
+.cats{margin:18px 0 0;font-size:.9rem;color:var(--muted)} .cats b{color:var(--ink);font-weight:600} .st{color:var(--accent);letter-spacing:1px}
+.context{background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:18px 20px}
+.context p{margin:0 0 10px; max-width:64ch} .context p:last-child{margin:0}
+footer{border-top:1px solid var(--line); padding-top:20px; color:var(--muted); font-size:.86rem; display:flex; flex-direction:column; gap:10px}
+footer p{margin:0; max-width:68ch}
+footer .who{color:var(--ink)}
+
+.alert{border:1px solid var(--watch);border-left:4px solid var(--watch);background:var(--paper);border-radius:3px;padding:16px 18px;display:flex;flex-direction:column;gap:14px}
+.alert h3{margin:0 0 4px;color:var(--watch)}
+.alert p{margin:0 0 6px;max-width:64ch}
+.alert .lab{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0}
+.found{color:var(--muted)}
+.simple{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.simple li{padding:10px 2px;border-bottom:1px solid var(--line)}
+.simple b{font-weight:500;display:block}
+.simple span{color:var(--muted);font-size:.92rem}
+.howto{background:var(--tint);border-radius:3px;padding:14px 16px;font-size:.95rem}
+.howto p{margin:0 0 6px} .howto p:last-child{margin:0}
+.meta2{font-size:.86rem;color:var(--muted)}
+.phs{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:10px 0;max-width:460px}
+.ph{padding:0;border:1px solid var(--line);border-radius:3px;background:var(--tint);cursor:zoom-in;aspect-ratio:4/3;overflow:hidden;max-width:100%}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.lb{position:fixed;inset:0;z-index:20;background:rgba(10,14,12,.88);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:2px}
+
+.abody .cost{font-size:.86rem;color:var(--watch)}</style>
+<div class="wrap">
+  <header>
+    <p class="brand">Otway Retreats</p>
+    <p class="kicker">Property care · November 2026</p>
+    <h1>Seal Haven</h1>
+    <p class="addr">1B Cartwright St, Apollo Bay</p>
+    <p class="meta">Prepared for Debbie Thomas · as at 9 November 2026</p>
+    <p class="lead"><b>Nothing needs your OK today.</b> Two items are on our radar: the ground-floor bedroom ceiling, where a quote is being organised for your approval, and the balcony glass panel.</p>
+  </header>
+  
+  
+  
+  <section aria-labelledby="h-watch"><h2 id="h-watch">Keeping an eye on</h2><p class="sub">Nothing to decide yet. We’ll come back to you if anything changes.</p><ul class="simple"><li><b>Ceiling, ground-floor bedroom</b><span>A guest noticed a damp patch near the light fitting on 6 Nov. Our team checked on 9 Nov and it was not dripping. We spoke with you by phone and are organising a quote for repairs. Nothing goes ahead until you approve it.</span></li><li><b>Balcony glass panel</b><span>One panel was found shattered. It has been made safe and guests were told. We are arranging a glazier for the replacement and will confirm timing with you.</span></li></ul></section>
+  <section aria-labelledby="h-how">
+    <h2 id="h-how">How approvals work</h2>
+    <div class="howto"><p>Under our management agreement we can go ahead with repairs up to $200 without your approval, and act straight away in an emergency. Anything above that waits for your yes.</p><p>Reply to the email this came with: “yes to 1”, “yes to all”, or ask us anything.</p></div>
+  </section>
+  <footer>
+    <p>Sources: inspection, cleaning and maintenance records from our team, and guest messages, as at 9 November 2026. Your next property care update: December 2026.</p>
+    <p class="who">The Otway Retreats team, Property care, Otway Retreats · Phone (03) 5292 3631 · hello@otwayretreats.com.au</p>
+  </footer>
+</div>
+<div class="lb" hidden role="dialog" aria-label="Photo"><img alt=""></div>
+<script>(function(){var lb=document.querySelector('.lb'),im=lb.querySelector('img');
+document.addEventListener('click',function(e){var b=e.target.closest('.ph');if(b){var s=b.querySelector('img');im.src=s.src;im.alt=s.alt;lb.hidden=false;return}if(e.target.closest('.lb'))lb.hidden=true});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.hidden=true});})();</script>
