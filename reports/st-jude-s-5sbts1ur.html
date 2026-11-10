@@ -177,11 +177,11 @@ footer .who{color:var(--ink)}
     <p class="kicker">Owner report · November 2026</p>
     <h1>St Jude&#x27;s</h1>
     <p class="addr">18B Casino Ave Apollo Bay · 3 bedrooms, sleeps 6</p>
-    <p class="meta">Prepared for Mary-Anne and Michael Carroll · as at 10 November 2026</p>
-    <p class="lead">St Jude's has eight stays on the books from 1 November to 24 December, paying out <b>$11,505</b> in total, the biggest being 22–24 December on Booking.com at <b>$2,490.40</b>. Christmas to New Year and all of January are still open, and bookings for the next 90 days are behind comparable homes, so this month's recommendations focus on those dates.</p>
+    <p class="meta">Prepared for Mary-Anne and Michael · as at 11 November 2026</p>
+    <p class="lead">St Jude's has eight stays on the books from 1 November to 24 December, paying out <b>$10,770</b> in total, the biggest being 22–24 December on Booking.com at <b>$1,754.60</b>. Christmas to New Year and all of January are still open, and bookings for the next 90 days are behind comparable homes (<b>12%</b> against <b>31%</b>), so this month's recommendations focus on those dates.</p>
     <div class="tiles">
-      <div class="tile"><p class="k">Payouts on the books</p><p class="v">$8,025</p><p class="d">Stays from today onward</p></div>
-      <div class="tile"><p class="k">Booked, next 90 days</p><p class="v">12%</p><p class="d">Comparable homes: 30%</p></div>
+      <div class="tile"><p class="k">Payouts on the books</p><p class="v">$6,169</p><p class="d">Stays from today onward</p></div>
+      <div class="tile"><p class="k">Booked, next 90 days</p><p class="v">12%</p><p class="d">Comparable homes: 31%</p></div>
       <div class="tile"><p class="k">Discounts on these stays</p><p class="v">$386</p><p class="d">Payout given up to discounts</p></div>
     </div>
   </header>
@@ -198,7 +198,7 @@ footer .who{color:var(--ink)}
       <div class="tile"><p class="k">2 · Minimum stay</p><p class="v">2 to 4 nights</p><p class="d">The fewest nights a guest can book; longer over peak periods. Shown for each period below.</p></div>
       <div class="tile"><p class="k">3 · Guest cleaning fee</p><p class="v">$100</p><p class="d">Added once to every booking, on top of the nightly rates</p></div>
     </div>
-    <div style="margin-top:22px"><div class="explain"><p><b>For example:</b> a 2-night stay, 11–13 Nov, at today's rates is 2 nights at about $395 = $790, plus the $100 cleaning fee, so roughly <b>$890</b> paid out for the stay, before our management, cleaning and linen fees.</p></div></div>
+    <div style="margin-top:22px"><div class="explain"><p><b>For example:</b> a 2-night stay, 12–14 Nov, at today's rates is 2 nights at about $408 = $815, plus the $100 cleaning fee, so roughly <b>$915</b> paid out for the stay, before our management, cleaning and linen fees.</p></div></div>
     <h3>Your pricing strategy in PriceLabs</h3>
     <p class="sub">PriceLabs sets a new rate for every night, every day, using three settings we agree with you.</p>
     <div class="tiles strat">
@@ -217,9 +217,22 @@ footer .who{color:var(--ink)}
 .calc>*,.calc .two>*,.calc .ctls>*{min-width:0}
 .calc td:first-child{padding-right:10px}
 .calc .ctl{display:grid;gap:6px}
-.calc .ctl label{display:grid;gap:2px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.calc .ctl label{display:grid;gap:2px;align-content:start;min-height:4.2rem;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .calc .ctl label b{font-size:.95rem;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:500}
-.calc input[type=range]{width:100%;accent-color:var(--accent);min-height:28px}
+.calc .ctl{background:var(--bg,#f6f4ef);border:1px solid var(--line);border-radius:10px;padding:12px 14px 10px}
+.calc .ctl label b{font-size:1.05rem;color:var(--accent);font-weight:600}
+.calc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:34px;margin:4px 0 0;background:transparent;cursor:pointer;--p:0%}
+.calc input[type=range]:focus{outline:none}
+.calc input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--accent) 0 var(--p),var(--line) var(--p) 100%)}
+.calc input[type=range]::-moz-range-track{height:8px;border-radius:999px;background:var(--line)}
+.calc input[type=range]::-moz-range-progress{height:8px;border-radius:999px;background:var(--accent)}
+.calc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:26px;height:26px;margin-top:-9px;border-radius:50%;background:var(--paper);border:3px solid var(--accent);box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .12s}
+.calc input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--paper);border:3px solid var(--accent);box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.calc input[type=range]:hover::-webkit-slider-thumb,.calc input[type=range]:focus-visible::-webkit-slider-thumb{transform:scale(1.12);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 18%,transparent),0 2px 6px rgba(0,0,0,.18)}
+.calc input[type=range]:focus-visible::-moz-range-thumb{box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 18%,transparent)}
+.calc .ends{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);margin-top:2px;letter-spacing:.02em}
+.calc .ends b{color:var(--ink);font-weight:500}
+.calc .hint{font-size:.74rem;color:var(--muted);margin:0}
 .calc .ctls{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .calc .warn{font-size:.86rem;color:var(--watch);margin:0}
 .calc table{width:100%;border-collapse:collapse;font-size:.95rem}
@@ -246,6 +259,8 @@ footer .who{color:var(--ink)}
 .cal .c.b{background:var(--tint);border-color:transparent}
 .cal .c.gap{background:repeating-linear-gradient(135deg,var(--paper) 0 4px,var(--band) 4px 8px);border-color:var(--watch)}
 .cal .c.x{visibility:hidden}
+.cal .c{position:relative}.cal .c .ms{position:absolute;top:1px;right:2px;font-size:.5rem;line-height:1;color:var(--accent,#2c6b5f);font-weight:700;letter-spacing:0}
+.cal .c.b .ms{display:none}
 .calkey{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--muted);margin:0 0 14px}
 .calkey i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:6px;border:1px solid var(--line)}
 .calkey i.b{background:var(--tint);border-color:transparent}.calkey i.gap{background:repeating-linear-gradient(135deg,var(--paper) 0 3px,var(--band) 3px 6px);border-color:var(--watch)}
@@ -258,15 +273,22 @@ footer .who{color:var(--ink)}
 .hbar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:.8rem}
 .calkey i.us{background:var(--accent);border-color:transparent}.calkey i.mk{background:var(--band);border-color:var(--median)}
 .pat{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.sl{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:14px}
+.sl th,.sl td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+.sl th{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.sl td:first-child,.sl th:first-child{text-align:left}
+.sl td.hi{font-weight:600;color:var(--accent)}
+.sl tr.grp td{font-weight:600;border-bottom:0;padding-top:14px;text-align:left;color:var(--ink)}
+.sl td.mu{color:var(--muted)}
 @media print{.calc input[type=range]{display:none}.calc .ctl label{text-transform:none}.cal .c{font-size:.6rem}}
 </style><section aria-labelledby="h-calc">
     <h2 id="h-calc">Try a stay</h2>
     <p class="sub">Pick a check-in date and a stay length to see what a booking would pay at today's rates, and roughly what it leaves you after our fees. Move the base price to see how the rates would shift. Nights keep within your minimum and maximum, and booked nights stay as booked.</p>
     <div class="calc" id="calc">
       <div class="ctls">
-        <div class="ctl"><label for="c-in">Check-in <b id="c-in-l"></b></label><input type="range" id="c-in" min="0" value="0" step="1"></div>
-        <div class="ctl"><label for="c-n">Stay length <b id="c-n-l"></b></label><input type="range" id="c-n" min="1" max="10" value="2" step="1"></div>
-        <div class="ctl"><label for="c-base">What if your base price was… <b id="c-base-l"></b></label><input type="range" id="c-base" min="-20" max="20" step="5" value="0"></div>
+        <div class="ctl"><label for="c-in">Check-in <b id="c-in-l"></b></label><input type="range" id="c-in" min="0" value="0" step="1" aria-describedby="c-in-h"><div class="ends" id="c-in-e"><span></span><span></span></div><p class="hint" id="c-in-h">Slide to any night in the next few months.</p></div>
+        <div class="ctl"><label for="c-n">Stay length <b id="c-n-l"></b></label><input type="range" id="c-n" min="1" max="10" value="2" step="1" aria-describedby="c-n-h"><div class="ends"><span>1 night</span><span>10 nights</span></div><p class="hint" id="c-n-h">Starts at the minimum stay for that check-in.</p></div>
+        <div class="ctl"><label for="c-base">What if your base price was… <b id="c-base-l"></b></label><input type="range" id="c-base" min="-20" max="20" step="5" value="0" aria-describedby="c-base-h"><div class="ends"><span>−20% ($420)</span><b>Today $525</b><span>+20% ($630)</span></div><p class="hint" id="c-base-h">Every open night moves by the same share, within your minimum and maximum.</p></div>
       </div>
       <p class="warn" id="c-warn" hidden></p>
       <div class="two">
@@ -299,7 +321,7 @@ footer .who{color:var(--ink)}
 <td data-label="Booked">12 Oct</td>
 <td data-label="Payout" class="strong">$1,022.40</td>
 <td data-label="Without discounts">–</td>
-<td data-label="Discounts cost">–</td></tr><tr><td data-label="Stay">8–11 Nov <span class="pill">Staying now</span></td>
+<td data-label="Discounts cost">–</td></tr><tr><td data-label="Stay">8–11 Nov <span class="pill">Completed</span></td>
 <td data-label="Nights">3</td><td data-label="Channel">Airbnb</td>
 <td data-label="Booked">4 Nov</td>
 <td data-label="Payout" class="strong">$1,119.41</td>
@@ -322,7 +344,7 @@ footer .who{color:var(--ink)}
 <td data-label="Discounts cost">–</td></tr><tr><td data-label="Stay">22–24 Dec</td>
 <td data-label="Nights">2</td><td data-label="Channel">Booking.com</td>
 <td data-label="Booked">7 Apr</td>
-<td data-label="Payout" class="strong">$2,490.40</td>
+<td data-label="Payout" class="strong">$1,754.60</td>
 <td data-label="Without discounts">–</td>
 <td data-label="Discounts cost">–</td></tr></tbody>
     </table>
@@ -334,23 +356,23 @@ footer .who{color:var(--ink)}
     <h2 id="h-disc">Discounts set up on your home</h2>
     <p class="sub">Everything that can lower a booking's payout, and whether it's on today. Your nightly rate never goes below $395 (your minimum) or above $1,000 (your maximum).</p>
     <div class="dgroup"><p class="dhead">Booking site promotions</p><div class="drow"><div class="dname">Early bird<span class="ddet">5% off when booked two or more months ahead.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Weekly and monthly stays<span class="ddet">10% off stays of 7 nights or more, and 20% off 30 nights or more.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Non-refundable rate<span class="ddet">10% off for guests who choose a non-refundable booking.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Airbnb mobile and top-rated discounts<span class="ddet">Not used, so discounts don&#x27;t stack.</span></div><div class="dstat"><span class="pill off">Off</span></div></div></div>
-    <div class="dgroup"><p class="dhead">Automatic pricing rules</p><div class="drow"><div class="dname">Last-minute easing<span class="ddet">If a night is still free inside 14 days, its rate eases gradually, by up to 5%.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Far-out premium<span class="ddet">Premium starting 60 days out, gradually increased to 20% over the next 150 days, then constant at 20% after that (210 days and beyond). Dates booked well ahead pay a little more.</span></div><div class="dstat"><span class="pill good">On (PriceLabs market setting)</span></div></div><div class="drow"><div class="dname">Day-of-week pricing<span class="ddet">Mon -10%, Tue -10%, Wed -10%, Thu -10%, Fri +0%, Sat +5%, Sun +0%</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Booking-pace adjustment<span class="ddet">Rates ease while the calendar fills slowly and rise when it fills fast. 0–15 days out: 8% lower to 20% higher; 16–30 days out: 12% lower to 25% higher; 31–60 days out: 12% lower to 30% higher.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Quiet-calendar easing<span class="ddet">Gradual discount from 5% (no bookings in the last 15 days) up to 15% (no bookings in the last 45 days), affecting prices for the next 30 days.</span></div><div class="dstat"><span class="pill good">On (PriceLabs default)</span></div></div></div>
+    <div class="dgroup"><p class="dhead">Automatic pricing rules</p><div class="drow"><div class="dname">Last-minute easing<span class="ddet">If a night is still free inside 14 days, its rate eases gradually, by up to 5%.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Far-out premium<span class="ddet">Premium starting 60 days out, gradually increased to 20% over the next 149 days, then constant at 20% after that (209 days and beyond). Dates booked well ahead pay a little more.</span></div><div class="dstat"><span class="pill good">On (PriceLabs market setting)</span></div></div><div class="drow"><div class="dname">Day-of-week pricing<span class="ddet">Mon -10%, Tue -10%, Wed -10%, Thu -10%, Fri +0%, Sat +5%, Sun +0%</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Booking-pace adjustment<span class="ddet">Rates ease while the calendar fills slowly and rise when it fills fast. 0–15 days out: 8% lower to 20% higher; 16–30 days out: 12% lower to 25% higher; 31–60 days out: 12% lower to 30% higher.</span></div><div class="dstat"><span class="pill good">On</span></div></div><div class="drow"><div class="dname">Quiet-calendar easing<span class="ddet">Gradual discount from 5% (no bookings in the last 15 days) up to 15% (no bookings in the last 45 days), affecting prices for the next 30 days.</span></div><div class="dstat"><span class="pill good">On (PriceLabs default)</span></div></div></div>
   </section>
 
   <section aria-labelledby="h-mkt">
     <h2 id="h-mkt">Your rates against the market</h2>
-    <p class="sub">Your nightly rate for every night from 11 Nov to 8 February 2027: the rate for one night only, before the guest cleaning fee and with each period's minimum stay applying. Because markups cover commission, this is roughly the payout per night before any discount. The shaded band is the middle half of comparable homes nearby, and the dashed line is their median.</p>
+    <p class="sub">Your nightly rate for every night from 12 Nov to 9 February 2027: the rate for one night only, before the guest cleaning fee and with each period's minimum stay applying. Because markups cover commission, this is roughly the payout per night before any discount. The shaded band is the middle half of comparable homes nearby, and the dashed line is their median.</p>
     <div class="legend"><span><i></i>Your nightly rate</span><span><i class="med"></i>Market median</span><span><i class="bandsw"></i>Middle half of the market</span><span><i class="bk"></i>Booked nights</span></div>
     <div id="chartbox">
-      <div id="chart" role="img" aria-label="Daily nightly rate for St Jude&#x27;s against the market median and middle half of comparable homes, 11 Nov to 8 February 2027."></div>
+      <div id="chart" role="img" aria-label="Daily nightly rate for St Jude&#x27;s against the market median and middle half of comparable homes, 12 Nov to 9 February 2027."></div>
       <div class="tip" id="tip" hidden></div>
     </div>
     <p class="hintline">Hover or tap a night for detail. AUD per night, before the cleaning fee.</p>
-    <ul class="points"><li><b>Booked in early December:</b> 3–6 Dec is fully booked at about <b>$456 a night</b>, above the $367 market median.</li><li><b>Christmas to New Year is open:</b> all 8 nights from 24–31 Dec are priced at about <b>$1,068 a night</b> with a 4-night minimum, in the top quarter of the market (median $725).</li><li><b>January is open:</b> all 31 nights are priced at about <b>$834 a night</b>, in the top quarter against a $586 market median.</li></ul>
+    <ul class="points"><li><b>Booked in early December:</b> 3–6 Dec is fully booked at about $456 a night, above the $366 market median.</li><li><b>Christmas to New Year is open:</b> all 8 nights from 24–31 Dec are priced at about $1,068 a night with a 4-night minimum, in the top quarter of the market (median $726).</li><li><b>January is open:</b> all 31 nights are priced at about $833 a night, in the top quarter against a $583 market median.</li></ul>
     <div class="scroll" style="margin-top:24px">
       <table aria-label="Rate by period against the market">
         <thead><tr><th>Period</th><th>Status</th><th>Your nightly rate</th><th>Minimum stay</th><th>Market median</th><th>Top quarter from</th><th>Where you sit</th></tr></thead>
-        <tbody><tr><td>11–23 Nov</td><td><span class="pill">2 of 13 booked</span></td><td>$419</td><td>2 nights</td><td>$337</td><td>$442</td><td><span class="pill">Above median</span></td></tr><tr><td>24 Nov–2 Dec</td><td><span class="pill watch">Open</span></td><td>$407</td><td>2 nights</td><td>$348</td><td>$460</td><td><span class="pill">Above median</span></td></tr><tr><td>3–6 Dec</td><td><span class="pill good">Booked</span></td><td>$456</td><td>2 nights</td><td>$367</td><td>$482</td><td><span class="pill">Above median</span></td></tr><tr><td>7–23 Dec</td><td><span class="pill">4 of 17 booked</span></td><td>$588</td><td>2–3 nights</td><td>$440</td><td>$577</td><td><span class="pill">Top quarter</span></td></tr><tr><td>24–31 Dec</td><td><span class="pill watch">Open</span></td><td>$1,068</td><td>4 nights</td><td>$725</td><td>$1,003</td><td><span class="pill">Top quarter</span></td></tr><tr><td>1–31 Jan</td><td><span class="pill watch">Open</span></td><td>$834</td><td>2–4 nights</td><td>$586</td><td>$755</td><td><span class="pill">Top quarter</span></td></tr><tr><td>1–8 Feb</td><td><span class="pill watch">Open</span></td><td>$598</td><td>2 nights</td><td>$407</td><td>$531</td><td><span class="pill">Top quarter</span></td></tr></tbody>
+        <tbody><tr><td>12–23 Nov</td><td><span class="pill">2 of 12 booked</span></td><td>$405</td><td>2 nights</td><td>$337</td><td>$443</td><td><span class="pill">Above median</span></td></tr><tr><td>24 Nov–2 Dec</td><td><span class="pill watch">Open</span></td><td>$406</td><td>2 nights</td><td>$347</td><td>$459</td><td><span class="pill">Above median</span></td></tr><tr><td>3–6 Dec</td><td><span class="pill good">Booked</span></td><td>$456</td><td>2 nights</td><td>$366</td><td>$482</td><td><span class="pill">Above median</span></td></tr><tr><td>7–23 Dec</td><td><span class="pill">4 of 17 booked</span></td><td>$586</td><td>2–3 nights</td><td>$438</td><td>$576</td><td><span class="pill">Top quarter</span></td></tr><tr><td>24–31 Dec</td><td><span class="pill watch">Open</span></td><td>$1,068</td><td>4 nights</td><td>$726</td><td>$1,003</td><td><span class="pill">Top quarter</span></td></tr><tr><td>1–31 Jan</td><td><span class="pill watch">Open</span></td><td>$833</td><td>2–4 nights</td><td>$583</td><td>$751</td><td><span class="pill">Top quarter</span></td></tr><tr><td>1–9 Feb</td><td><span class="pill watch">Open</span></td><td>$596</td><td>2 nights</td><td>$405</td><td>$528</td><td><span class="pill">Top quarter</span></td></tr></tbody>
       </table>
     </div>
     <p class="note">Average nightly rate across each period, per night, before the guest cleaning fee. Market figures are nightly rates too.</p>
@@ -358,9 +380,9 @@ footer .who{color:var(--ink)}
 
   <section aria-labelledby="h-cal">
     <h2 id="h-cal">Your calendar</h2>
-    <p class="sub">Every night from 11 Nov, with the nightly rate on open nights. Minimum stays for each period are in the table above; on a computer, hover over a night to see its own.</p>
+    <p class="sub">Every night from 12 Nov, with the nightly rate on open nights and, in the corner of each open night, the minimum stay that applies to it (<b>2n</b> = a 2-night minimum). Nights shown at the rate but marked as a gap can't be booked because the run between bookings is shorter than that minimum.</p>
     <div class="explain"><p><b>These are today's rates, not fixed prices.</b> Dynamic pricing changes them every day. As market demand, how far away the date is and how quickly your calendar is filling change, PriceLabs moves each open night up or down between your minimum ($395) and maximum ($1,000), around your base of $525. A night shown at one rate today can sell for a different rate closer to the date.</p></div>
-    <p class="calkey"><span><i class="b"></i>Booked</span><span><i></i>Open</span><span><i class="gap"></i>Gap night</span></p>
+    <p class="calkey"><span><i class="b"></i>Booked</span><span><i></i>Open</span><span><i class="gap"></i>Gap night</span><span><b style="font-size:.7rem">2n</b>&nbsp;Minimum nights</span></p>
     <div class="cal" id="calbox"></div>
     <p class="note" id="calsum"></p>
     <p class="note"><b>20–21 Dec</b> sit between two bookings, but the minimum stay there is 3 nights, so they can't be booked as things stand; we suggest allowing a 2-night stay on those dates.</p>
@@ -380,7 +402,7 @@ footer .who{color:var(--ink)}
 
   <section aria-labelledby="h-pat">
     <h2 id="h-pat">How guests book your home</h2>
-    <p class="sub">From 46 stays between 10 Nov 2025 and 18 Feb 2027. Typical stay <b>3 nights</b>; typically booked <b>40 days</b> ahead, against <b>2 nights</b> and <b>29 days</b> across the 64 Apollo Bay homes we manage.</p>
+    <p class="sub">From 46 stays between 11 Nov 2025 and 19 Feb 2027. Typical stay <b>3 nights</b>; typically booked <b>40 days</b> ahead, against <b>2 nights</b> and <b>29 days</b> across the 64 Apollo Bay homes we manage.</p>
     <p class="calkey"><span><i class="us"></i>St Jude&#x27;s</span><span><i class="mk"></i>The 64 homes we manage</span></p>
     <div class="pat">
       <div><p class="dhead">How far ahead guests book</p><div class="hbar"><span>Within a week</span><div class="hb"><i style="--v:20"></i><em>20%</em></div><div class="hb mk"><i style="--v:25"></i><em>25%</em></div></div><div class="hbar"><span>1–4 weeks</span><div class="hb"><i style="--v:26"></i><em>26%</em></div><div class="hb mk"><i style="--v:27"></i><em>27%</em></div></div><div class="hbar"><span>1–3 months</span><div class="hb"><i style="--v:37"></i><em>37%</em></div><div class="hb mk"><i style="--v:28"></i><em>28%</em></div></div><div class="hbar"><span>3+ months</span><div class="hb"><i style="--v:17"></i><em>17%</em></div><div class="hb mk"><i style="--v:19"></i><em>19%</em></div></div></div>
@@ -389,25 +411,33 @@ footer .who{color:var(--ink)}
     </div>
     <p class="note">The comparison is every booking across the homes Otway Retreats manages in and around Apollo Bay over the same period (1860 stays). PriceLabs doesn't publish booking-window or stay-length figures for the wider market.</p>
     <p class="note">Guests typically book St Jude's about 40 days ahead, so this is when Christmas and January bookings would normally be arriving; that's why those dates are the focus this month.</p>
+  </section><section aria-labelledby="h-sl">
+    <h2 id="h-sl">How long guests stay now</h2>
+    <p class="sub">Many owners picture the week-long summer booking. The market has moved: across the Apollo Bay homes we manage, the typical stay is <b>2 nights</b> and, even over Christmas and New Year, <b>3 to 4 nights</b> is the most common booking. Stays of 7 nights or more were <b>7%</b> of Christmas bookings last season (9% the season before) and <b>2%</b> of bookings across the year.</p>
+    <div class="scroll"><table class="sl" aria-label="Stay length by period">
+      <thead><tr><th>Period · season</th><th>1–2 nights</th><th>3–4 nights</th><th>5–6 nights</th><th>7+ nights</th><th>Typical</th></tr></thead>
+      <tbody><tr class="grp"><td colspan="6">Christmas and New Year (20 Dec – 10 Jan)</td></tr><tr><td>2024–25 <span class="mu" style="color:var(--muted)">· 159 stays</span></td><td class="">31%</td><td class="hi">41%</td><td class="">19%</td><td class="">9%</td><td class="mu">3</td></tr><tr><td>2025–26 <span class="mu" style="color:var(--muted)">· 208 stays</span></td><td class="">32%</td><td class="hi">46%</td><td class="">16%</td><td class="">7%</td><td class="mu">3</td></tr><tr class="grp"><td colspan="6">January school holidays (10 – 28 Jan)</td></tr><tr><td>2025 <span class="mu" style="color:var(--muted)">· 98 stays</span></td><td class="hi">54%</td><td class="">27%</td><td class="">9%</td><td class="">10%</td><td class="mu">2</td></tr><tr><td>2026 <span class="mu" style="color:var(--muted)">· 98 stays</span></td><td class="">39%</td><td class="hi">43%</td><td class="">7%</td><td class="">11%</td><td class="mu">3</td></tr><tr class="grp"><td colspan="6">Easter</td></tr><tr><td>2025 <span class="mu" style="color:var(--muted)">· 60 stays</span></td><td class="">40%</td><td class="hi">55%</td><td class="">3%</td><td class="">2%</td><td class="mu">3</td></tr><tr><td>2026 <span class="mu" style="color:var(--muted)">· 58 stays</span></td><td class="">41%</td><td class="hi">59%</td><td class="">0%</td><td class="">0%</td><td class="mu">3</td></tr><tr class="grp"><td colspan="6">Long weekends (Australia Day, Labour Day, Easter, Anzac Day, King&#x27;s Birthday, Grand Final, Cup weekend)</td></tr><tr><td>2025 <span class="mu" style="color:var(--muted)">· 268 stays</span></td><td class="hi">59%</td><td class="">36%</td><td class="">3%</td><td class="">2%</td><td class="mu">2</td></tr><tr><td>2026 <span class="mu" style="color:var(--muted)">· 282 stays</span></td><td class="hi">58%</td><td class="">38%</td><td class="">2%</td><td class="">2%</td><td class="mu">2</td></tr><tr class="grp"><td colspan="6">Whole year (January to October)</td></tr><tr><td>2025 <span class="mu" style="color:var(--muted)">· 1287 stays</span></td><td class="hi">62%</td><td class="">33%</td><td class="">4%</td><td class="">2%</td><td class="mu">2</td></tr><tr><td>2026 <span class="mu" style="color:var(--muted)">· 1289 stays</span></td><td class="hi">60%</td><td class="">35%</td><td class="">3%</td><td class="">2%</td><td class="mu">2</td></tr></tbody></table></div>
+    <p class="note">Share of bookings by length of stay for every booking across the homes Otway Retreats manages (data as at 10 Nov 2026); the bold figure is the most common length. "Typical" is the median stay in nights. Cancellations excluded.</p>
+    <div class="explain"><p><b>What this means for your minimum stay.</b> Long Christmas stays are booked early: last season the 7-night-plus bookings were made a median <b>97 days</b> ahead, while 3–4 night stays were booked <b>46 days</b> ahead and 47% of them inside the last six weeks; 1–2 night stays were booked 19 days out. By this point last year 100 Christmas stays were on the books across our homes, and the season finished with 208: nine in ten of the bookings made after this point were 1–4 night stays. A 7-night minimum held into December protects the chance of one long booking, but it also turns away the shorter stays that now make up most of the demand. Our usual approach is a longer minimum early, stepping down to 3 or 4 nights about six weeks out, and 2 nights to fill gaps in the last fortnight; we set this in PriceLabs so it happens automatically.</p></div>
   </section>
 
   
 
   <section aria-labelledby="h-act">
     <h2 id="h-act">What we recommend</h2>
-    <p class="sub">Changes to pricing, your listing and the house, based on the market and on what guests are telling us. Nothing changes until you tell us. Reply to the email this came with.</p>
-    <ol class="acts"><li class="act"><div class="anum">1</div><div class="abody"><p class="atype">Pricing</p><h3>24–31 Dec: price between $725 and $1,068 a night</h3>
-<p>All 8 nights from Christmas Eve to New Year&#x27;s Eve are open at about $1,068 a night with a 4-night minimum, in the top quarter of the market (median $725 a night). For the next 90 days St Jude&#x27;s has 10 nights booked, against 28 at this time last year.</p><p class="sugg"><b>Our suggestion:</b> Hold the current rate until 1 December, then ease towards $725 a night for any nights still open, and let the minimum stay come down from 4 to 3 nights from mid-December.</p>
-<p class="reply">To go ahead, reply <b>“yes to 1”</b>.</p></div></li><li class="act"><div class="anum">2</div><div class="abody"><p class="atype">Pricing</p><h3>January: ease from mid-December if still open</h3>
-<p>All 31 January nights are open at about $834 a night, in the top quarter of the market (median $586 a night). St Jude&#x27;s is 12% booked for the next 90 days, against 30% for comparable homes.</p><p class="sugg"><b>Our suggestion:</b> Price January between $586 and $834 a night, easing towards $586 from mid-December for any dates still open.</p>
-<p class="reply">To go ahead, reply <b>“yes to 2”</b>.</p></div></li><li class="act"><div class="anum">3</div><div class="abody"><p class="atype">Pricing</p><h3>Stop Airbnb promotions stacking on longer stays</h3>
+    <p class="sub">Changes to pricing, your listing and the house, based on the market and on what guests are telling us. You’ve entrusted us to manage the strategy, so pricing and listing changes go ahead from <b>18 November 2026</b> unless you’d like to discuss them or give us different instructions; anything at the house waits for your yes. Either way, we’d much rather hear from you than guess: reply to the email this came with, or call the office, and nothing is set in stone.</p>
+    <ol class="acts"><li class="act"><div class="anum">1</div><div class="abody"><p class="atype">Pricing</p><h3>24–31 Dec: price between $726 and $1,068 a night</h3>
+<p>All 8 nights from Christmas Eve to New Year&#x27;s Eve are open at about $1,068 a night with a 4-night minimum, in the top quarter of the market (median $726 a night). For the next 90 days St Jude&#x27;s has 10 nights booked, against 28 at this time last year.</p><p class="sugg"><b>Our suggestion:</b> Hold the current rate until 1 December, then ease towards $726 a night for any nights still open, and let the minimum stay come down from 4 to 3 nights from mid-December.</p>
+<p class="reply">We’ll put this in place from <b>18 November 2026</b> as part of managing your pricing, unless you ask us to hold off or discuss it. Replying <b>“yes to 1”</b> lets us do it straight away.</p></div></li><li class="act"><div class="anum">2</div><div class="abody"><p class="atype">Pricing</p><h3>January: ease from mid-December if still open</h3>
+<p>All 31 January nights are open at about $833 a night, in the top quarter of the market (median $583 a night). St Jude&#x27;s is 12% booked for the next 90 days, against 31% for comparable homes.</p><p class="sugg"><b>Our suggestion:</b> Price January between $583 and $833 a night, easing towards $583 from mid-December for any dates still open.</p>
+<p class="reply">We’ll put this in place from <b>18 November 2026</b> as part of managing your pricing, unless you ask us to hold off or discuss it. Replying <b>“yes to 2”</b> lets us do it straight away.</p></div></li><li class="act"><div class="anum">3</div><div class="abody"><p class="atype">Pricing</p><h3>Stop Airbnb promotions stacking on longer stays</h3>
 <p>The 4-night Airbnb stay from 3 December pays out $1,706.03; without discounts it would have paid $2,056.95, so discounts cost 17% of that stay.</p><p class="sugg"><b>Our suggestion:</b> We&#x27;ll check which Airbnb promotions applied to that stay and switch off any that stack, so a stay takes one discount at most.</p>
-<p class="reply">To go ahead, reply <b>“yes to 3”</b>.</p></div></li></ol>
+<p class="reply">We’ll put this in place from <b>18 November 2026</b> as part of managing your pricing, unless you ask us to hold off or discuss it. Replying <b>“yes to 3”</b> lets us do it straight away.</p></div></li></ol>
   </section>
 
   <section aria-labelledby="h-ctx">
     <h2 id="h-ctx">The season so far</h2>
-    <div class="context"><p>We're heading into the busiest weeks of the year, and guests are booking summer dates now. St Jude's is 23% booked for the next 30 days against 26% for comparable homes, but 12% for the next 90 days against 30%, because Christmas, New Year and January are still open while most of them sit in the top quarter of the market.</p><p>The nightly rates in this report are per night; each stay also has a minimum number of nights and a $100 guest cleaning fee on top. Easing the open peak dates towards the market median as they get closer gives them the best chance of filling, while the dates already booked keep the rates they were booked at.</p></div>
+    <div class="context"><p>We're heading into the busiest weeks of the year, and guests are booking summer dates now. St Jude's is 23% booked for the next 30 days against 26% for comparable homes, but 12% for the next 90 days against 31%, because Christmas, New Year and January are still open while most of them sit in the top quarter of the market.</p><p>The nightly rates in this report are per night; each stay also has a minimum number of nights and a $100 guest cleaning fee on top. Easing the open peak dates towards the market median as they get closer gives them the best chance of filling, while the dates already booked keep the rates they were booked at.</p></div>
   </section>
 
   <section aria-labelledby="h-nb">
@@ -415,8 +445,8 @@ footer .who{color:var(--ink)}
     <p class="sub">Typical nightly rates for homes near you over the next 12 months, by number of bedrooms. Per night, before cleaning fees.</p>
     <div class="scroll"><table aria-label="Neighbourhood nightly rate percentiles by bedrooms">
       <thead><tr><th>Bedrooms</th><th>Homes</th><th>25th percentile</th><th>Median</th><th>75th percentile</th><th>90th percentile</th></tr></thead>
-      <tbody><tr class=""><td>2</td><td>105</td><td>$287</td><td>$339</td><td>$436</td><td>$528</td></tr><tr class="me"><td>3 · St Jude&#x27;s</td><td>176</td><td>$352</td><td>$423</td><td>$511</td><td>$607<span class="youpill">You: $668</span></td></tr><tr class=""><td>4</td><td>69</td><td>$400</td><td>$527</td><td>$728</td><td>$959</td></tr></tbody></table></div>
-    <p class="note"><b>Where you sit:</b> St Jude&#x27;s averages <b>$668 a night</b> over the next 90 nights (11 Nov to 8 Feb), which is above the 90th percentile for 3-bedroom homes nearby. The table is the market's next 12 months, so a home priced for the season ahead can sit differently from its year-round position.</p>
+      <tbody><tr class=""><td>2</td><td>105</td><td>$280</td><td>$339</td><td>$435</td><td>$528</td></tr><tr class="me"><td>3 · St Jude&#x27;s</td><td>176</td><td>$352</td><td>$424</td><td>$509</td><td>$607<span class="youpill">You: $667</span></td></tr><tr class=""><td>4</td><td>69</td><td>$400</td><td>$513</td><td>$728</td><td>$960</td></tr></tbody></table></div>
+    <p class="note"><b>Where you sit:</b> St Jude&#x27;s averages <b>$667 a night</b> over the next 90 nights (12 Nov to 9 Feb), which is above the 90th percentile for 3-bedroom homes nearby. The table is the market's next 12 months, so a home priced for the season ahead can sit differently from its year-round position.</p>
   </section>
 
   <section aria-labelledby="h-g">
@@ -426,15 +456,15 @@ footer .who{color:var(--ink)}
   </section>
 
   <footer>
-    <p>Sources: Hostaway bookings and PriceLabs market data for homes near you, as at 10 November 2026. Your next report will be ready in early December.</p>
+    <p>Sources: Hostaway bookings and PriceLabs market data for homes near you, as at 11 November 2026. Your next report will be ready in early December.</p>
     <p class="who">Mikhala McCann, Director, Otway Retreats · Mobile 0437 375 774 · Office (03) 5292 3631 · mikhala@otwayretreats.com.au</p>
   </footer>
 </div>
 
 <script>
 (function(){
-  var C = {"start":"2026-11-11","ours":[395,395,465,537,421,395,395,395,395,433,498,363,363,395,395,395,413,488,395,395,395,395,395,469,517,442,395,395,395,410,535,604,511,425,451,464,471,649,793,730,773,1000,1000,988,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,810,810,810,810,810,810,810,810,810,810,810,810,810,790,790,790,790,1000,1000,1000,1000,631,568,561,676,754,645,547,528,518,538,682,735,620,615],"booked":[[11,12],[22,25],[37,38],[41,42]],"median":[327,330,344,351,329,331,332,330,335,347,356,336,339,338,337,341,363,363,341,346,350,349,360,376,379,354,351,351,352,368,399,406,364,366,373,374,419,474,516,559,580,602,625,674,708,707,731,743,746,743,746,739,744,721,695,674,666,659,647,641,594,581,579,575,586,588,593,556,558,557,587,595,592,615,583,536,466,431,455,468,462,420,395,384,387,408,444,426,409,401],"p25":[260,274,277,276,268,266,270,264,276,291,286,278,284,285,285,288,296,296,283,295,300,301,304,313,314,305,299,299,305,313,325,325,312,314,315,320,339,368,395,430,449,466,486,523,537,533,549,553,558,562,565,572,554,548,534,529,529,536,524,514,470,468,468,470,467,459,464,452,460,463,470,471,467,458,432,411,370,351,370,369,362,329,318,310,311,324,329,330,313,313],"p75":[422,429,452,462,433,424,430,430,446,456,460,447,450,447,446,455,473,479,452,455,466,467,479,489,487,475,474,469,473,492,526,514,490,496,499,504,552,626,671,684,724,775,833,927,971,988,1010,1048,1056,1012,1012,999,998,980,893,876,866,854,833,799,747,734,728,726,734,737,741,700,692,699,747,777,813,790,734,690,614,580,589,604,584,545,520,511,514,526,563,554,534,528],"ms":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2]};
-  var PACE = [["Next 30 days", 23, 26], ["Next 60 days", 18, 33], ["Next 90 days", 12, 30], ["Next 120 days", 9, 26], ["Next 180 days", 6, 20]];
+  var C = {"start":"2026-11-12","ours":[395,420,483,395,395,395,395,395,398,460,363,363,395,395,395,410,483,395,395,395,395,395,469,517,442,395,395,395,418,533,593,503,423,446,455,462,649,793,728,778,1000,1000,988,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,810,810,810,810,810,810,810,810,810,810,810,810,810,790,790,790,790,1000,1000,1000,1000,624,571,562,673,753,638,542,521,515,533,694,755,610,623,574],"booked":[[10,11],[21,24],[36,37],[40,41]],"median":[330,343,350,327,329,330,329,335,346,355,337,338,338,337,340,364,363,341,345,350,349,359,375,376,354,350,348,351,367,399,403,364,365,369,373,418,472,516,557,579,599,621,674,711,712,731,743,746,743,746,742,745,721,685,670,662,661,645,634,588,577,575,575,575,576,591,556,556,557,583,594,591,614,582,535,461,431,454,468,461,418,395,384,387,408,442,427,409,399,397],"p25":[274,277,276,267,265,267,262,276,290,284,277,283,285,285,287,296,295,282,295,299,300,304,312,313,305,299,298,303,312,322,325,312,314,313,319,338,367,395,430,448,467,486,524,537,534,549,553,558,562,565,572,554,547,534,529,529,536,524,515,470,467,467,468,464,457,464,451,458,462,469,470,467,458,431,411,371,350,370,369,362,329,318,308,310,324,330,330,314,312,313],"p75":[429,452,462,433,423,430,430,446,455,460,445,449,447,446,455,470,478,453,454,463,466,478,489,487,474,471,469,473,492,526,514,490,496,498,504,552,624,671,684,724,775,833,925,979,986,1008,1041,1057,1013,1016,997,993,955,885,866,850,841,815,795,747,733,725,725,735,734,739,703,688,705,748,779,814,789,729,685,613,581,589,604,585,545,518,507,513,523,562,553,533,527,519],"ms":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]};
+  var PACE = [["Next 30 days", 23, 26], ["Next 60 days", 18, 34], ["Next 90 days", 12, 31], ["Next 120 days", 9, 26], ["Next 180 days", 6, 20]];
   var N = C.ours.length, D0 = Date.parse(C.start + 'T00:00:00Z');
   var isB = new Array(N).fill(false);
   C.booked.forEach(function(r){ for (var i=r[0]; i<=r[1]; i++) if (i>=0 && i<N) isB[i]=true; });
@@ -483,7 +513,7 @@ footer .who{color:var(--ink)}
   }).join('');
 })();
 </script>
-<script type="application/json" id="xdata">{"start":"2026-11-11","ours":[395,395,465,537,421,395,395,395,395,433,498,363,363,395,395,395,413,488,395,395,395,395,395,469,517,442,395,395,395,410,535,604,511,425,451,464,471,649,793,730,773,1000,1000,988,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,810,810,810,810,810,810,810,810,810,810,810,810,810,790,790,790,790,1000,1000,1000,1000,631,568,561,676,754,645,547,528,518,538,682,735,620,615],"med":[327,330,344,351,329,331,332,330,335,347,356,336,339,338,337,341,363,363,341,346,350,349,360,376,379,354,351,351,352,368,399,406,364,366,373,374,419,474,516,559,580,602,625,674,708,707,731,743,746,743,746,739,744,721,695,674,666,659,647,641,594,581,579,575,586,588,593,556,558,557,587,595,592,615,583,536,466,431,455,468,462,420,395,384,387,408,444,426,409,401],"bk":[false,false,false,false,false,false,false,false,false,false,false,true,true,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],"ms":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"min":395,"max":1000,"base":525,"clean":100,"fees":{"pct":22.0,"clean":235.0,"linen":150.0,"other":0,"other_label":""}}</script><script>
+<script type="application/json" id="xdata">{"start":"2026-11-12","ours":[395,420,483,395,395,395,395,395,398,460,363,363,395,395,395,410,483,395,395,395,395,395,469,517,442,395,395,395,418,533,593,503,423,446,455,462,649,793,728,778,1000,1000,988,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,810,810,810,810,810,810,810,810,810,810,810,810,810,790,790,790,790,1000,1000,1000,1000,624,571,562,673,753,638,542,521,515,533,694,755,610,623,574],"med":[330,343,350,327,329,330,329,335,346,355,337,338,338,337,340,364,363,341,345,350,349,359,375,376,354,350,348,351,367,399,403,364,365,369,373,418,472,516,557,579,599,621,674,711,712,731,743,746,743,746,742,745,721,685,670,662,661,645,634,588,577,575,575,575,576,591,556,556,557,583,594,591,614,582,535,461,431,454,468,461,418,395,384,387,408,442,427,409,399,397],"bk":[false,false,false,false,false,false,false,false,false,false,true,true,false,false,false,false,false,false,false,false,false,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,true,true,false,false,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],"ms":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"min":395,"max":1000,"base":525,"clean":100,"fees":{"pct":22.0,"clean":235.0,"linen":150.0,"other":0,"other_label":""}}</script><script>
 (function(){
 var X=JSON.parse(document.getElementById('xdata').textContent);
 var N=X.ours.length, D0=Date.parse(X.start+'T00:00:00Z');
@@ -524,7 +554,10 @@ if($('calc')){
       t+='<tr class="'+(k===r.n?'on':'')+(sh?' short':'')+'"><td>'+k+(sh?' <small>below min.</small>':'')+'</td><td>'+money(q.pay)+'</td>'+(f?'<td>'+money(q.net)+'</td><td>'+money(q.net/k)+'</td>':'<td>'+money(q.pay/k)+'</td>')+'</tr>'; }
     $('c-los').innerHTML=t;
   }
-  [ci,cn,cb].forEach(function(e){e.addEventListener('input',draw);}); draw();
+  function fill(e){var mn=+e.min||0,mx=+e.max||100,v=+e.value;e.style.setProperty('--p',((v-mn)/(mx-mn)*100)+'%');}
+  var ie=$('c-in-e'); if(ie){ie.children[0].textContent=lab(0,{day:'numeric',month:'short'});ie.children[1].textContent=lab(N-2,{day:'numeric',month:'short'});}
+  [ci,cn,cb].forEach(function(e){e.addEventListener('input',function(){fill(e);draw();});fill(e);}); draw();
+  cn.addEventListener('input',function(){fill(cn);}); ci.addEventListener('input',function(){fill(cn);});
 }
 /* ---- calendar ---- */
 if($('calbox')){
@@ -537,7 +570,7 @@ if($('calbox')){
     if(m!==cur){ if(cur>=0) html+=g+'</div></div>'; cur=m; g='';
       html+='<div><h3>'+dt.toLocaleDateString('en-AU',{month:'long',year:'numeric',timeZone:'UTC'})+'</h3><div class="g">'+['M','T','W','T','F','S','S'].map(function(x){return '<div class="dw">'+x+'</div>';}).join('');
       var pad=(dt.getUTCDay()+6)%7; for(var p=0;p<pad;p++) g+='<div class="c x"></div>'; }
-    g+='<div class="c'+(X.bk[i]?' b':gap[i]?' gap':'')+'" title="'+lab(i,{weekday:'short',day:'numeric',month:'short'})+': '+(X.bk[i]?'booked':gap[i]?'gap night (shorter than the minimum stay)':'open')+', '+money(X.ours[i])+' a night, minimum '+(X.ms[i]||1)+'">'+dt.getUTCDate()+'<small>'+(X.bk[i]?'':money(X.ours[i]))+'</small></div>'; }
+    g+='<div class="c'+(X.bk[i]?' b':gap[i]?' gap':'')+'" title="'+lab(i,{weekday:'short',day:'numeric',month:'short'})+': '+(X.bk[i]?'booked':gap[i]?'gap night (shorter than the minimum stay)':'open')+', '+money(X.ours[i])+' a night, minimum '+(X.ms[i]||1)+'">'+(X.bk[i]?'':'<span class="ms" aria-label="minimum '+(X.ms[i]||1)+' nights">'+(X.ms[i]||1)+'n</span>')+dt.getUTCDate()+'<small>'+(X.bk[i]?'':money(X.ours[i]))+'</small></div>'; }
   html+=g+'</div></div>'; $('calbox').innerHTML=html;
   var gn=gap.filter(Boolean).length, open=X.bk.filter(function(b){return !b;}).length;
   $('calsum').innerHTML='<b>'+(N-open)+'</b> of the next '+N+' nights are booked and <b>'+open+'</b> are open'+(gn?', including <b>'+gn+' gap night'+(gn>1?'s':'')+'</b>: short runs between bookings that are shorter than the minimum stay, so they can\'t be booked as things stand':'')+'.';
