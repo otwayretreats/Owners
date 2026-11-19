@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Icaro Recipe Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chango&family=LXGW+Marker+Gothic&family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: cover band → contents index (sections in a grid, numbered) → one chapter per section, recipes as numbered cards. Day = cream/brick, dark = Nights wine/apricot. */
+:root{
+  --bg:#F6E9DC; --alt:#E6D8C9; --raised:#FFFFFF; --heading:#93392B; --ink:#241210; --body:#4A3830; --muted:#6B5448;
+  --accent:#93392B; --accent-ink:#F6E9DC; --apricot:#D9846A; --line:#DCCAB8; --draft:#8A4A12; --ok:#4E6B3A; --mark:#F2C2AE;
+  --display:"Chango","Arial Black",system-ui,sans-serif;
+  --marker:"LXGW Marker Gothic","Comic Sans MS",cursive;
+  --text:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#3B0A10; --alt:#241210; --raised:#4A1A1D; --heading:#F6E9DC; --ink:#F6E9DC; --body:#E6D8C9; --muted:#CDB9AB;
+  --accent:#D9846A; --accent-ink:#241210; --line:#5A2A27; --draft:#F2C2AE; --ok:#B5CF98; --mark:#7A3324; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#3B0A10; --alt:#241210; --raised:#4A1A1D; --heading:#F6E9DC; --ink:#F6E9DC; --body:#E6D8C9; --muted:#CDB9AB;
+  --accent:#D9846A; --accent-ink:#241210; --line:#5A2A27; --draft:#F2C2AE; --ok:#B5CF98; --mark:#7A3324; color-scheme:dark }
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 130px)}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--text);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--alt)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.label{font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:11px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--apricot);outline-offset:2px}
+
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--alt);border-bottom:1px solid var(--line)}
+header.bar .wrap{padding-block:10px;display:grid;gap:8px}
+.bar-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.bar-row img{height:26px;width:auto;display:block}
+.logo-d{display:none!important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-l{display:none!important} :root:not([data-theme="light"]) .logo-d{display:block!important}}
+:root[data-theme="dark"] .logo-l{display:none!important} :root[data-theme="dark"] .logo-d{display:block!important}
+.bar-row .label{color:var(--muted)}
+.search{flex:1 1 240px;position:relative;min-width:0}
+.search input{width:100%;font:500 16px var(--text);padding:9px 76px 9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--raised);color:var(--ink);outline:none}
+.search input:focus{border-color:var(--accent)}
+.search button{position:absolute;right:5px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:var(--muted);padding:7px 12px;border-radius:999px;cursor:pointer;font-family:var(--text)}
+nav.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+nav.chips::-webkit-scrollbar{display:none}
+nav.chips a{flex:none;text-decoration:none;border:1.5px solid var(--line);color:var(--ink);padding:5px 12px;border-radius:999px;white-space:nowrap;font-size:10.5px}
+nav.chips a:hover{border-color:var(--accent);color:var(--accent)}
+
+.cover{padding-block:48px 28px;display:grid;gap:8px}
+.cover .label{color:var(--accent)}
+.cover h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,8vw,76px);line-height:1;color:var(--heading);margin:0;text-wrap:balance}
+.cover .marker{font-family:var(--marker);font-size:21px;color:var(--accent)}
+.cover p{max-width:62ch;margin:6px 0 0}
+.stats{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:10px;font-size:13.5px;color:var(--muted)}
+.stats b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--heading);margin-right:4px}
+.rule{display:block;margin-top:14px}
+
+.contents{padding-block:8px 40px}
+.contents h2,.chapter h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4.5vw,40px);line-height:1.05;color:var(--heading);margin:0;text-wrap:balance}
+.idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:18px}
+.idx section{background:var(--raised);border-top:5px solid var(--apricot);border-radius:6px;padding:16px 18px 14px;min-width:0}
+.idx h3{margin:0 0 2px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}
+.idx h3 a{text-decoration:none;color:inherit}
+.idx .cnt{font-size:12px;color:var(--muted);margin-bottom:8px}
+.idx ol{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.idx li{display:grid;grid-template-columns:2.6em minmax(0,1fr);gap:4px;font-size:14px;line-height:1.4}
+.idx li .no{font-variant-numeric:tabular-nums;color:var(--muted);text-align:right;padding-right:6px}
+.idx li a{color:var(--ink);text-decoration:none}
+.idx li a:hover{color:var(--accent);text-decoration:underline}
+.idx li .tag{font-size:10px;font-weight:700;color:var(--draft);margin-left:6px;letter-spacing:.06em;text-transform:uppercase}
+
+.chapter{padding-block:34px 10px;border-top:1px solid var(--line)}
+.chapter.arch{background:transparent}
+.ch-head{display:flex;justify-content:space-between;align-items:end;gap:10px 20px;flex-wrap:wrap;margin-bottom:16px}
+.ch-head .marker{font-family:var(--marker);font-size:19px;color:var(--accent);margin-top:4px}
+.ch-head .back{font-size:11px;text-decoration:none;border:1.5px solid var(--accent);border-radius:999px;padding:6px 12px;color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.recipe{background:var(--raised);border-top:5px solid var(--apricot);border-radius:6px;padding:18px 22px 20px;min-width:0;break-inside:avoid}
+.r-top{display:flex;gap:10px;align-items:baseline}
+.r-no{font-family:var(--display);font-size:18px;color:var(--accent);font-variant-numeric:tabular-nums;flex:none}
+.recipe h3{font-family:var(--text);font-weight:800;font-size:18px;line-height:1.3;color:var(--ink);margin:0;text-wrap:balance}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.pill{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:2px 8px;border-radius:999px;border:1px solid currentColor}
+.pill.menu{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pill.draft{color:var(--draft)}
+.pill.old{color:var(--muted)}
+.src{font-size:12px;color:var(--muted);margin-bottom:8px}
+.body{font-size:14.5px}
+.body h3,.body h4{font-family:var(--text);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--accent);margin:16px 0 6px}
+.body p{margin:5px 0}
+.body ul,.body ol{padding-left:20px;margin:6px 0}
+.body li p{margin:1px 0}
+.body .yield{background:var(--bg);border-radius:6px;padding:8px 12px;font-size:13px;margin:4px 0 8px}
+.body blockquote{margin:8px 0;padding-left:12px;border-left:2px solid var(--line);color:var(--muted)}
+.body .tw{overflow-x:auto;margin:8px 0;border:1px solid var(--line);border-radius:6px}
+.body table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+.body th,.body td{border-bottom:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+.body th{background:var(--bg);font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink)}
+.body tr:last-child td{border-bottom:0}
+.body td p{margin:0}
+mark{background:var(--mark);color:inherit;border-radius:2px}
+.empty{padding:30px 0;color:var(--muted)}
+footer{padding-block:40px 60px;color:var(--muted);font-size:13px}
+
+@media (max-width:760px){
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .recipe{padding:16px 16px 18px}
+}
+@media print{
+  header.bar{display:none}
+  body{background:#fff;color:#241210;font-size:11pt}
+  .recipe,.idx section{border:1px solid #DCCAB8;border-top:5px solid #D9846A}
+  .chapter{break-before:page}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .ch-head .back{display:none}
+}
+</style>
+
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <div class="bar-row">
+      <img class="logo-l" src="brand/wordmark-brick.png" alt="Icaro">
+      <img class="logo-d" src="brand/wordmark-cream.png" alt="Icaro">
+      <span class="label">Recipe book</span>
+      <div class="search">
+        <label for="q" style="position:absolute;left:-9999px">Search recipes</label>
+        <input id="q" type="search" placeholder="Search a recipe or ingredient…" autocomplete="off" enterkeyhint="search">
+        <button id="clear" type="button" class="label" hidden>Clear</button>
+      </div>
+    </div>
+    <nav class="chips label" id="chips" aria-label="Sections"></nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap cover">
+    <div class="label">Icaro · 1G Moore Street, Apollo Bay</div>
+    <h1>Recipe Book</h1>
+    <div class="marker">every recipe in the kitchen, the elixir bar and the bar</div>
+    <p>All recipes from the Icaro knowledge base, grouped by section and numbered so the index points straight to each one. Recipes tagged <b>Draft – test</b> were written to fill menu gaps and still need testing and costing. Ask Mikhala before changing a recipe.</p>
+    <div class="stats" id="stats"></div>
+    <svg class="rule" width="220" height="24" viewBox="0 0 220 24" aria-hidden="true"><path d="M4 12 Q 16 2 28 12 T 52 12 T 76 12 T 100 12 T 124 12 T 148 12 T 172 12 T 196 12 T 216 12" fill="none" stroke="var(--apricot)" stroke-width="3" stroke-linecap="round"/></svg>
+  </div>
+
+  <div class="wrap contents" id="index">
+    <h2>Index</h2>
+    <div class="idx" id="idx"><p class="empty">Loading the recipes…</p></div>
+  </div>
+
+  <div id="chapters"></div>
+
+  <footer class="wrap">House rules for every recipe: no pork, and a seed-oil free kitchen (olive oil, butter, tallow or coconut only). Built from the Icaro knowledge base, November 2026.</footer>
+</main>
+
+<script>
+(function(){
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  let DATA=[];
+  function pills(r,arch){
+    let p='';
+    if(r.menu) p+='<span class="pill menu">On the menu</span>';
+    if(r.draft) p+='<span class="pill draft">Draft – test</span>';
+    if(arch) p+='<span class="pill old">Archive</span>';
+    return p?'<div class="pills">'+p+'</div>':'';
+  }
+  function render(){
+    const total=DATA.reduce((a,s)=>a+s.recipes.length,0);
+    const arch=DATA.filter(s=>s.key.startsWith('archive')).reduce((a,s)=>a+s.recipes.length,0);
+    const drafts=DATA.reduce((a,s)=>a+s.recipes.filter(r=>r.draft).length,0);
+    document.getElementById('stats').innerHTML=
+      '<span><b>'+(total-arch)+'</b>current recipes</span><span><b>'+drafts+'</b>drafts to test</span><span><b>'+DATA.length+'</b>sections</span>';
+    document.getElementById('chips').innerHTML='<a href="#index">Index</a>'+DATA.map(s=>'<a href="#s-'+s.key+'">'+esc(s.name)+'</a>').join('');
+    document.getElementById('idx').innerHTML=DATA.map(s=>{
+      const a=s.recipes[0].n, b=s.recipes[s.recipes.length-1].n;
+      return '<section data-sec="'+s.key+'"><h3><a href="#s-'+s.key+'">'+esc(s.name)+'</a></h3><div class="cnt">'+s.recipes.length+' recipes · '+a+'–'+b+'</div><ol>'+
+        s.recipes.map(r=>'<li data-id="'+r.id+'"><span class="no">'+r.n+'</span><span><a href="#r-'+r.id+'">'+esc(r.t)+'</a>'+(r.draft?'<span class="tag">draft</span>':'')+'</span></li>').join('')+'</ol></section>';
+    }).join('');
+    document.getElementById('chapters').innerHTML=DATA.map(s=>{
+      const arch=s.key.startsWith('archive');
+      return '<section class="chapter'+(arch?' arch':'')+'" id="s-'+s.key+'" data-sec="'+s.key+'"><div class="wrap"><div class="ch-head"><div><h2>'+esc(s.name)+'</h2><div class="marker">'+esc(s.marker)+'</div></div><a class="back label" href="#index">Back to index</a></div><div class="cards">'+
+        s.recipes.map(r=>'<article class="recipe" id="r-'+r.id+'" data-id="'+r.id+'"><div class="r-top"><span class="r-no">'+r.n+'</span><h3>'+esc(r.t)+'</h3></div>'+pills(r,arch)+
+          '<div class="src">'+esc(r.src)+(r.upd?' · updated '+esc(r.upd):'')+'</div><div class="body">'+(r.h||'<p>No method written yet.</p>')+'</div></article>').join('')+
+        '</div></div></section>';
+    }).join('');
+    const tx={};
+    document.querySelectorAll('article.recipe').forEach(el=>{tx[el.dataset.id]=el.textContent.toLowerCase();});
+    const q=document.getElementById('q'), clear=document.getElementById('clear');
+    function filter(){
+      const v=q.value.trim().toLowerCase(); clear.hidden=!v;
+      document.querySelectorAll('[data-id]').forEach(el=>{el.hidden=!!v&&!tx[el.dataset.id].includes(v);});
+      document.querySelectorAll('[data-sec]').forEach(sec=>{sec.hidden=!!v&&!sec.querySelector('[data-id]:not([hidden])');});
+    }
+    q.addEventListener('input',filter);
+    clear.addEventListener('click',()=>{q.value='';filter();q.focus();});
+    if(location.hash){const t=document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView();}
+  }
+  fetch('recipes.json').then(r=>r.json()).then(d=>{DATA=d;render();})
+    .catch(()=>{document.getElementById('idx').innerHTML='<p class="empty">The recipes could not load. Refresh the page to try again.</p>';});
+})();
+</script>
+
+</body>
+</html>
