@@ -407,7 +407,7 @@ label.f input,label.f select,label.f textarea{font-size:1rem;font-weight:400;let
   <p class="note">Bed sizes in each room (king, queen, double, single, bunk, tri-bunk). Guests like heating in every room; portable heaters and spare blankets are wise.</p>
   <div id="bedrooms"></div>
   <div class="grid">
-    <label class="f"><span>Total guests the home sleeps</span><input id="sleeps_total" value=""></label>
+    <label class="f"><span>Total guests the home sleeps</span><input id="sleeps_total" value="8"></label>
     <label class="f"><span>Main bathrooms (excluding ensuites)</span><input id="main_baths" inputmode="numeric"></label>
     <label class="f"><span>Bath</span><select id="bath"><option value="">—</option><option>No</option><option>Yes</option></select></label>
   </div>
@@ -531,7 +531,7 @@ label.f input,label.f select,label.f textarea{font-size:1rem;font-weight:400;let
 <!-- 10 -->
 <section class="step" id="s10">
   <h2><span class="n">10</span>Rate schedule</h2>
-  <p class="note">Starting rates for 44 Seaview Drive. PriceLabs moves the nightly rate between the minimum and the maximum with demand, around the base; guests pay a $350 cleaning and linen fee per stay; the whole-house tariff covers six guests, plus $40 per person per night above six.</p>
+  <p class="note">Starting rates for 44 Seaview Drive. PriceLabs moves the nightly rate between the minimum and the maximum with demand, around the base; guests pay a $350 cleaning and linen fee per stay; the whole-house tariff covers six guests, plus $40 per person per night above six (guests seven and eight), to a maximum of eight guests.</p>
   <div class="tbl"><table>
     <thead><tr><th>Setting</th><th>What it means</th><th class="r">Nightly rate</th></tr></thead>
     <tbody>
@@ -581,7 +581,7 @@ label.f input,label.f select,label.f textarea{font-size:1rem;font-weight:400;let
     <li>While under management the property will not be advertised for holiday rental by anyone else; Otway Retreats has exclusive rights to advertise and book it until notice under clause 4.</li>
   </ol></div>
   <h3>Agreed with the owner</h3>
-  <p class="note">Suggested pre-listing improvements: replace the bedside tables and lamps in the downstairs bedrooms; replace the soft furnishings in the downstairs bedrooms (throw, display cushions); and lift some of the soft furnishings upstairs. We can help source and set these up. Start date and availability are to be confirmed, and the maximum guest numbers and bed configuration are confirmed on the property checklist.</p>
+  <p class="note">Suggested pre-listing improvements: replace the bedside tables and lamps in the downstairs bedrooms; replace the soft furnishings in the downstairs bedrooms (throw, display cushions); and lift some of the soft furnishings upstairs. We can help source and set these up. Start date and availability are to be confirmed. The home takes a maximum of eight guests; the bed configuration is confirmed on the property checklist.</p>
   <div class="checks"><label><input type="checkbox" id="ack_decl" data-req>I/we have read and agree to the declaration, the indemnity and the schedule of fees *</label></div>
   <div class="grid">
     <label class="f req"><span>Signed by (full name)</span><input id="sign1_name" data-req value="Matthew Strong"></label>
@@ -720,7 +720,7 @@ function sections(){
    ['Indemnity',[['Agreed',val('ack_indemnity')]]],
    ['Property checklist',[['Bins',[val('bin_red')==='Yes'&&'red',val('bin_yellow')==='Yes'&&'yellow',val('bin_green')==='Yes'&&'green'].filter(Boolean).join(', ')+(val('bins_loc')?' · '+val('bins_loc'):'')],['Bottled gas',val('gas')+(val('gas_loc')?' · '+val('gas_loc'):'')],['Switchboard',val('switchboard')],['Electricity meter',val('meter')+(val('smart_meter')?' · smart meter: '+val('smart_meter'):'')],['Hot water',val('hws')+(val('hws_loc')?' · '+val('hws_loc'):'')],['Smoke alarms',[val('smoke_n'),val('smoke_loc')].filter(Boolean).join(' · ')],['Septic',val('septic')],['Appliance manuals',val('manuals')],['Water',val('water')+(val('filters')?' · filters: '+val('filters'):'')],['Cooktop / oven',[val('cooktop'),val('oven')].filter(Boolean).join(' / ')],['Barbecue',val('bbq')+[val('bbq_spare')==='Yes'&&'spare bottle',val('bbq_tools')==='Yes'&&'cleaning tools',val('bbq_cover')==='Yes'&&'cover'].filter(Boolean).map(x=>' · '+x).join('')],['Air conditioning',val('aircon')],['Fireplace',rad('fireplace')+(rad('fireplace')!=='No fireplace'?[val('fire_type'),val('fire_loc')&&'wood: '+val('fire_loc'),val('kindling_loc')&&'kindling: '+val('kindling_loc'),val('fire_lockable')==='Yes'&&'lockable store',val('fire_tools')==='Yes'&&'tools',val('fire_bucket')==='Yes'&&'ash bucket',val('fire_barrow')==='Yes'&&'wheelbarrow',val('fire_splitter')==='Yes'&&'splitter',val('fire_stock')==='Yes'&&'wood stocked',val('fire_delivery')==='Yes'&&'arrange deliveries'].filter(Boolean).map(x=>' · '+x).join(''):'')],['Wi-Fi',[val('wifi_provider'),val('wifi_name')&&'network '+val('wifi_name'),val('wifi_pw')&&'password '+val('wifi_pw'),val('wifi_loc')&&'modem '+val('wifi_loc')].filter(Boolean).join(' · ')],...beds,['Sleeps',val('sleeps_total')],['Main bathrooms',val('main_baths')+(val('bath')?' · bath: '+val('bath'):'')],['Other rooms',list('rooms','rooms_other')],['Kitchen',list('kitchen','kitchen_other')+(val('dining_seats')?' · dining seats '+val('dining_seats'):'')],['Coffee',[rad('coffee_type'),val('coffee'),val('coffee_grinder')&&'grinder: '+val('coffee_grinder')].filter(Boolean).join(' · ')],['General',list('general','general_other')+[['heating_main','living-area heating'],['ceiling_fans','living-area cooling'],['heaters','spare heaters/fans']].filter(([k])=>val(k)).map(([k,l])=>' · '+l+': '+val(k)).join('')],['Bathrooms & wardrobes',list('bedbath','bedbath_other')],['Entertainment',list('ent','ent_other')+(val('ent_type')?' · '+val('ent_type'):'')],['Laundry',list('laundry','')],['Accessibility',list('access','')],['Children',list('kids','kids_other')]]],
    ['Photography, set-up & fees',[['Photography',rad('photos')],['Set-up payment',rad('pay')],['Total to commence',$('setup_total').textContent],['Read fees, policies and what to expect',val('ack_fees')],['Fees acknowledged','Management 22% of booking income; set-up $600; annual $500; schedule of fees as published']]],
-   ['Rate schedule',[['Minimum',CFG.rates.min],['Base',CFG.rates.base],['Maximum',CFG.rates.max],['Guest cleaning and linen fee','$350 per stay'],['Extra guest fee','$40 per person per night above '+CFG.extra_above+' guests']]],
+   ['Rate schedule',[['Minimum',CFG.rates.min],['Base',CFG.rates.base],['Maximum',CFG.rates.max],['Guest cleaning and linen fee','$350 per stay'],['Extra guest fee','$40 per person per night above '+CFG.extra_above+' guests'],['Maximum guests','8']]],
    ['Declaration',[['Agreed to declaration, indemnity and fees',val('ack_decl')],['Signed by',val('sign1_name')+' on '+fmtD(val('sign1_date'))],...( $('two_signers').checked?[['Also signed by',val('sign2_name')+' on '+fmtD(val('sign2_date'))]]:[])]],
   ];
 }
